@@ -5,7 +5,7 @@ Le cours est donné le lundi de 14h15 à 16h15 dans la salle R.103, Abram-Louis-
 
 **Attention, le cours n'est pas dispensé dans le bâtiment de la FLSH.** 
 
-Le descriptif de cours est disponible [[en ligne(http://www5.unine.ch/descriptifs/plans2020-2021/plan_2020-2021_2LF2117.pdf)].
+Le descriptif de cours est disponible [[en ligne](http://www5.unine.ch/descriptifs/plans2020-2021/plan_2020-2021_2LF2117.pdf)].
 
 ## Programme
 
