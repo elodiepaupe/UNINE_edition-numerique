@@ -5,7 +5,7 @@ Le cours est donné le lundi de 14h15 à 16h15 dans la salle R.103, Abram-Louis-
 
 **Attention, le cours n'est pas dispensé dans le bâtiment de la FLSH.** 
 
-Le descriptif de cours est disponible [[en ligne](http://www5.unine.ch/descriptifs/plans2020-2021/plan_2020-2021_2LF2117.pdf)].
+Le descriptif de cours est disponible [en ligne](http://www5.unine.ch/descriptifs/plans2020-2021/plan_2020-2021_2LF2117.pdf).
 
 ## Programme
 
@@ -54,7 +54,7 @@ En option:
 * Si vous souhaitez utiliser toutes les fonctionnalités de gitHub, essayez de télécharger [_GitHub Desktop_](https://desktop.github.com/).
 
 ## Cite this repository
-Élodie Paupe (éd.), _Encoder, Analyser - Introduction à la philologie numérique_, Neuchâtel: Université de Neuchâtel, 2020, [https://github.com/elodiepaupe/UNINE_edition-numerique](https://github.com/elodiepaupe/UNINE_edition-numerique).
+Élodie Paupe (éd.), _Encoder, Analyser - Introduction à la philologie numérique_, Neuchâtel: Université de Neuchâtel, 2020, https://github.com/elodiepaupe/UNINE_edition-numerique(https://github.com/elodiepaupe/UNINE_edition-numerique).
 
 ## Licence
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution 4.0 International Licence</a>.
