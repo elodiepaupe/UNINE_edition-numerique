@@ -82,7 +82,7 @@ L'inflexion des voix chères qui se sont tues.
 Logiciel: oxygène (ou un éditeur de code)
 
 Consigne: 
-1. Traduisez votre encodage du poème de Ronsard en TEI. Voici quelques éléments de vocabulaire:
+1. Traduisez votre encodage du poème de Verlaine en TEI. Voici quelques éléments de vocabulaire:
 
     * `l` pour le vers (_line_)
     * `lg` pour une strophe (_line group_)
