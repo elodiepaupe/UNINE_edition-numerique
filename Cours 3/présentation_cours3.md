@@ -348,7 +348,7 @@ Plus la granularité augmente, plus il devient difficile de lire le document.
 ````
 ---
 
-### Exercices
+### Exercice
 
 Exercice 4:  [ici](https://github.com/elodiepaupe/UNINE_edition-numerique/blob/master/Cours%203/exercices/exercice_cours3.md)
 
