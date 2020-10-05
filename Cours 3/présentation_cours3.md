@@ -80,7 +80,7 @@ Le document XML comme des poupées russes
 
 ---
 
-![w:700](https://github.com/elodiepaupe/UNINE_edition-numerique/blob/master/Cours%203/images/arborescence.png) Arborescence
+![w:500](https://github.com/elodiepaupe/UNINE_edition-numerique/blob/master/Cours%203/images/arborescence.png) Arborescence
 
 ---
 
@@ -88,7 +88,7 @@ Le document XML comme des poupées russes
 
 Ce langage de balisage fonctionne de manière simple
 ```XML
-    <élément attribut="valeur">données</élément>
+    <element attribut="valeur">données</element>
 ```
 ---
 
