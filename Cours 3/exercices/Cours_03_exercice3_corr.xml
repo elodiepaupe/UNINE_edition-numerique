@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<poeme type="sonnet">
+<page>
+    
+    <numérotation type="poème" style="chiffreromain">VI</numérotation>
+    
+    <titre style="majuscule">MON RÊVE FAMILIER</titre>
+    
+    <strophe numéro="1" type="quatrain" schéma="abba">
+        <vers type="alexandrin">Je fais souvent ce rêve étrange et <rime type="a">pénétrant</rime></vers>
+        <vers type="alexandrin">D'une femme inconnue, et que j'aime, et qui m'<rime type="b">aime</rime></vers>
+        <vers type="alexandrin">Et qui n'est, chaque fois, ni tout à fait la <rime type="b">même</rime></vers>
+        <vers type="alexandrin">Ni tout à fait une autre, et m'aime et me <rime type="a">comprend</rime>.</vers>
+    </strophe>
+
+</page>
+
+<page>
+    <numérotation type="page" style="chiffrearabe">- 24 -</numérotation>
+    
+    <strophe numéro="2" type="quatrain" schéma="abba">
+        <vers type="alexandrin">Car elle me comprend, et mon coeur, <rime type="a">transparent</rime></vers>
+        <vers type="alexandrin">Pour elle seule, hélas ! cesse d'être un <rime type="b">problème</rime></vers>
+        <vers type="alexandrin">Pour elle seule, et les moiteurs de mon front <rime type="b">blême</rime>,</vers>
+        <vers type="alexandrin">Elle seule les sait rafraîchir, en <rime type="a">pleurant</rime>.</vers>
+    </strophe>
+    
+    <strophe numéro="3" type="tercet" schéma="ccd">
+        <vers type="alexandrin">Est-elle brune, blonde ou rousse ? - Je l'<rime type="c">ignore</rime>.</vers>
+        <vers type="alexandrin">Son nom ? Je me souviens qu'il est doux et <rime type="c">sonore</rime></vers>
+        <vers type="alexandrin">Comme ceux des aimés que la Vie <rime type="d">exila</rime>.</vers>
+    </strophe>
+    
+    <strophe numéro="4" type="tercet" schéma="ede">
+        <vers type="alexandrin">Son regard est pareil au regard des <rime type="e">statues</rime>,</vers>
+        <vers type="alexandrin">Et, pour sa voix, lointaine, et calme, et grave, <rime type="d">elle a</rime></vers>
+        <vers type="alexandrin">L'inflexion des voix chères qui se sont <rime type="e">tues</rime>.</vers>
+</strophe>
+</page>
+</poeme>
