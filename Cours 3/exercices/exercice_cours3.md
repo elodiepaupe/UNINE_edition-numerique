@@ -44,7 +44,7 @@ Consigne:
 Logiciel: un éditeur de texte comme ci-dessus ou oxygène
 
 Consigne: 
-1. Ouvrez l'image [suivante]().
+1. Ouvrez ces deux images: [page 23](https://github.com/elodiepaupe/UNINE_edition-numerique/blob/master/Cours%203/exercices/Verlaine1.jpeg) et [page 24](https://github.com/elodiepaupe/UNINE_edition-numerique/blob/master/Cours%203/exercices/Verlaine2.jpeg)
 1. Modélisez le document. 
     * Qu'avez-vous sous les yeux? Soyez attentif à la mise en page aussi bien qu'au contenu.
     * Comment l'éditeriez-vous?
