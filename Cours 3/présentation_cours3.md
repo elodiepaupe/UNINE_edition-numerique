@@ -48,7 +48,7 @@ Transformer un texte brut (= une chaîne de caractères) en base de données à 
 
 --- 
 
-![w:1000](images/poupéesrusses.jpg)
+![w:1000](https://github.com/elodiepaupe/UNINE_edition-numerique/blob/master/Cours%203/images/arborescence.png)
 Le document XML comme des poupées russes
 
 ---
