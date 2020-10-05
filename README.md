@@ -1,7 +1,7 @@
 # Édition de texte (numérique) 
 
 ## Quelques informations
-Le cours est donné le lundi de 14h45 à 16h15 dans la salle R.103, Abram-Louis-Breguet 2. 
+Le cours est donné le lundi de 14h15 à 16h45 dans la salle R.103, Abram-Louis-Breguet 2. 
 
 **Attention, le cours n'est pas dispensé dans le bâtiment de la FLSH.** 
 
