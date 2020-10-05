@@ -193,7 +193,7 @@ Exercice 3: [ici](https://github.com/elodiepaupe/UNINE_edition-numerique/blob/ma
 
 T = _Text_
 E = _Encoding_
-I = _Initiave_
+I = _Initiative_
 
 - Version standardisée du XML pour représenter un texte sous une forme numérique:
     > The Text Encoding Initiative (TEI) is a consortium which collectively develops and maintains a standard for the representation of texts in digital form. Its chief deliverable is a set of Guidelines which specify encoding methods for machine-readable texts, chiefly in the humanities, social sciences and linguistics.
