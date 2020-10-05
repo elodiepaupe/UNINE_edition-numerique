@@ -1,7 +1,3 @@
----
-marp: true
----
-
 Université de Neuchâtel
 Master en littérature
 
@@ -157,7 +153,7 @@ Les retours à la ligne ne sont pas signifiant:
 
 ---
 
-Exercice 1(-2) [ici]()
+Exercice(s) 1(-2) [ici](https://github.com/elodiepaupe/UNINE_edition-numerique/blob/master/Cours%203/exercices/exercice_cours3.md)
 
 ---
 
@@ -187,7 +183,7 @@ Le langage XML ne propose pas un jeu prédéfini et fermé de balises, mais u
 
 --- 
 
-Exercice 3 [ici]()
+Exercice 3: [ici](https://github.com/elodiepaupe/UNINE_edition-numerique/blob/master/Cours%203/exercices/exercice_cours3.md)
 
 ---
 
@@ -354,7 +350,7 @@ Plus la granularité augmente, plus il devient difficile de lire le document.
 
 ### Exercices
 
-Exercice 4:  [ici]()
+Exercice 4:  [ici](https://github.com/elodiepaupe/UNINE_edition-numerique/blob/master/Cours%203/exercices/exercice_cours3.md)
 
 ---
 ### Sources
