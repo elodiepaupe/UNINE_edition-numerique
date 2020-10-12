@@ -19,7 +19,7 @@ Consigne:
 1. Consultez le site Internet ci-dessous pour voir la source éditée.
 1. Un document .xml se trouve dans le dossier [exercices/exercice1](https://github.com/elodiepaupe/UNINE_edition-numerique/tree/master/Cours%204/exercices/exercice1). 
 
-Maurice Leblanc, _Arsène Lupin gentleman-cambrioleur, 1907. URL: [https://fr.wikisource.org/wiki/Arsène_Lupin_gentleman-cambrioleur](https://fr.wikisource.org/wiki/Ars%C3%A8ne_Lupin_gentleman-cambrioleur)
+Maurice Leblanc, _Arsène Lupin gentleman-cambrioleur_, 1907. URL: [https://fr.wikisource.org/wiki/Arsène_Lupin_gentleman-cambrioleur](https://fr.wikisource.org/wiki/Ars%C3%A8ne_Lupin_gentleman-cambrioleur)
 
 ---
 
