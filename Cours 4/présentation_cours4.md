@@ -410,22 +410,22 @@ Exercice 2: [ici](https://github.com/elodiepaupe/UNINE_edition-numerique/blob/ma
 --- 
 
 ```txt
-_Le temps a laissé son manteau
-De vent, de froidure et de pluie,_
+Le temps a laissé son manteau
+De vent, de froidure et de pluie,
 Et s'est vêtu de broderie,
 De soleil luisant, clair et beau.
 
 Il n'y a bête ni oiseau,
 Qu'en son jargon ne chante ou crie :
-_Le temps a laissé son manteau
-De vent, de froidure et de pluie._
+Le temps a laissé son manteau
+De vent, de froidure et de pluie.
 
 Rivière, fontaine et ruisseau
 Portent en livrée jolie,
 Gouttes d'argent, d'orfèvrerie,
 Chacun s'habille de nouveau
-_Le temps a laissé son manteau
-De vent, de froidure et de pluie._
+Le temps a laissé son manteau
+De vent, de froidure et de pluie.
 ```
 
 --- 
@@ -461,7 +461,7 @@ De vent, de froidure et de pluie._
 </lg>
 ```
 --- 
-### Saut de vers `lb`
+### Saut de ligne `lb`
 ![](images/lb.jpeg)
 
 ```XML
