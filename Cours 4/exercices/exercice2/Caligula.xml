@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Exercice d'encodage</title>
+            </titleStmt>
+            <publicationStmt>
+                <p>Élodie Paupe, Université de Neuchâtel</p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Caligula de Camus</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <head>Caligula</head>
+SCÈNE PREMIÈRE
+Des patriciens, dont un très âgé, sont groupés dans une salle du palais et donnent des signes de nervosité.
+PREMIER PATRICIEN
+Toujours rien.
+LE VIEUX PATRICIEN
+Rien le matin, rien le soir.
+DEUXIÈME PATRICIEN
+Rien depuis trois jours.
+LE VIEUX PATRICIEN
+Les courriers partent, les courriers reviennent. Ils secouent la tête et disent : « Rien. »
+DEUXIÈME PATRICIEN
+Toute la campagne est battue, il n'y a rien à faire.
+PREMIER PATRICIEN
+Pourquoi s'inquiéter à l'avance ? Attendons. Il reviendra peut-être comme il est parti.
+LE VIEUX PATRICIEN
+Je l'ai vu sortir du palais. Il avait un regard étrange.
+PREMIER PATRICIEN
+J'étais là aussi et je lui ai demandé ce qu'il avait.
+DEUXIÈME PATRICIEN
+A-t-il répondu ?
+PREMIER PATRICIEN
+Un seul mot : « Rien. »
+Un temps. Entre Hélicon, mangeant des oignons.
+DEUXIÈME PATRICIEN, toujours nerveux.
+C'est inquiétant.
+PREMIER PATRICIEN
+Allons, tous les jeunes gens sont ainsi.
+LE VIEUX PATRICIEN
+Bien entendu, l'âge efface tout.
+DEUXIÈME PATRICIEN
+Vous croyez?
+PREMIER PATRICIEN
+Souhaitons qu'il oublie.
+LE VIEUX PATRICIEN
+Bien sûr ! Une de perdue, dix de retrouvées.
+HÉLICON
+Où prenez-vous qu'il s'agisse d'amour ?
+PREMIER PATRICIEN
+Et de quoi d'autre?
+HÉLICON
+Le foie peut-être. Ou le simple dégoût de vous voir tous les jours. On supporterait tellement mieux nos contemporains s'ils pouvaient de temps en temps changer de museau. Mais non, le menu ne change pas. Toujours la même fricassée.
+LE VIEUX PATRICIEN
+Je préfère penser qu'il s'agit d'amour. C'est plus attendrissant.
+HÉLICON
+Et rassurant, surtout, tellement plus rassurant. C'est le genre de maladies qui n'épargnent ni les intelligents ni les imbéciles.
+PREMIER PATRICIEN
+De toute façon, heureusement, les chagrins ne sont pas éternels. Êtes-vous capable de souffrir plus d'un an?
+DEUXIÈME PATRICIEN
+Moi, non.
+PREMIER PATRICIEN
+Personne n'a ce pouvoir.
+LE VIEUX PATRICIEN
+La vie serait impossible.
+PREMIER PATRICIEN
+Vous voyez bien. Tenez, j'ai perdu ma femme, l'an passé. J'ai beaucoup pleuré et puis j'ai oublié. De temps en temps, j'ai de la peine. Mais, en somme, ce n'est rien.
+LE VIEUX PATRICIEN
+La nature fait bien les choses.
+HÉLICON
+Quand je vous regarde, pourtant, j'ai l'impression qu'il lui arrive de manquer son coup.
+Entre Cherea.
+PREMIER PATRICIEN
+Eh bien?
+Toujours rien
+CHEREA
+HÉLICON
+Du calme, Messieurs, du calme. Sauvons les apparences. L'Empire romain, c'est nous. Si nous perdons
+la figure, l'Empire perd la tête. Ce n'est pas le
+moment, oh non! Et pour commencer, allons déjeuner, l'Empire se portera mieux.
+LE VIEUX PATRICIEN
+C'est juste, il ne faut pas lâcher la proie pour l'ombre.
+CHEREA
+Je n'aime pas cela. Mais tout allait trop bien. Cet empereur était parfait.
+DEUXIEME PATRICIEN
+Oui, il était comme il faut : scrupuleux et sans expérience.
+PREMIER PATRICIEN
+Mais, enfin, qu'avez-vous et pourquoi ces lamentations? Rien ne l'empêche de continuer. Il aimait Drusilla, c'est entendu. Mais elle était sa sœur, en somme. Coucher avec elle, c'était déjà beaucoup. Mais bouleverser Rome parce qu'elle est morte, cela dépasse les bornes.
+CHEREA
+II n'empêche. Je n'aime pas cela, et cette fuite ne me dit rien.
+LE VIEUX PATRICIEN
+Oui, il n'y a pas de fumée sans feu.
+PREMIER PATRICIEN
+En tout cas, la raison d'État ne peut admettre un inceste qui prend l'allure des tragédies. L'inceste, soit, mais discret.
+HÉLICON
+Vous savez, l'inceste, forcément, ça fait toujours un peu de bruit. Le lit craque, si j'ose m'exprimer ainsi. Qui vous dit, d'ailleurs, qu'il s'agisse de Drusilla?
+DEUXIÈME PATRICIEN
+Et de quoi donc alors ?
+HÉLICON
+Devinez. Notez bien, le malheur c'est comme le mariage. On croit qu'on choisit et puis on est choisi. C'est comme ça, on n'y peut rien. Notre Caligula est malheureux, mais il ne sait peut-être même pas pourquoi ! Il a dû se sentir coincé, alors il a fui. Nous en aurions tous fait autant. Tenez, moi qui vous parle, si j'avais pu choisir mon père, je ne serais pas né.
+Entre Scipion.
+SCÈNE DEUXIÈME
+        </body>
+    </text>
+</TEI>

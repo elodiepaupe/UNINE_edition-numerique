@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Exercice d'encodage</title>
+            </titleStmt>
+            <publicationStmt>
+                <p>Élodie Paupe, Université de Neuchâtel</p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Le vieux Chat et la jeune Souris</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="fable" n="5">
+                <head>Fable V.<lb/> Le vieux chat &amp; la jeune Souris</head>
+
+                <lg type="alexandrin">
+                    <l n="1"><hi rend="initial">U</hi>Ne jeune Souris, <caesura/> de peu <lb/> d'<rhyme label="a">expérience</rhyme>,</l>
+                    <l n="2">Crut fléchir un vieux Chat <caesura/><lb/> implorant ſa <rhyme label="a">clémence</rhyme>,</l>
+                    <l n="3">Et païant de raiſons <caesura/> le <rhyme label="b">Raminagrobis</rhyme> :</l>
+                </lg>
+                <lg type="octosyllabe">
+                    <l n="4">Laiſſez-moi vivre: <caesura/> une <rhyme label="b">Souris</rhyme></l>
+                    <l n="5">De ma taille &amp; <caesura/> de ma <rhyme label="c">dépenſe</rhyme></l>
+                    <l n="6">Eſt-elle à charge <caesura/> en ce <rhyme label="b">logis</rhyme>?</l>
+                    <l n="7">Affamerois-je, <caesura/> à vôtre <rhyme label="b">avis</rhyme>,</l>
+                    <l n="8">L'Hôte &amp; l'Hôtesse, <caesura/> &amp; tout leur <lb/> <rhyme label="d">monde</rhyme> ?</l>
+                    <l n="9">D'un grain de bled <caesura/> je me <rhyme label="b">nourris</rhyme> ;</l>
+                    <l n="10">Une noix me <caesura/> rend toute <rhyme label="d">ronde</rhyme>.</l>
+                </lg>
+                
+                <!-- Poursuivre l'encodage des rimes. -->
+                
+                <lg type="alexandrin">
+                    <l n="11">A preſent je suis maigre; <caesura/> attendez quel-<lb/>que-temps.</l>
+                    <l n="12">Reſervez ce repas <caesura/> à meſſieurs vos Enfans.</l>
+                    <l n="13">Ainſi parloit au Chat <caesura/> la Souris attrapée.</l>
+                </lg>
+                <lg type="octosyllabe">
+                    <l n="14">L'autre lui dit: <caesura/> Tu t'es trompée.</l>
+                </lg>
+                <lg type="alexandrin">
+                    <l n="15">Eſt-ce à moi que l'on <caesura/> tient de ſemblables <lb/> discours?</l>
+                    <l n="16">Tu gagnerois autant <caesura/> à parler à des ſourds.</l>
+                    <l n="17">Chat &amp; vieux pardonner? <caesura/> cela n'arrive <lb/> gueres.</l>
+                </lg>
+                <lg type="octosyllabe">
+                    <l n="18">Selon ces loix <caesura/> descends là-bas,</l>
+                    <l n="19">Meurs, &amp; va-t'en <caesura/> tout de ce pas,</l>
+                    <l n="20">Haranguer les <caesura/> ſœurs Filandieres.</l>
+                </lg>
+                <lg type="alexandrin">
+                    <l n="21">Mes Enfans trouveront <caesura/> aſſez d'autres <lb/> repas.</l>
+                </lg>
+                <lg type="octosyllabe">
+                    <l n="22">Il tint parole;<caesura/> &amp;, pour ma Fable,</l>
+                </lg>
+                <lg type="alexandrin">
+                    <l n="23">Voici le ſens moral <caesura/> qui peut y convenir.</l>
+                    <l n="24">La jeuneſſe se flatte, <caesura/> &amp; croit tout obtenir.</l>
+                </lg>
+                <lg type="octosyllabe">
+                    <l n="25">La vieilleſſe <caesura/> est impitoïable.</l>
+                </lg>
+            </div>
+        </body>
+    </text>
+</TEI>

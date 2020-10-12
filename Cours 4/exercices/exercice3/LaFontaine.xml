@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Exercice d'encodage</title>
+            </titleStmt>
+            <publicationStmt>
+                <p>Élodie Paupe, Université de Neuchâtel</p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Le vieux Chat et la jeune Souris</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+Fable V.
+Le vieux chat & la jeune Souris
+Une jeune Souris, de peu d'expérience,
+Crut fléchir un vieux Chat implorant ſa clémence,
+Et païant de raiſons le Raminagrobis :
+Laiſſez-moi vivre : une Souris
+De ma taille & de ma dépenſe
+Eſt-elle à charge en ce logis?
+Affamerois-je, à vôtre avis,
+L'Hôte & l'Hôtesse, & tout leur monde ?
+D'un grain de bled je me nourris ;
+Une noix me rend toute ronde.
+A preſent je suis maigre ; attendez quelque-temps.
+Reſervez ce repas à meſſieurs vos Enfans.
+Ainſi parloit au Chat la Souris attrapée.
+L'autre lui dit : Tu t'es trompée.
+Eſt-ce à moi que l'on tient de ſemblables discours?
+Tu gagnerois autant à parler à des ſourds.
+Chat & vieux pardonner? cela n'arrive gueres.
+Selon ces loix descends là-bas,
+Meurs, & va-t'en tout de ce pas,
+Haranguer les ſœurs Filandieres.
+Mes Enfans trouveront aſſez d'autres repas.
+Il tint parole; &, pour ma Fable,
+Voici le ſens moral qui peut y convenir.
+La jeuneſſe se flatte, & croit tout obtenir.
+La vieilleſſe est impitoïable.
+        </body>
+    </text>
+</TEI>

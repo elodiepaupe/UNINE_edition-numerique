@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Exercice d'encodage</title>
+            </titleStmt>
+            <publicationStmt>
+                <p>Élodie Paupe, Université de Neuchâtel</p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Caligula de Camus</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <head>Caligula</head>
+            <!-- Pas de mention de début de l'acte: je l'encode seulement. -->
+            <div type="acte" n="1">
+                <div type="scène" n="1">
+                    <!-- La scène est bien mentionnée sur la source: je l'encode et je l'écris. -->
+                    <head>SCÈNE PREMIÈRE</head>
+                    <stage>Des patriciens, dont un très âgé, sont groupés dans une salle du palais
+                        et donnent des signes de nervosité. </stage>
+                    <sp>
+                        <speaker>PREMIER PATRICIEN</speaker>
+                        <p>Toujours rien.</p>
+                    </sp>
+                    <sp>
+                        <speaker>LE VIEUX PATRICIEN</speaker>
+                        <p>Rien le matin, rien le soir.</p>
+                    </sp>
+                    <sp>
+                        <speaker>DEUXIÈME PATRICIEN</speaker>
+                        <p>Rien depuis trois jours.</p>
+                    </sp>
+                    <sp>
+                        <speaker>LE VIEUX PATRICIEN</speaker>
+                        <p>Les courriers partent, les courriers reviennent. Ils secouent la tête et
+                            disent : « Rien. »</p>
+                    </sp>
+                    <sp>
+                        <speaker>DEUXIÈME PATRICIEN</speaker>
+                        <p>Toute la campagne est battue, il n'y a rien à faire.</p>
+                    </sp>
+                    <sp>
+                        <speaker>PREMIER PATRICIEN</speaker>
+                        <p>Pourquoi s'inquiéter à l'avance ? Attendons. Il reviendra peut-être comme
+                            il est parti.</p>
+                    </sp>
+                    <sp>
+                        <speaker>LE VIEUX PATRICIEN</speaker>
+                        <p>Je l'ai vu sortir du palais. Il avait un regard étrange.</p>
+                    </sp>
+                    <sp>
+                        <speaker>PREMIER PATRICIEN</speaker>
+                        <p>J'étais là aussi et je lui ai demandé ce qu'il avait.</p>
+                    </sp>
+                    <sp>
+                        <speaker>DEUXIÈME PATRICIEN</speaker>
+                        <p>A-t-il répondu ?</p>
+                    </sp>
+                    <sp>
+                        <speaker>PREMIER PATRICIEN</speaker>
+                        <p>Un seul mot : « Rien. »</p>
+                    </sp>
+                    <stage>Un temps. Entre Hélicon, mangeant des oignons.</stage>
+                    <sp>
+                        <speaker>DEUXIÈME PATRICIEN,</speaker>
+                        <stage>toujours nerveux.</stage>
+                        <p>C'est inquiétant.</p>
+                    </sp>
+                    <sp>
+                        <speaker>PREMIER PATRICIEN</speaker>
+                        <p>Allons, tous les jeunes gens sont ainsi.</p>
+                    </sp>
+                    <sp>
+                        <speaker>LE VIEUX PATRICIEN</speaker>
+                        <p>Bien entendu, l'âge efface tout.</p>
+                    </sp>
+                    <sp>
+                        <speaker>DEUXIÈME PATRICIEN </speaker>
+                        <p>Vous croyez?</p>
+                    </sp>
+                    <sp>
+                        <speaker>PREMIER PATRICIEN </speaker>
+                        <p>Souhaitons qu'il oublie.</p>
+                    </sp>
+                    <sp>
+                        <speaker>LE VIEUX PATRICIEN </speaker>
+                        <p>Bien sûr ! Une de perdue, dix de retrouvées.</p>
+                    </sp>
+                    <sp>
+                        <speaker>HÉLICON</speaker>
+                        <p>Où prenez-vous qu'il s'agisse d'amour ?</p>
+                    </sp>
+
+                    <sp>
+                        <speaker>PREMIER PATRICIEN</speaker>
+                        <p>Et de quoi d'autre?</p>
+                    </sp>
+
+                    <sp>
+                        <speaker>HÉLICON</speaker>
+                        <p>Le foie peut-être. Ou le simple dégoût de vous voir tous les jours. On
+                            supporterait tellement mieux nos contemporains s'ils pouvaient de temps
+                            en temps changer de museau. Mais non, le menu ne change pas. Toujours la
+                            même fricassée. </p>
+                    </sp>
+                    <sp>
+                        <speaker>LE VIEUX PATRICIEN</speaker>
+                        <p>Je préfère penser qu'il s'agit d'amour. C'est plus attendrissant. </p>
+                    </sp>
+
+                    <sp>
+                        <speaker>HÉLICON</speaker>
+                        <p>Et rassurant, surtout, tellement plus rassurant. C'est le genre de
+                            maladies qui n'épargnent ni les intelligents ni les imbéciles. </p>
+                    </sp>
+                    <sp>
+                        <speaker>PREMIER PATRICIEN</speaker>
+                        <p>De toute façon, heureusement, les chagrins ne sont pas éternels.
+                            Êtes-vous capable de souffrir plus d'un an?</p>
+                    </sp>
+                    <sp>
+                        <speaker>DEUXIÈME PATRICIEN</speaker>
+                        <p>Moi, non.</p>
+                    </sp>
+                    <sp>
+                        <speaker>PREMIER PATRICIEN </speaker>
+                        <p>Personne n'a ce pouvoir.</p>
+                    </sp>
+                    <sp>
+                        <speaker>LE VIEUX PATRICIEN</speaker>
+                        <p>La vie serait impossible.</p>
+                    </sp>
+                    <sp>
+                        <speaker>PREMIER PATRICIEN</speaker>
+                        <p>Vous voyez bien. Tenez, j'ai perdu ma femme, l'an passé. J'ai beaucoup
+                            pleuré et puis j'ai oublié. De temps en temps, j'ai de la peine. Mais,
+                            en somme, ce n'est rien. </p>
+                    </sp>
+                    <sp>
+                        <speaker>LE VIEUX PATRICIEN</speaker>
+                        <p>La nature fait bien les choses.</p>
+                    </sp>
+
+                    <sp>
+                        <speaker>HÉLICON</speaker>
+                        <p>Quand je vous regarde, pourtant, j'ai l'impression qu'il lui arrive de
+                            manquer son coup.</p>
+                    </sp>
+
+                    <stage>Entre Cherea.</stage>
+                    <sp>
+                        <speaker>PREMIER PATRICIEN</speaker>
+                        <p>Eh bien?</p>
+                    </sp>
+                    <sp>
+                        <speaker>CHEREA</speaker>
+                        <p>Toujours rien </p>
+                    </sp>
+                    <sp>
+                        <speaker>HÉLICON</speaker>
+                        <p>Du calme, Messieurs, du calme. Sauvons les apparences. L'Empire romain,
+                            c'est nous. Si nous perdons la figure, l'Empire perd la tête. Ce n'est
+                            pas le moment, oh non! Et pour commencer, allons déjeuner, l'Empire se
+                            portera mieux. </p>
+                    </sp>
+                    <sp>
+                        <speaker>LE VIEUX PATRICIEN</speaker>
+                        <p>C'est juste, il ne faut pas lâcher la proie pour l'ombre. </p>
+                    </sp>
+                    <sp>
+                        <speaker>CHEREA</speaker>
+                        <p>Je n'aime pas cela. Mais tout allait trop bien. Cet empereur était
+                            parfait. </p>
+                    </sp>
+                    <sp>
+                        <speaker>DEUXIEME PATRICIEN</speaker>
+                        <p>Oui, il était comme il faut : scrupuleux et sans expérience. </p>
+                    </sp>
+                    <sp>
+                        <speaker>PREMIER PATRICIEN</speaker>
+                        <p>Mais, enfin, qu'avez-vous et pourquoi ces lamentations? Rien ne l'empêche
+                            de continuer. Il aimait Drusilla, c'est entendu. Mais elle était sa
+                            sœur, en somme. Coucher avec elle, c'était déjà beaucoup. Mais
+                            bouleverser Rome parce qu'elle est morte, cela dépasse les bornes. </p>
+                    </sp>
+                    <sp>
+                        <speaker>CHEREA</speaker>
+                        <p>II n'empêche. Je n'aime pas cela, et cette fuite ne me dit rien. </p>
+                    </sp>
+                    <sp>
+                        <speaker>LE VIEUX PATRICIEN</speaker>
+                        <p>Oui, il n'y a pas de fumée sans feu. </p>
+                    </sp>
+                    <sp>
+                        <speaker>PREMIER PATRICIEN</speaker>
+                        <p>En tout cas, la raison d'État ne peut admettre un inceste qui prend
+                            l'allure des tragédies. L'inceste, soit, mais discret. </p>
+                    </sp>
+                    <sp>
+                        <speaker>HÉLICON</speaker>
+                        <p>Vous savez, l'inceste, forcément, ça fait toujours un peu de bruit. Le
+                            lit craque, si j'ose m'exprimer ainsi. Qui vous dit, d'ailleurs, qu'il
+                            s'agisse de Drusilla? </p>
+                    </sp>
+                    <sp>
+                        <speaker>DEUXIÈME PATRICIEN</speaker>
+                        <p>Et de quoi donc alors ? </p>
+                    </sp>
+                    <sp>
+                        <speaker>HÉLICON</speaker>
+                        <p>Devinez. Notez bien, le malheur c'est comme le mariage. On croit qu'on
+                            choisit et puis on est choisi. C'est comme ça, on n'y peut rien. Notre
+                            Caligula est malheureux, mais il ne sait peut-être même pas pourquoi !
+                            Il a dû se sentir coincé, alors il a fui. Nous en aurions tous fait
+                            autant. Tenez, moi qui vous parle, si j'avais pu choisir mon père, je ne
+                            serais pas né. </p>
+                    </sp>
+                    <stage>Entre Scipion.</stage>
+                </div>
+                <div type="scène" n="2">
+                    <head>SCÈNE DEUXIÈME</head>
+                    <!-- Le texte continue. -->
+                </div>
+            </div>
+        </body>
+    </text>
+</TEI>
