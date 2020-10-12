@@ -28,7 +28,7 @@ Maurice Leblanc, _Arsène Lupin gentleman-cambrioleur_, 1907. URL: [https://fr.w
 
 Consigne: 
 1. Encodez la première scène du _Caligula_ d'Albert Camus. Attention, le texte ne s'est pas encore élevé dans le domaine public.
-1. Consultez les images qui se trouve dans le dossier [exercices/exercice2](https://github.com/elodiepaupe/UNINE_edition-numerique/tree/master/Cours%204/exercices/exercice2).
+1. Consultez les images qui se trouvent dans le dossier [exercices/exercice2](https://github.com/elodiepaupe/UNINE_edition-numerique/tree/master/Cours%204/exercices/exercice2).
 1. Un document .xml se trouve dans le dossier.
 
 
@@ -39,7 +39,7 @@ Consigne:
 
 Consigne: 
 1. Encodez le poème (édition diplomatique) y compris les rimes et les césures.
-1. Consultez les images qui se trouve dans le dossier [exercices/exercice3](https://github.com/elodiepaupe/UNINE_edition-numerique/tree/master/Cours%204/exercices/exercice3).
+1. Consultez les images qui se trouvent dans le dossier [exercices/exercice3](https://github.com/elodiepaupe/UNINE_edition-numerique/tree/master/Cours%204/exercices/exercice3).
 1. Un document .xml se trouve dans le dossier exercices.
 
 --- 
