@@ -1,7 +1,3 @@
----
-marp: true
----
-
 Université de Neuchâtel
 Master en littérature
 
@@ -21,7 +17,7 @@ chaire de philologie classique et d'histoire ancienne
 Consigne: 
 1. Encoder la nouvelle de Maurice Leblanc "L'arrestation d'Arsène Lupin"
 1. Consultez le site Internet ci-dessous pour voir la source éditée.
-1. Un document .xml se trouve dans le dossier exercices/exercice1. 
+1. Un document .xml se trouve dans le dossier [exercices/exercice1](https://github.com/elodiepaupe/UNINE_edition-numerique/tree/master/Cours%204/exercices/exercice1). 
 
 Maurice Leblanc, _Arsène Lupin gentleman-cambrioleur, 1907. URL: [https://fr.wikisource.org/wiki/Arsène_Lupin_gentleman-cambrioleur](https://fr.wikisource.org/wiki/Ars%C3%A8ne_Lupin_gentleman-cambrioleur)
 
@@ -32,7 +28,7 @@ Maurice Leblanc, _Arsène Lupin gentleman-cambrioleur, 1907. URL: [https://fr.wi
 
 Consigne: 
 1. Encodez la première scène du _Caligula_ d'Albert Camus. Attention, le texte ne s'est pas encore élevé dans le domaine public.
-1. Consultez les images qui se trouve dans le dossier exercices/exercice2.
+1. Consultez les images qui se trouve dans le dossier [exercices/exercice2](https://github.com/elodiepaupe/UNINE_edition-numerique/tree/master/Cours%204/exercices/exercice2).
 1. Un document .xml se trouve dans le dossier.
 
 
@@ -43,7 +39,7 @@ Consigne:
 
 Consigne: 
 1. Encodez le poème (édition diplomatique) y compris les rimes et les césures.
-1. Consultez les images qui se trouve dans le dossier exercices/exercice3.
+1. Consultez les images qui se trouve dans le dossier [exercices/exercice3](https://github.com/elodiepaupe/UNINE_edition-numerique/tree/master/Cours%204/exercices/exercice3).
 1. Un document .xml se trouve dans le dossier exercices.
 
 --- 
@@ -58,7 +54,7 @@ Le signe `&` comme le signe `<` appartiennent au code XML et doivent donc être 
 
 Consigne: 
 1. Encodez l'extrait de l'_Andromaque_ de Racine dont le texte est donné ci-dessous.
-1. Consultez les numérisations qui se trouvent dans le dossier exercices/exercice4. 
+1. Consultez les numérisations qui se trouvent dans le dossier [exercices/exercice4](https://github.com/elodiepaupe/UNINE_edition-numerique/tree/master/Cours%204/exercices/exercice4). 
 
 ---
 ```txt
