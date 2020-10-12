@@ -33,7 +33,7 @@ La semaine dernière, nous avons découvert les balises XML-TEI suivantes:
 
 --- 
 
-![w:800](images/poupéesrusses.jpg)
+![w:800](Cours 4/images/poupéesrusses.jpg)
 
 ---
 
