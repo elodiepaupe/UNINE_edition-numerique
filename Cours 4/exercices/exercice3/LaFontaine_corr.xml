@@ -29,6 +29,7 @@
                 </lg>
                 <lg type="octosyllabe">
                     <l n="4">Laiſſez-moi vivre: <caesura/> une <rhyme label="b">Souris</rhyme></l>
+		<pb/>
                     <l n="5">De ma taille &amp; <caesura/> de ma <rhyme label="c">dépenſe</rhyme></l>
                     <l n="6">Eſt-elle à charge <caesura/> en ce <rhyme label="b">logis</rhyme>?</l>
                     <l n="7">Affamerois-je, <caesura/> à vôtre <rhyme label="b">avis</rhyme>,</l>
@@ -56,6 +57,7 @@
                     <l n="18">Selon ces loix <caesura/> descends là-bas,</l>
                     <l n="19">Meurs, &amp; va-t'en <caesura/> tout de ce pas,</l>
                     <l n="20">Haranguer les <caesura/> ſœurs Filandieres.</l>
+		<pb/>
                 </lg>
                 <lg type="alexandrin">
                     <l n="21">Mes Enfans trouveront <caesura/> aſſez d'autres <lb/> repas.</l>
