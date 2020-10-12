@@ -1,7 +1,3 @@
----
-marp: true
----
-
 Université de Neuchâtel
 Master en littérature
 
@@ -268,7 +264,7 @@ Augmentons la granularité.
 
 ---
 
-Exercice 1: disponible [ici]()
+Exercice 1: disponible [ici](https://github.com/elodiepaupe/UNINE_edition-numerique/blob/master/Cours%204/exercices/cours4_exercices.mdwn)
 
 ---
 ## Théâtre
@@ -330,27 +326,27 @@ Les informations telles que la liste des personnages, les indications liminaires
 ```XML
 <sp who="patricien1">
     <speaker>PREMIER PATRICIEN</speaker>
-    Pourquoi s'inquiéter à l'avance ? Attendons. Il reviendra peut-être comme il est parti.
+    <p>Pourquoi s'inquiéter à l'avance ? Attendons. Il reviendra peut-être comme il est parti.</p>
 </sp>
 
 <sp who="vieuxpatricien">
     <speaker>LE VIEUX PATRICIEN</speaker>
-    Je l'ai vu sortir du palais. Il avait un regard étrange.
+    <p>Je l'ai vu sortir du palais. Il avait un regard étrange.</p>
 </sp>
 
 <sp who="patricien1">
     <speaker>PREMIER PATRICIEN</speaker>
-    J'étais là aussi et je lui ai demandé ce qu'il avait.
+    <p>J'étais là aussi et je lui ai demandé ce qu'il avait.</p>
 </sp>
 
 <sp who="patricien2">
     <speaker>DEUXIÈME PATRICIEN</speaker>
-    A-t-il répondu ?
+    <p>A-t-il répondu ?</p>
 </sp>
 
 <sp who="patricien1">
     <speaker>PREMIER PATRICIEN</speaker>
-    Un seul mot : « Rien. »
+    <p>Un seul mot : « Rien. »</p>
 </sp>
 ```
 
@@ -387,7 +383,7 @@ Les informations telles que la liste des personnages, les indications liminaires
 ```
 --- 
 
-Exercice 2: [ici]()
+Exercice 2: [ici](https://github.com/elodiepaupe/UNINE_edition-numerique/blob/master/Cours%204/exercices/cours4_exercices.mdwn)
 
 ---
 
@@ -507,7 +503,7 @@ Utilisé en balise autofermante.
 ```
 --- 
 
-Exercice 3: [ici](https://github.com/elodiepaupe/UNINE_edition-numerique/blob/master/Cours%203/exercices/exercice_cours3.md)
+Exercice 3: [ici](https://github.com/elodiepaupe/UNINE_edition-numerique/blob/master/Cours%204/exercices/cours4_exercices.mdwn)
 
 --- 
 ## Théâtre en vers
@@ -537,12 +533,7 @@ Morcellement d'un vers sur plusieurs répliques. Il est possible de le signaler 
 
 --- 
 
-Exercice 4: [ici](https://github.com/elodiepaupe/UNINE_edition-numerique/blob/master/Cours%203/exercices/exercice_cours3.md)
-
-
---- 
-
-Exercice 5: [ici](https://github.com/elodiepaupe/UNINE_edition-numerique/blob/master/Cours%203/exercices/exercice_cours3.md)
+Exercice 4: [ici](https://github.com/elodiepaupe/UNINE_edition-numerique/blob/master/Cours%204/exercices/cours4_exercices.mdwn)
 
 
 ---
