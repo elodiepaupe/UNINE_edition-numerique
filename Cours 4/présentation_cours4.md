@@ -409,6 +409,7 @@ Exercice 2: [ici](https://github.com/elodiepaupe/UNINE_edition-numerique/blob/ma
 
 --- 
 
+```txt
 _Le temps a laissé son manteau
 De vent, de froidure et de pluie,_
 Et s'est vêtu de broderie,
@@ -425,6 +426,7 @@ Gouttes d'argent, d'orfèvrerie,
 Chacun s'habille de nouveau
 _Le temps a laissé son manteau
 De vent, de froidure et de pluie._
+```
 
 --- 
 
