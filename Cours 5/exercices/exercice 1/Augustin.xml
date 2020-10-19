@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Exercice d'encodage</title>
+            </titleStmt>
+            <publicationStmt>
+                <p>Élodie Paupe, Université de Neuchâtel</p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Les Confessions de s. Augustin</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            LES CONFESSIONS DE SAINT AUGUSTIN.
+            
+            LIVRE PREMIER.
+            Invocation. — Ses premières années. — Péchés de son enfance. — Haine de l’étude. — Amour du jeu.
+            
+            CHAPITRE PREMIER.
+            
+            grandeur de dieu.
+            1. « Vous êtes grand, Seigneur, et infiniment louable [1] ; grande est votre puissance, et il n’est point de mesure à votre sagesse [2]. » Et c’est vous que l’homme veut louer, chétive partie de votre création, être de boue, promenant sa mortalité, et par elle le témoignage de son péché, et la preuve éloquente que vous résistez, Dieu que vous êtes, aux superbes [3] ! Et pourtant il veut vous louer, cet homme, chétive partie de votre création ! Vous l’excitez à se complaire dans vos louanges ; car vous nous avez faits pour vous, et notre cœur est inquiet jusqu’à ce qu’il repose en vous.
+            
+            Donnez-moi, Seigneur, de savoir et de comprendre si notre premier acte est de vous invoquer ou de vous louer, et s’il faut, d’abord, vous connaître ou vous invoquer. Mais qui vous invoque en vous ignorant ? On peut invoquer autre que vous dans cette ignorance. Ou plutôt ne vous invoque-t-on pas pour vous connaître ? « Mais est-ce possible, sans croire ? Et comment croire, sans apôtre [4] ? » Et : « Ceux-là loueront le Seigneur, qui le recherchent [5]. » Car le cherchant, ils le trouveront, et le trouvant, ils le loueront. Que je vous cherche Seigneur, en vous invoquant, et que je vous invoque en croyant en vous ; car vous nous avez été annoncé. Ma foi vous invoque, Seigneur, cette foi que vous m’avez donnée, que vous m’avez inspirée par l’humanité de votre Fils, par le ministère de votre apôtre.
+            
+            CHAPITRE II.
+            
+            dieu est en l’homme ; l’homme est en dieu.
+            2. Et comment invoquerai-je mon Dieu, mon Dieu et Seigneur ? car l’invoquer, c’est l’appeler en moi. Et quelle place est en moi, pour qu’en moi vienne mon Dieu ? pour que Dieu vienne en moi, Dieu qui a fait le ciel et la terre ? Quoi ! Seigneur mon Dieu, est-il en moi de quoi vous contenir ? Mais le ciel et la terre que vous avez faits, et dans qui vous m’avez fait, vous contiennent-ils ?
+            
+            Or, de ce que sans vous rien ne serait, suit-il que tout ce qui est, vous contienne ? Donc, puisque je suis, comment vous demandé-je de venir en moi, qui ne puis être sans que vous soyez en moi ? et pourtant je ne suis point aux lieux profonds, et vous y êtes ; « car si je descends en enfer je vous y trouve [6]. »
+            
+            Je ne serais donc point, mon Dieu, je ne serais point du tout si vous n’étiez en moi. Que dis-je ? je ne serais point si je n’étais en vous, « de qui, par qui et en qui toutes choses sont [7].» Il est ainsi, Seigneur, il est ainsi. Où donc vous appelé-je, puisque je suis en vous ? D’où viendrez-vous en moi ? car où me retirer hors du ciel et de la terre, pour que de là vienne en moi mon Dieu qui a dit : « C’est moi qui remplis le ciel et la terre [8] ? »
+            
+            CHAPITRE III.
+            
+            dieu est tout entier partout.
+            3. Êtes-vous donc contenu par le ciel et la terre, parce que vous les remplissez ? ou les remplissez-vous, et reste-t-il encore de vous, puisque vous n’en êtes pas contenu ? Et où répandez-vous, hors du ciel et de la terre, le trop plein de votre être ? Mais avez-vous besoin d’être contenu, vous qui contenez tout, puisque vous n’emplissez qu’en contenant ? Les vases qui sont pleins de vous ne vous font pas votre équilibre ; car s’ils se brisent, vous ne vous répandez pas ; et lorsque vous vous répandez sur nous, vous ne tombez pas, mais vous nous élevez ; et vous ne vous écoulez pas, mais vous recueillez.
+            
+            Remplissant tout, est-ce de vous tout entier que vous remplissez toutes choses ? Ou bien, tout ne pouvant vous contenir, contient-il partie de vous, et toute chose en même temps cette même partie ? ou bien chaque être, chacune ; les plus grands, davantage ; les moindres, moins ? Y a-t-il donc en vous, plus et moins ? Ou plutôt n’êtes-vous pas tout entier partout, et, nulle part, contenu tout entier ?
+            
+            CHAPITRE IV.
+            
+            grandeurs ineffables de dieu.
+            4. Qu’êtes-vous donc, mon Dieu ? qu’êtes-vous, sinon le Seigneur Dieu ? « Car quel autre Seigneur que le Seigneur, quel autre Dieu que notre Dieu [9] ? » Ô très-haut, très-bon, très-puissant, tout-puissant, très-miséricordieux et très-juste, très-caché et très-présent, très-beau et très-fort, stable et incompréhensible, immuable et remuant tout, jamais nouveau, jamais ancien, renouvelant tout et conduisant à leur insu les superbes au dépérissement, toujours en action, toujours en repos, amassant sans besoin, vous portez, remplissez et protégez ; vous créez, nourrissez et perfectionnez, cherchant lorsque rien ne vous manque !
+            
+            Votre amour est sans passion ; votre jalousie sans inquiétude ; votre repentance, sans douleur ; votre colère, sans trouble ; vos œuvres changent, vos conseils ne changent pas. Vous recouvrez ce que vous trouvez et n’avez jamais perdu. Jamais pauvre, vous aimez le gain ; jamais avare, et vous exigez des usures. On vous donne de surérogation pour vous rendre débiteur ; et qu’avons-nous qui ne soit vôtre ? Vous rendez sans devoir ; en payant, vous donnez et ne perdez rien. Et qu’ai-je dit, mon Dieu, ma vie, mes délices saintes ? Et que dit-on de vous en parlant de vous ? Mais malheur à qui se tait de vous ! car sa parole est muette.
+            
+            CHAPITRE V.
+            
+            dites à mon âme : je suis ton salut.
+            5. Qui me donnera de me reposer en vous ? Qui vous fera descendre en mon cœur ? Quand trouverai-je l’oubli de mes maux dans l’ivresse de votre présence, dans le charme de vos embrassements, ô mon seul bien ? Que m’êtes-vous ? Par pitié, déliez ma langue ! Que vous suis-je moi-même, pour que vous m’ordonniez de vous aimer, et, si je désobéis, que votre colère s’allume contre moi et me menace de grandes misères ? En est-ce donc une petite que de ne vous aimer pas ? Ah ! dites-moi, au non de vos miséricordes, Seigneur mon Dieu, dites-moi ce que vous m’êtes. « Dites à mon âme : Je suis ton salut [10]. » Parlez haut, que j’entende. L’oreille de mon cœur est devant vous, Seigneur ; ouvrez-la, et « dites à mon âme : Je suis ton salut. » Que je coure après cette voix, et que je m’attache à vous ! Ne me voilez pas votre face. Que je meure pour la voir ! Que je meure pour vivre de sa vue !
+            
+            6. La maison de mon âme est étroite pour vous recevoir, élargissez-la. Elle tombe en ruines, réparez-la. Çà et là elle blesse vos yeux, je l’avoue et le sais ; mais qui la balayera ? À quel autre que vous crierai-je : « Purifiez-moi de mes secrètes souillures, Seigneur, et n’imputez pas celles d’autrui à votre serviteur [11] ? » « Je crois, c’est pourquoi je parle ; Seigneur, vous le savez [12]. » « Ne vous ai-je pas, contre moi-même, accusé mes crimes, ô mon Dieu, et ne m’avez-vous pas remis la malice de mon cœur [13] ? » « Je n’entre point en jugement avec vous qui êtes la vérité [14].» « Et je ne veux pas me tromper moi-même, de peur que mon iniquité ne mente à elle-même [15]. » « Non, je ne conteste pas avec vous ; car si vous pesez les iniquités, Seigneur, Seigneur, qui pourra tenir [16] ? »
+        </body>
+    </text>
+</TEI>

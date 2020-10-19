@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+    schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Exercice d'encodage</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Élodie Paupe, Université de Neuchâtel</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Le Cid, acte II, scène VI</p>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <editorialDecl>
+            <hyphenation>
+               <ab>Le texte corrige le découpage en scène à la scène 7, acte 2<ptr target="#A02S07"/>.</ab>
+               <ab>Les sauts de ligne sont corrigés sans indiquer si le rejet s'effectuait au-dessus ou au-dessous.</ab>
+            </hyphenation>
+            <correction>
+               <ab>Toutes les corrections sont proposées en alternative.</ab>
+               <ab>Les majuscules sont conservées.</ab>
+            </correction>
+            <normalization>
+               <ab>La normalisation est proposée en alternative.</ab>
+               <ab>Le ſ est normalisé en s sans indication.</ab>
+               <ab>I et V sont normalisés en j et u sans indication.</ab>
+            </normalization>
+         </editorialDecl>
+      </encodingDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="act" n="2">
+            <div type="scene" n="6">
+               <head>SCENE VI.</head>
+               <stage>LE ROY, D. ARIAS. D. SANCHE<choice>
+                     <orig>,
+                        D. ALONSE</orig>
+                     <corr resp="#EP" />
+                  </choice>.</stage>
+               <sp who="roi">
+                  <speaker>
+                     <choice>
+                        <orig>LE ROY.</orig>
+                        <corr >LE ROI.</corr>
+                     </choice>
+                  </speaker>
+                  <l>LE comte est donc si vain, &amp; si peu raisonna<lb break="no" rend="-"/>
+                            ble !</l>
+                  <l>
+                     <choice>
+                        <orig>Ose t'il</orig>
+                        <corr >Ose-t-il</corr>
+                     </choice> croire encor son crime pardonnable ?</l>
+               </sp>
+               <sp who="Arias">
+                  <speaker>D<ex >on</ex> ARIAS.</speaker>
+                  <l>Je l’<choice>
+                        <orig>ay</orig>
+                        <corr >ai</corr>
+                     </choice> de votre part <choice>
+                        <orig>long temps</orig>
+                        <corr >longtemps</corr>
+                     </choice> entretenu; </l>
+                  <l>J’ai fait mon pouvoir, Sire, &amp; n’<choice>
+                        <orig>ay</orig>
+                        <corr >ai</corr>
+                     </choice> rien obtenu.</l>
+               </sp>
+               <sp who="roi">
+                  <speaker>
+                     <choice>
+                        <orig>LE ROY.</orig>
+                        <corr >LE ROI.</corr>
+                     </choice>
+                  </speaker>
+                  <l>
+                     <choice>
+                        <orig>I</orig>
+                        <corr >J</corr>
+                     </choice>ustes Cieux! Ainsi donc un sujet <choice>
+                        <orig>temeraire</orig>
+                        <corr >téméraire</corr>
+                     </choice>
+                  </l>
+                  <l>A si peu de respect, &amp; de soin de me plaire!</l>
+                  <l>Il <choice>
+                        <orig>offence</orig>
+                        <corr >offense</corr>
+                     </choice> Don Diegue, &amp; <choice>
+                        <orig>mesprise</orig>
+                        <corr >méprise</corr>
+                     </choice> son <choice>
+                        <orig>Roy</orig>
+                        <corr >Roi</corr>
+                     </choice>!</l>
+                  <l>Au milieu de ma Cour il me donne la <choice>
+                        <orig>loy</orig>
+                        <corr >loi</corr>
+                     </choice>!</l>
+                  <l>Qu’il soit brave guerrier, qu’il soit grand Capitai<lb break="no" rend="(-"/>ne,</l>
+                  <l>Je <choice>
+                        <orig>luy</orig>
+                        <corr >lui</corr>
+                     </choice>
+                     <choice>
+                        <orig>rabatrai</orig>
+                        <corr >rabattrai</corr>
+                     </choice> bien cette humeur si hautaine.</l>
+                  <l>
+                     <choice>
+                        <orig>Fust</orig>
+                        <corr >Fût</corr>
+                     </choice>-il la valeur <choice>
+                        <orig>mesme</orig>
+                        <corr >même</corr>
+                     </choice>, &amp; le Dieu des combats,</l>
+                  <l>Il verra ce que c’est que de n’<choice>
+                        <orig>obeïr</orig>
+                        <corr >obéir</corr>
+                     </choice> pas.</l>
+                  <l>Je <choice>
+                        <orig>sçay</orig>
+                        <corr >sais</corr>
+                     </choice> trop comme il faut dompter cette insolen<lb break="no" rend="-("/>ce:</l>
+                  <l>Je l’<choice>
+                        <orig>ay</orig>
+                        <corr >ai</corr>
+                     </choice> voulu d’abord traiter sans violence ;</l>
+                  <l> Mais <choice>
+                        <orig>puis qu’</orig>
+                        <corr >puisqu'</corr>
+                     </choice>il en abuse, allez <choice>
+                        <orig>dés</orig>
+                        <corr >dès</corr>
+                     </choice> aujourd’<choice>
+                        <orig>huy</orig>
+                        <corr >hui</corr>
+                     </choice>,</l>
+                  <l>Soit qu’il <choice>
+                        <orig>resiste</orig>
+                        <corr >résiste</corr>
+                     </choice> ou non, vous <choice>
+                        <orig>asseurer</orig>
+                        <corr >assurer</corr>
+                     </choice> de <choice>
+                        <orig>luy</orig>
+                        <corr >lui</corr>
+                     </choice>.</l>
+               </sp>
+               <sp who="Sanche">
+                  <speaker>D<ex >on</ex> SANCHE.</speaker>
+                  <l>
+                     <choice>
+                        <orig>Peut estre</orig>
+                        <corr >Peut-être</corr>
+                     </choice> un peu de temps le <choice>
+                        <orig>rendroit</orig>
+                        <corr >rendrait</corr>
+                     </choice> moins re<lb break="no" rend="-"/>belle</l>
+                  <l>On l’a pris tout <choice>
+                        <orig>bouïllant</orig>
+                        <corr >bouillant</corr>
+                     </choice> encor de sa querelle:</l>
+                  <l>Sire, dans la chaleur d’un premier mouvement</l>
+                  <l>Un cœur si <choice>
+                        <orig>genereux</orig>
+                        <corr >généreux</corr>
+                     </choice> se rend <choice>
+                        <orig>mal-aisement</orig>
+                        <corr >malaisément</corr>
+                     </choice>;</l>
+                  <l>On voit bien qu’on a tort, mais une <choice>
+                        <orig>ame</orig>
+                        <corr >âme</corr>
+                     </choice> si haute</l>
+                  <l>N’est pas <choice>
+                        <orig>si tost</orig>
+                        <corr >sitôt</corr>
+                     </choice>
+                     <choice>
+                        <orig>reduite</orig>
+                        <corr >réduite</corr>
+                     </choice> à confesser sa faute.</l>
+               </sp>
+               <sp who="roi">
+                  <speaker>
+                     <choice>
+                        <orig>LE ROY.</orig>
+                        <corr >LE ROI.</corr>
+                     </choice>
+                  </speaker>
+                  <l>Don Sanche, taisez-vous, &amp; soyez <choice>
+                        <orig>adverty</orig>
+                        <corr >averti</corr>
+                     </choice>
+                  </l>
+                  <l>Qu’on se rend criminel à prendre son <choice>
+                        <orig>party</orig>
+                        <corr >parti</corr>
+                     </choice>.</l>
+               </sp>
+               <sp who="Sanche">
+                  <speaker>D<ex >on</ex> SANCHE.</speaker>
+                  <l>J’<choice>
+                        <orig>obeïs</orig>
+                        <corr >obéis</corr>
+                     </choice>, &amp; me tais; mais de <choice>
+                        <orig>grace</orig>
+                        <corr >grâce</corr>
+                     </choice> encore, Sire,</l>
+                  <l part="I">Deux mots en sa <choice>
+                        <orig>defense</orig>
+                        <corr >défense</corr>
+                     </choice>.</l>
+               </sp>
+               <sp who="roi">
+                  <speaker>LE ROI</speaker>
+                  <l part="F">Et que <choice>
+                        <orig>pouvez vous</orig>
+                        <corr >pouvez-vous</corr>
+                     </choice> dire?</l>
+               </sp>
+               <sp who="Sanche">
+                  <speaker>D<ex >on</ex> SANCHE.</speaker>
+                  <l>Qu’une <choice>
+                        <orig>ame</orig>
+                        <corr >âme</corr>
+                     </choice>
+                     <choice>
+                        <orig>accoustumée</orig>
+                        <corr >accoutumée</corr>
+                     </choice> aux grandes actions</l>
+                  <l>Ne se peut abaisser à des <choice>
+                        <orig>submissions</orig>
+                        <corr >soumissions</corr>
+                     </choice>,</l>
+                  <l>Elle n’en conçoit point qui s’expliquent sans honte,</l>
+                  <l>Et c’est contre mot seul qu’a resisté le Comte.</l>
+                  <l>Il trouve en son devoir un peu trop de rigueur,</l>
+                  <l>Et vous <choice>
+                        <orig>obeyroit</orig>
+                        <corr >obéirait</corr>
+                     </choice> s’il avoit moins de cœur.</l>
+                  <l>Commandez que son bras nourri dans les alarmes,</l>
+                  <l>
+                     <choice>
+                        <orig>Repare</orig>
+                        <corr >Répare</corr>
+                     </choice> cette injure à la pointe des armes,</l>
+                  <l>Il satisfera, Sire, &amp; vienne qui voudra,</l>
+                  <l>Attendant qu’il l’ait <choice>
+                        <orig>sceu</orig>
+                        <corr >su</corr>
+                     </choice>, <choice>
+                        <orig>voicy</orig>
+                        <corr >voici</corr>
+                     </choice> qui <choice>
+                        <orig>respondra</orig>
+                        <corr >répondra</corr>
+                     </choice>.</l>
+               </sp>
+               <sp who="roi">
+                  <speaker>
+                     <choice>
+                        <orig>LE ROY.</orig>
+                        <corr >LE ROI.</corr>
+                     </choice>
+                  </speaker>
+                  <l>Vous perdez le respect, mais je pardonne à l’<choice>
+                        <orig>age</orig>
+                        <corr >âge</corr>
+                     </choice>,</l>
+                  <l>Et j’estime l’ardeur en un jeune courage;</l>
+                  <l>Un Roy dont la prudence a de meilleurs objets</l>
+                  <l>Est meilleur ménager du sang de ses sujets,</l>
+                  <l>Je veille pour les miens, mes soucis les conservent,</l>
+                  <l>Comme le chef a soin des membres qui le servent.</l>
+                  <l>Ainsi <choice>
+                        <orig>vostre</orig>
+                        <corr >votre</corr>
+                     </choice> raison n’est pas raison pour <choice>
+                        <orig>moy</orig>
+                        <corr >moi</corr>
+                     </choice>;</l>
+                  <l>Vous parlez en soldat, je dois <choice>
+                        <orig>regir</orig>
+                        <corr >régir</corr>
+                     </choice> en Roy,</l>
+                  <l>Et <choice>
+                        <orig>quoy</orig>
+                        <corr >quoi</corr>
+                     </choice> qu’il faille dire, et <choice>
+                        <orig>quoy</orig>
+                        <corr >quoi</corr>
+                     </choice> qu’il ose croi<lb break="no" rend="-("/>re,</l>
+                  <l>Le Comte à m’<choice>
+                        <orig>obeïr</orig>
+                        <corr >obéir</corr>
+                     </choice> ne peut perdre sa gloire,</l>
+                  <l>D’ailleurs l’affront me touche : il a perdu d’hon<lb break="no" rend="-("/>neur</l>
+                  <l>Ce<choice>
+                        <orig>luy</orig>
+                        <corr >lui</corr>
+                     </choice> que de mon fils j’<choice>
+                        <orig>ay</orig>
+                        <corr >ai</corr>
+                     </choice> fait le Gouverneur,</l>
+                  <l>Et par ce trait <choice>
+                        <orig>hardy</orig>
+                        <corr >hardi</corr>
+                     </choice> d'une insolence <choice>
+                        <orig>extreme</orig>
+                        <corr >extrême</corr>
+                     </choice>
+                  </l>
+                  <l>Il s'est à mon choix, il s'est pris à <choice>
+                        <orig>moy mesme</orig>
+                        <corr >moi-même</corr>
+                     </choice>.</l>
+                  <l>C'est <choice>
+                        <orig>moy</orig>
+                        <corr >moi</corr>
+                     </choice> qu'il satisfait en <choice>
+                        <orig>reperant</orig>
+                        <corr >réparant</corr>
+                     </choice> ce tort.</l>
+                  <l>N’en parlons plus. Au reste, on nous menace fort.</l>
+                  <l>Sur un <choice>
+                        <orig>advis</orig>
+                        <corr >avis</corr>
+                     </choice>
+                     <choice>
+                        <orig>receu</orig>
+                        <corr >reçu</corr>
+                     </choice>, je crains une surprise.</l>
+               </sp>
+               <sp who="Arias">
+                  <speaker>D<ex >on</ex> ARIAS.</speaker>
+                  <l>Les Mores contre vous <choice>
+                        <orig>font ils</orig>
+                        <corr >font-il</corr>
+                     </choice> quelque entreprise?</l>
+                  <l>S'<choice>
+                        <orig>osent ils</orig>
+                        <corr >osent-il</corr>
+                     </choice>
+                     <choice>
+                        <orig>preparer</orig>
+                        <corr >préparer</corr>
+                     </choice> à des efforts nouveaux?</l>
+               </sp>
+               <sp who="roi">
+                  <speaker>
+                     <choice>
+                        <orig>LE ROY.</orig>
+                        <corr >LE ROI.</corr>
+                     </choice>
+                  </speaker>
+                  <l>Vers la bouche du fleuve on a <choice>
+                        <orig>veu</orig>
+                        <corr >vu</corr>
+                     </choice> leurs vaisseaux,</l>
+                  <l>Et vous n'ignorez pas qu'avec fort peu de peine</l>
+                  <l>Un flux de pleine mer jusqu'<choice>
+                        <orig>icy</orig>
+                        <corr >ici</corr>
+                     </choice> les <choice>
+                        <orig>ameine</orig>
+                        <corr >amène</corr>
+                     </choice>.</l>
+               </sp>
+               <sp who="Arias">
+                  <speaker>D.ARIAS</speaker>
+                  <l>Tant de combats perdus leur ont <choice>
+                        <orig>osté</orig>
+                        <corr >ôté</corr>
+                     </choice> le cœur</l>
+                  <l>D'attaquer <choice>
+                        <orig>desormais</orig>
+                        <corr >désormais</corr>
+                     </choice> un si puissant vainqueur.</l>
+               </sp>
+               <sp who="roi">
+                  <speaker>
+                     <choice>
+                        <orig>LE ROY.</orig>
+                        <corr >LE ROI.</corr>
+                     </choice>
+                  </speaker>
+                  <l>N'importe, ils ne <choice>
+                        <orig>sçauroient</orig>
+                        <corr >sauraient</corr>
+                     </choice> qu'avecque jalousie</l>
+                  <l>Voir mon sceptre aujourd'<choice>
+                        <orig>huy</orig>
+                        <corr >hui</corr>
+                     </choice>
+                     <choice>
+                        <orig>regir</orig>
+                        <corr >régir</corr>
+                     </choice> l’Andalousie,</l>
+                  <l>Et ce pays si beau que j'<choice>
+                        <orig>ay</orig>
+                        <corr >ai</corr>
+                     </choice> conquis sur eux</l>
+                  <l>Réveille à tous momens leurs desseins genereux:</l>
+                  <l>C’est l’unique raison qui m’a fait dans <choice>
+                        <orig>Seville</orig>
+                        <corr >Séville</corr>
+                     </choice>
+                  </l>
+                  <l>Placer depuis dix ans le <choice>
+                        <orig>trosne</orig>
+                        <corr >trône</corr>
+                     </choice> de Castille,</l>
+                  <l>Pour les voir de plus <choice>
+                        <orig>prés</orig>
+                        <corr >près</corr>
+                     </choice>, &amp; d’un ordre plus<lb break="yes"/>prompt</l>
+                  <l>Renverser aussi <choice>
+                        <orig>tost</orig>
+                        <corr >tôt</corr>
+                     </choice> ce qu’ils entreprendront.</l>
+               </sp>
+               <sp who="Arias">
+                  <speaker>D<ex >on</ex> ARIAS.</speaker>
+                  <l>Sire, ils ont appris aux <choice>
+                        <orig>despens</orig>
+                        <corr >dépens</corr>
+                     </choice> de leurs <choice>
+                        <orig>testes</orig>
+                        <corr >têtes</corr>
+                     </choice>
+                  </l>
+                  <l>Combien votre <choice>
+                        <orig>presence</orig>
+                        <corr >présence</corr>
+                     </choice> assure vos <choice>
+                        <orig>conquestes</orig>
+                        <corr >conquêtes</corr>
+                     </choice>;</l>
+                  <l part="I">Vous n’avez rien à craindre.</l>
+               </sp>
+               <sp who="roi">
+                  <speaker>
+                     <choice>
+                        <orig>LE ROY.</orig>
+                        <corr >LE ROI.</corr>
+                     </choice>
+                  </speaker>
+                  <l part="F">Et rien à <choice>
+                        <orig>negliger</orig>
+                        <corr >négliger</corr>
+                     </choice>,</l>
+                  <l>Le trop de confiance attire le danger,</l>
+                  <l>Et le <choice>
+                        <orig>mesme</orig>
+                        <corr >même</corr>
+                     </choice>
+                     <choice>
+                        <orig>ennemy</orig>
+                        <corr >ennemi</corr>
+                     </choice> que l'on vient de <choice>
+                        <orig>destruire</orig>
+                        <corr >détruire</corr>
+                     </choice>,</l>
+                  <l>S'il <choice>
+                        <orig>sçait</orig>
+                        <corr >sait</corr>
+                     </choice> prendre son temps, est capable de nuire.</l>
+                  <l>Toutefois j’<choice>
+                        <orig>aurois</orig>
+                        <corr >aurais</corr>
+                     </choice> tort de jeter dans les cœurs,</l>
+                  <l>L’<choice>
+                        <orig>advis</orig>
+                        <corr >avis</corr>
+                     </choice>
+                     <choice>
+                        <orig>estant</orig>
+                        <corr >étant</corr>
+                     </choice> mal <choice>
+                        <orig>seur</orig>
+                        <corr >sûr</corr>
+                     </choice>, de Paniques terreurs,</l>
+                  <l>L’<choice>
+                        <orig>effroy</orig>
+                        <corr >effroi</corr>
+                     </choice> que <choice>
+                        <orig>produiroit</orig>
+                        <corr >produirait</corr>
+                     </choice> cette alarme inutile,</l>
+                  <l>Dans la <choice>
+                        <orig>nuict</orig>
+                        <corr >nuit</corr>
+                     </choice> qui <choice>
+                        <abbr>surviẽt</abbr>
+                        <expan >survient</expan>
+                     </choice>, <choice>
+                        <orig>troubleroit</orig>
+                        <corr >troublerait</corr>
+                     </choice> trop la ville:</l>
+                  <l>
+                     <choice>
+                        <orig>Puis qu'</orig>
+                        <corr >Puisqu'</corr>
+                     </choice>on fait <choice>
+                        <abbr>bõne</abbr>
+                        <expan >bonne</expan>
+                     </choice> garde aux murs &amp; sur le port,</l>
+                  <l part="I">Il suffit pour ce soir.</l>
+               </sp>
+            </div>
+            <!-- L'encodage complet s'interrompt ici. -->
+            <div type="scene"
+                 n="7"
+                 xml:id="A02S07">
+               <sp>
+                  <speaker>D. ALONSE.</speaker>
+                  <l part="F">Sire, le Comte est mort,</l>
+                  <l>Don Diegue par son fils a vangé son offence.</l>
+               </sp>
+               <sp>
+                  <speaker>
+                     <choice>
+                        <orig>LE ROY.</orig>
+                        <corr >LE ROI.</corr>
+                     </choice>
+                  </speaker>
+                  <l>(ce,
+                            <choice>
+                        <orig>Dés</orig>
+                        <corr >Dès</corr>
+                     </choice> que j'<choice>
+                        <orig>ay</orig>
+                        <corr >ai</corr>
+                     </choice> sceu l'affront, j'ay preveu la vangean-</l>
+                  <l>Et j'<choice>
+                        <orig>ay</orig>
+                        <corr >ai</corr>
+                     </choice> voulu <choice>
+                        <orig>dés</orig>
+                        <corr >dès</corr>
+                     </choice> lors prevenir ce malheur.</l>
+               </sp>
+               <sp>
+                  <speaker>D. ALONSE.</speaker>
+                  <l>Chimène à vos genoux apporte sa douleur:</l>
+                  <l>Elle vient toute en pleurs vous demander justice.</l>
+               </sp>
+               <sp>
+                  <speaker>
+                     <choice>
+                        <orig>LE ROY.</orig>
+                        <corr >LE ROI.</corr>
+                     </choice>
+                  </speaker>
+                  <l>Bien qu'à ses desplaissirs mon ame compatisse,</l>
+                  <l>Ce que le Comte a fait, semble avoir merité</l>
+                  <l>Ce juste chastiment de sa temerité.</l>
+                  <l>Quelque juste pourtant que puisse estre sa peine,</l>
+                  <l>Ie ne puis sans regret perdre vn tel capitaine; </l>
+                  <l>Apres vn long service à mon Estat rendu, </l>
+                  <l>Apres son sang pour moy mille fois répandu.</l>
+                  <l>A quelques sentimens que son orgueil m'oblige, </l>
+                  <l>Sa perte m'affoiblit, &amp; son trépas m'afflige.</l>
+               </sp>
+            </div>
+         </div>
+      </body>
+   </text>
+</TEI>

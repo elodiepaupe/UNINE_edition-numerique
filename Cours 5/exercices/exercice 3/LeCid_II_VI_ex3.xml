@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+    schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Exercice d'encodage</title>
+            </titleStmt>
+            <publicationStmt>
+                <p>Élodie Paupe, Université de Neuchâtel</p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Le Cid, acte II, scène VI</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <editorialDecl>
+                
+                
+            </editorialDecl>
+        </encodingDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="act" n="2">
+                <div type="scene" n="6">
+                    <head>SCENE VI.</head>
+                    <stage>LE ROY, D. ARIAS. D. SANCHE,
+                        D. ALONSE.</stage>
+                    <sp who="roi">
+                        <speaker>LE ROY.</speaker>
+                        <l>LE comte est donc si vain, &amp; si peu raisonna<lb break="no" rend="-"/>
+                            ble !</l>
+                        <l>Ose t'il croire encor son crime pardonnable ?</l>
+                    </sp>
+                    <sp who="Arias">
+                        <speaker>D. ARIAS.</speaker>
+                        <l>Je l’ay de votre part long temps entretenu; </l>
+                        <l>J’ai fait mon pouvoir, Sire, &amp; n’ay rien obtenu.</l>
+                    </sp>
+                    <sp who="roi">
+                        <speaker>LE ROY.</speaker>
+                        <l>Iustes Cieux! Ainsi donc un sujet temeraire</l>
+                        <l>A si peu de respect, &amp; de soin de me plaire!</l>
+                        <l>Il offence Don Diegue, &amp; mesprise son Roy!</l>
+                        <l>Au milieu de ma Cour il me donne la loy!</l>
+                        <l>Qu’il soit brave guerrier, qu’il soit grand Capitai<lb break="no" rend="(-"/>ne,</l>
+                        <l>Je luy rabatrai bien cette humeur si hautaine.</l>
+                        <l>Fust-il la valeur mesme, &amp; le Dieu des combats,</l>
+                        <l>Il verra ce que c’est que de n’obeïr pas.</l>
+                        <l>Je sçay trop comme il faut dompter cette insolen<lb break="no" rend="-("/>ce:</l>
+                        <l>Je l’ay voulu d’abord traiter sans violence ;</l>
+                        <l> Mais puis qu’il en abuse, allez dés aujourd’huy,</l>
+                        <l>Soit qu’il resiste ou non, vous asseurer de luy.</l>
+                    </sp>
+                    <pb n="31"/>
+                    <sp who="Sanche">
+                        <speaker>D.SANCHE.</speaker>
+                        <l>Peut estre un peu de temps le rendroit moins re<lb break="no" rend="-"/>belle</l>
+                        <l>On l’a pris tout bouïllant encor de sa querelle:</l>
+                        <l>Sire, dans la chaleur d’un premier mouvement</l>
+                        <l>Un cœur si genereux se rend mal-aisement;</l>
+                        <l>On voit bien qu’on a tort, mais une ame si haute</l>
+                        <l>N’est pas si tost reduite à confesser sa faute.</l>
+                    </sp>
+                    <sp who="roi">
+                        <speaker>LE ROY.</speaker>
+                        <l>Don Sanche, taisez-vous, &amp; soyez adverty</l>
+                        <l>Qu’on se rend criminel à prendre son party.</l>
+                    </sp>
+                    <sp who="Sanche">
+                        <speaker>D.SANCHE.</speaker>
+                        <l>J’obeïs, &amp; me tais; mais de grace encore, Sire,</l>
+                        <l part="I">Deux mots en sa defense.</l>
+                    </sp>
+                    <sp who="roi">
+                        <speaker>LE ROI</speaker>
+                        <l part="F">Et que pouvez vous dire?</l>
+                    </sp>
+                    <sp who="Sanche">
+                        <speaker>D.SANCHE.</speaker>
+                        <l>Qu’une ame accoustumée aux grandes actions</l>
+                        <l>Ne se peut abaisser à des submissions,</l>
+                        <l>Elle n’en conçoit point qui s’expliquent sans honte,</l>
+                        <l>Et c’est contre mot seul qu’a resisté le Comte.</l>
+                        <l>Il trouve en son devoir un peu trop de rigueur,</l>
+                        <l>Et vous obeyroit s’il avoit moins de cœur.</l>
+                        <l>Commandez que son bras nourri dans les alarmes,</l>
+                        <l>Repare cette injure à la pointe des armes,</l>
+                        <l>Il satisfera, Sire, &amp; vienne qui voudra,</l>
+                        <l>Attendant qu’il l’ait sceu, voicy qui respondra.</l>
+                    </sp>
+                    <sp who="roi">
+                        <speaker>LE ROY.</speaker>
+                        <l>Vous perdez le respect, mais je pardonne à l’age,</l>
+                        <l>Et j’estime l’ardeur en un jeune courage;</l>
+                        <l>Un Roy dont la prudence a de meilleurs objets</l>
+                        <l>Est meilleur ménager du sang de ses sujets,</l>
+                        <l>Je veille pour les miens, mes soucis les conservent,</l>
+                        <l>Comme le chef a soin des membres qui le servent.</l>
+                        <l>Ainsi vostre raison n’est pas raison pour moy;</l>
+                        <l>Vous parlez en soldat, je dois regir en Roy,</l>
+                        <l>Et quoy qu’il faille dire, et quoy qu’il ose croi<lb break="no" rend="-("/>re,</l>
+                        <pb n="32"/>
+                        <l>Le Comte à m’obeïr ne peut perdre sa gloire,</l>
+                        <l>D’ailleurs l’affront me touche : il a perdu d’hon<lb break="no" rend="-("/>neur</l>
+                        <l>Celuy que de mon fils j’ay fait le Gouverneur,</l>
+                        <l>Et par ce trait hardy d'une insolence extreme</l>
+                        <l>Il s'est à mon choix, il s'est pris à moy mesme.</l>
+                        <l>C'est moy qu'il satisfait en reperant ce tort.</l>
+                        <l>N’en parlons plus. Au reste, on nous menace fort.</l>
+                        <l>Sur un advis receu, je crains une surprise.</l>
+                    </sp>
+                    <sp who="Arias">
+                        <speaker>D.ARIAS.</speaker>
+                        <l>Les Mores contre vous font ils quelque entreprise?</l>
+                        <l>S'osent ils preparer à des efforts nouveaux?</l>
+                    </sp>
+                    <sp who="roi">
+                        <speaker>LE ROY.</speaker>
+                        <l>Vers la bouche du fleuve on a veu leurs vaisseaux,</l>
+                        <l>Et vous n'ignorez pas qu'avec fort peu de peine</l>
+                        <l>Un flux de pleine mer jusqu'icy les ameine.</l>
+                    </sp>
+                    <sp who="Arias">
+                        <speaker>D.ARIAS</speaker>
+                        <l>Tant de combats perdus leur ont osté le cœur</l>
+                        <l>D'attaquer desormais un si puissant vainqueur.</l>
+                    </sp>
+                    <sp who="roi">
+                        <speaker>LE ROY.</speaker>
+                        <l>N'importe, ils ne sçauroient qu'avecque jalousie</l>
+                        <l>Voir mon sceptre aujourd'huy regir l’Andalousie,</l>
+                        <l>Et ce pays si beau que j'ay conquis sur eux</l>
+                        <l>Réveille à tous momens leurs desseins genereux:</l>
+                        <l>C’est l’unique raison qui m’a fait dans Seville</l>
+                        <l>Placer depuis dix ans le trosne de Castille,</l>
+                        <l>Pour les voir de plus prés, &amp; d’un ordre plus<lb break="yes"/>prompt</l>
+                        <l>Renverser aussi tost ce qu’ils entreprendront.</l>
+                    </sp>
+                    <sp who="Arias">
+                        <speaker>D.ARIAS.</speaker>
+                        <l>Sire, ils ont appris aux despens de leurs testes</l>
+                        <l>Combien votre presence assure vos conquestes;</l>
+                        <l part="I">Vous n’avez rien à craindre.</l>
+                    </sp>
+                    <sp who="roi">
+                        <speaker>LE ROY.</speaker>
+                        <l part="F">Et rien à negliger,</l>
+                        <l>Le trop de confiance attire le danger,</l>
+                        <pb n="33"/>
+                        <l>Et le mesme ennemy que l'on vient de destruire,</l>
+                        <l>S'il sçait prendre son temps, est capable de nuire.</l>
+                        <l>Toutefois j’aurois tort de jeter dans les cœurs,</l>
+                        <l>L’advis estant mal seur, de Paniques terreurs,</l>
+                        <l>L’effroy que produiroit cette alarme inutile,</l>
+                        <l>Dans la nuict qui , troubleroit trop la ville:</l>
+                        <l>Puis qu'on fait  garde aux murs &amp; sur le port,</l>
+                        <l part="I">Il suffit pour ce soir.</l>
+                    </sp>
+                </div>
+                <!-- L'encodage complet s'interrompt ici. -->
+                <div type="scene"
+                    n="7"
+                    xml:id="A02S07"
+                   
+                    org="uniform"
+                    sample="complete">
+                    <sp>
+                        <speaker>D. ALONSE.</speaker>
+                        <l part="F">Sire, le Comte est mort,</l>
+                        <l>Don Diegue par son fils a vangé son offence.</l>
+                    </sp>
+                    <sp>
+                        <speaker>LE ROY.</speaker>
+                        <l>(ce,
+                            Dés que j'ay sceu l'affront, j'ay preveu la vangean-</l>
+                        <l>Et j'ay voulu dés lors prevenir ce malheur.</l>
+                    </sp>
+                    <sp>
+                        <speaker>D. ALONSE.</speaker>
+                        <l>Chimène à vos genoux apporte sa douleur:</l>
+                        <l>Elle vient toute en pleurs vous demander justice.</l>
+                    </sp>
+                    <sp>
+                        <speaker>LE ROY.</speaker>
+                        <l>Bien qu'à ses desplaissirs mon ame compatisse,</l>
+                        <l>Ce que le Comte a fait, semble avoir merité</l>
+                        <l>Ce juste chastiment de sa temerité.</l>
+                        <l>Quelque juste pourtant que puisse estre sa peine,</l>
+                        <l>Ie ne puis sans regret perdre vn tel capitaine; </l>
+                        <l>Apres vn long service à mon Estat rendu, </l>
+                        <l>Apres son sang pour moy mille fois répandu.</l>
+                        <l>A quelques sentimens que son orgueil m'oblige, </l>
+                        <l>Sa perte m'affoiblit, &amp; son trépas m'afflige.</l>
+                    </sp>
+                </div>
+            </div>
+        </body>
+    </text>
+</TEI>

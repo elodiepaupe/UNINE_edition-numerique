@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+    schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Exercice d'encodage</title>
+            </titleStmt>
+            <publicationStmt>
+                <p>Élodie Paupe, Université de Neuchâtel</p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Le Cid, acte II, scène VI</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            
+        </encodingDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="acte" n="2">
+                SCENE VI. 
+            LE ROY, D. ARIAS. D. SANCHE,
+            D. ALONSE.
+            
+            LE ROY.
+            Le comte eſt donc ſi vain, & ſi peu raiſonna-
+            ble !
+            Oſe t'il croire encor ſon crime pardonnable?
+            
+            
+            D. ARIAS.
+            
+            Ie l’ay de votre part long temps entretenu; 
+            I’ai fait mon pouvoir, Sire, & n’ay rien obtenu.
+            
+            
+            LE ROY.
+            
+            Iuſtes Cieux! Ainſi donc un ſujet temeraire
+            A ſi peu de reſpect, & de ſoin de me plaire!
+            Il offence Don Diegue, & meſpriſe ſon Roy!
+            Au milieu de ma Cour il me donne la loy!
+            Qu’il ſoit brave guerrier, qu’il ſoit grand Capitai
+            (-ne,
+            Ie luy rabatrai bien cette humeur ſi hautaine.
+            Fuſt-il la valeur meſme, & le Dieu des combats,
+            Il verra ce que c’eſt que de n’obeïr pas.
+            Ie ſçay trop comme il faut dompter cette inſolen-
+            (ce:
+            Ie l’ay voulu d’abord traiter ſans violence ;
+            Mais puis qu’il en abuſe, allez dés aujourd’huy,
+            Soit qu’il reſiſte ou non, vous aſſeurer de luy.
+            
+            
+            D. SANCHE.
+            
+            (belle,
+            Peut eſtre un peu de temps le rendroit moins re- 
+            On l’a pris tout bouïllant encor de ſa querelle:
+            Sire, dans la chaleur d’vn premier mouuement
+            Vn cœur ſi genereux se rend mal-aiſement;
+            On voit bien qu’on a tort, mais vne ame ſi haute
+            N’eſt pas ſi toſt reduite à confeſſer ſa faute.
+            
+            
+            LE ROY.
+            
+            Don Sanche, taiſez-vous, & ſoyez adverty
+            Qu’on ſe rend criminel à prendre ſon party.
+            
+            
+            D. SANCHE
+            
+            I’obeïs, & me tais; mais de grace encore, Sire,
+            Deux mots en ſa defenſe.
+            
+            LE ROI
+            
+            Et que pouvez vous dire?
+            
+            
+            D. SANCHE
+            
+            Qu’vne ame accouſtumée aux grandes actions
+            Ne ſe peut abaiſſer à des ſubmiſſions,
+            Elle n’en conçoit point qui s’expliquent ſans honte,
+            Et c’eſt contre mot seul qu’a reſiſté le Comte.
+            Il trouve en ſon devoir vn peu trop de rigueur,
+            Et vous obeyroit s’il avoit moins de cœur.
+            Commandez que ſon bras nourri dans les alarmes,
+            Repare cette injure à la pointe des armes,
+            Il ſatisfera, Sire, & vienne qui voudra,
+            Attendant qu’il l’ait ſceu, voicy qui reſpondra.
+            
+            
+            LE ROY.
+            
+            Vous perdez le reſpect, mais je pardonne à l’age,
+            Et j’eſtime l’ardeur en vn jeune courage;
+            
+            Vn Roy dont la prudence a de meilleurs objets
+            Eſt meilleur ménager du ſang de ses ſujets,
+            Ie veille pour les miens, mes ſoucis les conſervent,
+            Comme le chef a ſoin des membres qui le ſervent.
+            Ainsi voſtre raiſon n’est pas raison pour moy;
+            Vous parlez en ſoldat, je dois regir en Roy,
+            Et quoy qu’il faille dire, et quoy qu’il ose croi-
+            (re,
+            Le Comte à m’obeïr ne peut perdre ſa gloire,
+            D’ailleurs l’affront me touche : il a perdu d’hon-
+            (neur
+            Celuy que de mon fils j’ay fait le Gouverneur,
+            Et par ce trait hardy d'vne inſolence extreme
+            Il s'eſt à mon choix, il s'eſt pris à moy meſme.
+            C'eſt moy qu'il ſatisfait en reperant ce tort.
+            N’en parlons plus. Au reſte, on nous menace fort.
+            Sur vn advis receu, je crains vne ſurpriſe.
+            
+            
+            D. ARIAS.
+            
+            Les Mores contre vous font ils quelque entrepriſe?
+            S'oſent ils preparer à des efforts nouveaux?
+            
+            
+            LE ROY.
+            
+            Vers la bouche du fleuve on a veu leurs vaiſſeaux,
+            Et vous n'ignorez pas qu'auec fort peu de peine
+            Vn flux de pleine mer juſqu'icy les ameine.
+            
+            D.ARIAS
+            
+            Tant de combats perdus leur ont oſté le cœur
+            D'attaquer deſormais vn ſi puiſſant vainqueur.
+            
+            LE ROY.
+            
+            N'importe, ils ne ſçauroient qu'avecque jalouſie
+            Voir mon ſceptre aujourd'huy regir l’Andalouſie,
+            Et ce pays ſi beau que j'ay conquis ſur eux
+            Réveille à tous momens leurs deſſeins genereux:
+            C’eſt l’vnique raiſon qui m’a fait dans Seville
+            Placer depuis dix ans le troſne de Caſtille,
+            Pour les voir de plus prés, & d’vn ordre plus 
+            prompt
+            Renverſer auſſi toſt ce qu’ils entreprendront.
+            
+            
+            D. ARIAS.
+            
+            Sire, ils ont appris aux deſpens de leurs teſtes
+            Combien votre preſence assure vos conqueſtes;
+            Vous n’avez rien à craindre.
+            
+            
+            LE ROY.
+            
+            Et rien à negliger,
+            Le trop de confiance attire le danger,
+            Et le meſme ennemy que l'on vient de deſtruire,
+            S'il ſçait prendre ſon temps, eſt capable de nuire.
+            Toutefois j’aurois tort de jeter dans les cœurs,
+            L’advis eſtant mal ſeur, de Paniques terreurs,
+            L’effroy que produiroit cette alarme inutile,
+            Dans la nuict qui ſurviẽt, troubleroit trop la ville:
+            Puis qu'on fait bõne garde aux murs & ſur le port,
+            Il ſuffit pour ce soir.
+            
+            D. ALONSE.
+            Sire, le Comte eſt mort,
+            Don Diegue par ſon fils a vangé ſon offence.
+            
+            LE ROY.
+            
+            (ce,
+            Dés que j'ay ſceu l'affront, j'ay preveu la vangean-
+            Et j'ay voulu dés lors prevenir ce malheur.
+            
+            D. ALONSE.
+            
+            Chimène à vos genoux apporte ſa douleur:
+            Elle vient toute en pleurs vous demander juſtice.
+            
+            LE ROY.
+            
+            Bien qu'à ſes deſplaiſsirs mon ame compatiſſe,
+            Ce que le Comte a fait, ſemble avoir merité
+            Ce juſte chaſtiment de ſa temerité.
+            Quelque juſte pourtant que puiſſe eſtre ſa peine,
+            Ie ne puis ſans regret perdre vn tel capitaine; 
+            Apres vn long ſervice à mon Eſtat rendu, 
+            Apres ſon ſang pour moy mille fois répandu.
+            A quelques ſentimens que ſon orgueil m'oblige, 
+            Sa perte m'affoiblit, & ſon trépas m'afflige.</div>
+        </body>
+    </text>
+</TEI>
