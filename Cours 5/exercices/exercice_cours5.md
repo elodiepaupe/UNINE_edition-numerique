@@ -17,7 +17,7 @@ Logiciel: oxygen
 
 Consigne: 
 1. Ouvrez le document [Augustin.xml](https://github.com/elodiepaupe/UNINE_edition-numerique/tree/master/Cours%205/exercices/exercice%201)
-1. Ouvrez les numérisations Confessions.pdf
+1. Ouvrez les numérisations [IMG_6670.JPG](IMG_6670.JPG)
 1. Ouvrez [l'édition numérique](https://fr.wikisource.org/wiki/Les_Confessions_(Augustin)/Livre_premier#cite_note-1).
 1. Synthétisez les notes des différentes éditions.
 
