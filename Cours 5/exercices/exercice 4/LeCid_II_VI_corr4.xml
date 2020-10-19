@@ -131,7 +131,7 @@
                         <fw type="sig" place="bottom-center">B4</fw>
                         <fw type="catch" place="bottom-right">Le</fw>
                         <pb n="32"/>
-                        <fw type="catch" place="top-left">Le</fw>
+                        <fw type="pageNum" place="top-left">32</fw>
                         <fw type="runningTitle" rend="top-center"><hi rend="uppercase">LE CID</hi></fw>
                         
                         
