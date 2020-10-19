@@ -1,7 +1,3 @@
----
-marp: true
----
-
 Université de Neuchâtel
 Master en littérature
 
@@ -21,7 +17,7 @@ Logiciel: oxygen
 
 Consigne: 
 1. Ouvrez le document Augustin.xml
-1. Ouvrez les numérisations ConfessionsX.jpeg
+1. Ouvrez les numérisations Confessions.pdf
 1. Ouvrez [l'édition numérique](https://fr.wikisource.org/wiki/Les_Confessions_(Augustin)/Livre_premier#cite_note-1).
 1. Synthétisez les notes des différentes éditions.
 
@@ -49,7 +45,7 @@ NB: le texte de l'édition web ne correspond pas exactement à l'imprimé que vo
 ## Exercice 3: encoder une scène de théâtre, suite
 
 Consigne: 
-1. Reprenez le document de l'exercice 2 (ou [ce document]())
+1. Reprenez le document de l'exercice 2 (ou [LeCid_II_VI_ex3.xml](https://github.com/elodiepaupe/UNINE_edition-numerique/tree/master/Cours%205/exercices/exercice%203))
 1. Coller l'`encodingDesc`dans le `teiHeader`. 
 1. Faites l'encodage de la normalisation et de la correction du texte.
 
@@ -71,5 +67,5 @@ Ainsi, on a conservé l'indication du saut de ligne, mais sans la balise, le mot
 ## Exercice 4: encoder une scène de théâtre, suite de suite
 
 Consigne: 
-1. Reprenez le document de l'exercice 2 (ou [ce document]())
+1. Reprenez le document de l'exercice 3 (ou [LeCid_II_VI_ex4.xml](https://github.com/elodiepaupe/UNINE_edition-numerique/tree/master/Cours%205/exercices/exercice%204))
 1. Encodez la mise en page du document. (`pb`, `fw`, `hi`, `@rend`, etc.)
