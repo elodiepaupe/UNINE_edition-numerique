@@ -1,7 +1,3 @@
----
-marp: true
----
-
 Université de Neuchâtel
 Master en littérature
 
@@ -87,7 +83,7 @@ On peut aussi opérer au niveau du mot
 Ah Madame! en ce cas je n'
 <choice>
   <orig>ay</orig>
-  <reg>ao</reg>
+  <reg>ai</reg>
 </choice>
 plus de 
 <choice>
@@ -222,7 +218,7 @@ Exercice 3: [ici]()
 
 `<fw>`peut regrouper toutes les informations d'un coup: 
 ```xml
-<fw>7 A4 Jeunes,<fw>
+<fw>7 A4 Jeunes,</fw>
 ```
 ou les distinguer avec `@type` et `@place`:
 ```xml
