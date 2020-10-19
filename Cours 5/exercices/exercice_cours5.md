@@ -16,7 +16,7 @@ chaire de philologie classique et d'histoire ancienne
 Logiciel: oxygen
 
 Consigne: 
-1. Ouvrez le document Augustin.xml
+1. Ouvrez le document [Augustin.xml](https://github.com/elodiepaupe/UNINE_edition-numerique/tree/master/Cours%205/exercices/exercice%201)
 1. Ouvrez les numérisations Confessions.pdf
 1. Ouvrez [l'édition numérique](https://fr.wikisource.org/wiki/Les_Confessions_(Augustin)/Livre_premier#cite_note-1).
 1. Synthétisez les notes des différentes éditions.
@@ -32,7 +32,7 @@ Que pensez-vous de la solution adoptée? Aimeriez-vous encoder différement un p
 Logiciel: oxygen
 
 Consigne: 
-1. Ouvrez le document Cid_II_VI.xml
+1. Ouvrez le document [Cid_II_VI_ex2.xml](https://github.com/elodiepaupe/UNINE_edition-numerique/tree/master/Cours%205/exercices/exercice%202)
 1. Ouvrez la [source](https://gallica.bnf.fr/ark:/12148/bpt6k1280248c/).
 1. Ouvrez l'[édition web](https://fr.m.wikisource.org/wiki/Le_Cid).
 1. Faites l'encodage de la scène VI (`sp`, `speaker`, `l`, etc.)
