@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="fr">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Exercice d'encodage</title>
+            </titleStmt>
+            <publicationStmt>
+                <authority>
+                    <persName xml:id="EP">Élodie Paupe</persName>
+                    <affiliation>Université de Neuchâtel</affiliation>
+                    <email>elodie.paupe@unine.ch</email>
+                </authority>
+            </publicationStmt>
+            <sourceDesc>
+                <listWit>
+                <witness xml:id="AS">
+                    <bibl>
+                        <title>Acta Sanctorum</title>
+                        <editor>Johannes Bollandus</editor>
+                        <pubPlace>Antverpiae</pubPlace>
+                        <biblScope unit="volume" n="3">février III</biblScope>
+                        <date>1658</date>
+                        <biblScope unit="column" from="264A" to="265E"/>
+                        <biblScope unit="page" from="264" to="265">264-265</biblScope>                            
+                        <link target="http://acta.chadwyck.co.uk"/>
+                    </bibl>
+                </witness>
+                <witness xml:id="Sang">
+                    <msDesc>
+                    <msIdentifier>
+                        <settlement>St. Gallen</settlement>
+                        <repository>Stiftsbibliothek</repository>
+                        <idno>Cod. Sang. 551</idno>
+                    </msIdentifier>
+                    <msContents>
+                        <msItem>
+                            <locus from="106" to="125">106-125</locus>
+                            <author>Bobolenus</author>
+                            <title>Passio sancti Germani martyris (Grandevallensis)</title>
+                        </msItem>
+                    </msContents>
+                    <history>
+                        <ab>Il s'agit d'un manuscrit mérovingien du<origDate notBefore="0900" notAfter="0999">Xe siècle</origDate>.</ab>
+                    </history>
+                </msDesc>
+                </witness>
+                <witness xml:id="P1">
+                    <msDesc>
+                    <msIdentifier>
+                        <country>Suisse</country>
+                        <region>Jura</region>
+                        <settlement>Porrentruy</settlement>
+                        <repository>Archives de l'ancien Évêché de Bâle</repository>
+                        <idno>A 55/12-1.1</idno>
+                        <msName>Vita Sancti Germani</msName>
+                    </msIdentifier>
+                    <msContents>
+                        <msItem>
+                            <author>Prêtre Bolène</author>
+                            <title>Vita Sancti Germani</title>
+                        </msItem>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <p>Livret de papier de 16 folios.</p>
+                            <p>Titre, prologue et notes marginales à l'encre rouge.</p>
+                        </objectDesc>
+                    </physDesc>
+                    <history>
+                        <ab>Le manuscrit est une copie du XVIIe siècle<origDate notBefore="1600"
+                                notAfter="1700"/> d'après le répertoire des archives et Krusch.</ab>
+                    </history>
+                </msDesc>
+                </witness>
+                </listWit>
+                <listBibl type="edcritique">
+                    <bibl xml:id="Krush">
+                        <title>Monumenta Germaniae Historica</title>
+                        <editor>B. Krusch et W. Levison</editor>
+                        <publisher>Societas aperiendis fontibus rerum Germanicarum medii aevi</publisher>
+                        <pubPlace>Antverpiae et Lipsae</pubPlace>
+                        <date>1910</date>
+                        <biblScope unit="volume" n="5">V, Passiones vitaeque sanctorum aevi merovingici</biblScope>
+                        <biblScope unit="page" from="25" to="40">25-40, Vita Germani abbatis grandivallensis</biblScope>
+                    </bibl>
+                </listBibl>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <editorialDecl>
+                <punctuation>
+                    <ab>La ponctuation ne respecte pas l'usage des manuscrits.</ab>
+                </punctuation>
+                <normalization>
+                    <ab>Les abréviations sont développées.</ab>
+                    <ab>Les majuscules sont mises d'après l'usage moderne.</ab>
+                    <ab>Les u/v et les i/j ont été différenciés. Les ij sont normalisés en ii.</ab>
+                </normalization>
+                <hyphenation>
+                    <ab>Le découpage du texte suit l'édition de Krusch.</ab>
+                </hyphenation>
+            </editorialDecl>
+            <variantEncoding location="external" method="location-referenced"/>
+        </encodingDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url="A55_12_1_1_f3.jpeg"/>
+        <graphic url="Cod.Sang.551.jpg"/>
+        <graphic url="ActaSanctorum264.pdf"/>
+    </facsimile>
+    <text>
+        <front>
+            <div type="méthode">
+                <p>
+                    Le texte sur lequel a lieu la collation est l'édition numérique des <title>Acta sanctorum</title>.
+                </p>
+            </div>
+        </front>
+        <body> 
+            <head>
+                <app>
+                    <rdg wit="#AS">Vita auctore Boboleno coaeuo, ex veteri MS eruta a Pet Fran. Chiffletio S I.</rdg>
+                    <rdg wit="#P1">Vita Sancti Germani Martyris ac Abbatis Monasterii Grandis vallis Basiliensis Dioecesis. De quondam antiquo manuscripto Boboleni ejusdem ecclesiae et monasterii presbyteri fideliter et ad verbum transcripta. 
+                        Vide tamen certior uti sis ipsum manuscriptum quod nescio an verbis aut litteris quibusdam praecipuis? tam? differat ob illatum.</rdg>
+                    <rdg wit="#Sang">In nomini domini incipit passio sancti Germani martyris.</rdg>
+                </app>
+            </head>
+            
+            
+            <div type="preface">
+                <head>
+                    <app>
+                        <rdg wit="#P1">Praefatio Boboleni in vita S. Germani Abbatis ac Martyris</rdg>
+                    </app>
+                </head>
+                <p>
+                    <s xml:id="ps1">
+                        Dominis eximiis et sacris culminibus decoratis religionisque
+                        copia fultis et in sanctitate semper ubique pollentibus Deicolo, Leudemundo et Nigofrido patribus, 
+                        Bobolenus exiguus omnium presbyterorum. 
+                    </s>
+                    <s xml:id="ps2">
+                        Pauci admodum dies sunt, 
+                        quod a quibusdam sanctis fratribus flagitatus, 
+                        ut almi Sancti Germani Abbatis Grandevallensis meo studerem stilo texere gesta. 
+                    </s>
+                    <s xml:id="ps3">
+                        Praesertim qui cum eo fuerunt in tempore, 
+                        et penes ipsum patrata viderunt: qui nobis non audita sed visa narrent
+                        a quibus etiam et nos per venerabiles viros Chadoaldum et Aridium didicimus 
+                        qui nunc superstites sunt.
+                    </s>
+                </p>
+            </div>
+        </body>
+        <back>
+            <div type="apparatus">
+                <listApp>
+                    <app loc="#ps1">
+                        <rdg wit="#AS #P1">religionisque</rdg>
+                        <rdg wit="#Sang">relegionisque</rdg>
+                    </app>
+                    <app loc="#ps1">
+                        <rdg wit="#AS #P1">Deicolo</rdg>
+                        <rdg wit="#Sang">Deiculo</rdg>
+                    </app>
+                    <app loc="#ps1">
+                        <rdg wit="#AS #P1">Leudemundo</rdg>
+                        <rdg wit="#Sang">Leodemundo</rdg>
+                    </app> 
+                    <app loc="#ps1">
+                        <rdg wit="#AS">Ingefrido</rdg>
+                        <rdg wit="#P1">Nigofrido</rdg>
+                        <rdg wit="#Sang">Ingofrido</rdg>
+                    </app> 
+                    <app loc="#ps1">
+                        <rdg wit="#AS #Sang">Patribus</rdg>
+                        <rdg wit="#P1">Praesbyteris</rdg>
+                    </app>
+                    <app loc="#ps1">
+                        <rdg wit="#AS #Sang"></rdg>
+                        <rdg wit="#P1">etc.</rdg>
+                    </app>
+                    <app loc="#ps1">
+                        <rdg wit="#AS #Sang">Presbyterorum</rdg>
+                        <rdg wit="#P1">Praesbyterorum.</rdg>
+                    </app>
+                    <app loc="#ps2">
+                        <rdg wit="#AS #P1"></rdg>
+                        <rdg wit="#Sang">almi</rdg>
+                    </app>
+                    <app loc="#ps2">
+                        <rdg wit="#AS">Grandiuallensis</rdg>
+                        <rdg wit="#P1">Grande<lb break="no"/>vallensis</rdg>
+                        <rdg wit="#Sang">grande vallensis</rdg>
+                    </app> 
+                    <app loc="#ps2">
+                        <rdg wit="#AS">stylo</rdg>
+                        <rdg wit="#P1 #Sang">stilo</rdg>
+                    </app>
+                    <app loc="#ps3">
+                        <rdg wit="#AS #P1">Praesertim</rdg>
+                        <rdg wit="#Sang">Presertim</rdg>
+                    </app>
+                    <app loc="#ps3">
+                        <rdg wit="#AS #P1"></rdg>
+                        <rdg wit="#Sang">qui nobis non audita sed visa narrent</rdg>
+                    </app>
+                </listApp>
+            </div>
+        </back>
+    </text>
+</TEI>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="fr">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Exercice d'encodage</title>
+            </titleStmt>
+            <publicationStmt>
+                <authority>
+                    <persName xml:id="EP">Élodie Paupe</persName>
+                    <affiliation>Université de Neuchâtel</affiliation>
+                    <email>elodie.paupe@unine.ch</email>
+                </authority>
+            </publicationStmt>
+            <sourceDesc>
+                        <msDesc>
+                            <msIdentifier>
+                                <settlement>Delémont</settlement>
+                                <repository>Archives Jura Bruschweiller</repository>
+                                <idno>FH 1011-0217</idno>
+                            </msIdentifier>
+                            <msContents>
+                                <msItem>
+                                    <p>Lettre de Ferdinand Hodler adressée à son ami Marc Odier envoyée le 20 octobre 1881.</p>
+                                </msItem>
+                            </msContents>
+                        </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <editorialDecl>
+                <punctuation>
+                    <ab>La ponctuation est modifiée pour correspondre à l'usage.</ab>
+                </punctuation>
+                <normalization>
+                    <ab>Les majuscules sont mises d'après l'usage francophone moderne.</ab>
+                    <ab>L'orthographe n'est pas corrigé.</ab>
+                </normalization>
+                <hyphenation>
+                    <ab>Le découpage de la source est conservé.</ab>
+                </hyphenation>
+            </editorialDecl>
+        </encodingDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url="FH-1011-0217%20-%20copie.jpg"/>
+        <graphic url="FH-1011-0217_1%20-%20copie.jpg"/>
+    </facsimile>
+    <text>
+        <body>
+            <div type="letter">
+                <p rend="align(right)" hand="moderne">1881</p>
+                <p rend="align(right)">
+                    Lyon, l<ex>e</ex> 20. Oct. 1881,
+                </p>
+                <p>
+                    Monsieur à pas tranquilles,
+                </p>
+                <p>
+                     Tu ne m’envoit pas <lb/>
+                     les journaux, <del rend="strikeout">et</del> je <lb/>
+                     comprend que tu <lb/>
+                     soit entrainé par le <lb/>
+                     charme irrésistible <lb/>
+                     du mariage.
+                </p>
+                <p>
+                    il faudra bien que <lb/>
+                    je me forme un <lb/>
+                    autre commissionnaire <lb/>
+                    pourvue que tu <lb/>
+                    me fasses encore <lb/>
+                    la <add place="above">commission</add> suivante en <lb/>
+                    exceptant pas la <lb/>
+                    première.
+                </p>
+                <pb/>
+                 <p>
+                     Je viens lire dans <lb/>
+                     le Journal d<ex>e</ex> Genève <lb/>
+                     <subst><del>q</del><add>q</add></subst>ue l’exposition est <lb/>
+                     fermée aujourd’hui <lb/>
+                     l’incertitude au sujet <lb/>
+                     de mon tableau m’est <lb/>
+                     désagréable.
+                 </p>
+                <p>
+                    Voudrais tu ein sortant <lb/>
+                    a 11 heure de ton magasin <lb/>
+                    <subst><del>din</del><add place="inline">t’in</add></subst>form<subst><del>é</del><add>er</add></subst> chez M Couteau <lb/>
+                    Batiment Électoral <lb/>
+                    si mon tableau est <lb/>
+                    à retiré ou si il <lb/>
+                    est vendu.
+                </p>
+                 <p>
+                     À 11 heures, tu pourrai <lb/>
+                     le trouvé au Batiment <lb/>
+                     autrement en sortant <lb/>
+                     de dîner, il demeure <lb/>
+                     dans le petit chemin <lb/>
+                     qui passe devant ta <lb/>
+                 <pb/>
+                     maison, dans une des <lb/>
+                     deux habitations un <lb/>
+                     peu re<subst><del><unclear reason="illegible"/></del><add place="inline">tirée</add></subst> et devant <lb/>
+                     lesquelles il y a un petit <lb/>
+                    jardin.
+                 </p>
+                 <p>
+                     J<subst><del>a</del><add place="inline">e</add></subst> n’ai aucune <lb/>
+                     communication est <lb/>
+                     je suis vraiment <lb/>
+                     ennuyer.
+                 </p>
+                <p>
+                    À la fin du mois, <lb/>
+                    mon retour.
+                </p>
+                <p>
+                    (Présente mes amitiés à <lb/>
+                    ta femme et recu <lb/>
+                    toit même lexpression <lb/>
+                    de mon iresistible <lb/>
+                    devouement.
+                </p>
+                <p rend="align(right)">
+                    Hodler (de bonne écorce)
+                </p>
+            </div>
+        </body>
+    </text>
+</TEI>
+
+
