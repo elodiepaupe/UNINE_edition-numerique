@@ -21,7 +21,7 @@ Cours 4.	Texte 1 (prose et vers)
 
 Cours 5.	Texte 2 (annotation et normalisation)
 
-Cours 6.	Mise en page
+Cours 6.	Philologie numérique (apparats) [initialement prévu cours 10]
 
 _Semaine de lecture_
 
@@ -29,12 +29,13 @@ Cours 7.	Métadonnées
 
 Cours 8.	Documenter
 
-_Journées de formations pour les étudiants de Master DigitalJura à Porrentruy le 20-21 juillet. En partenariat avec l'université de Franche-Comté_
+_Journées de formations pour les étudiants de Master DigitalJura à Porrentruy le 20-21 novembre. En partenariat avec l'université de Franche-Comté_
+Les deux journées de formation sont annulées.
 
 ### Encodage XML-TEI avancé
 Cours 9.	Texte 3 (correspondance) et entités nommées
 
-Cours 10.	Philologie numérique (apparats)
+Cours 10.	Mise en page
 
 Cours 11.	Xpath
 
