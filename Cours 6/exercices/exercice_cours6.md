@@ -45,7 +45,7 @@ Nouvelles balises et attributs à employer:
 * `<back>`
 * `<listApp>`
 * `@xml:id`
-* `@locus`
+* `@loc`
 
 --- 
 
