@@ -34,7 +34,7 @@ chaire de philologie classique et d'histoire ancienne
 <app>
     <lem>numine</lem>
     <rdg wit="#J #N">nomine</rdg>
-    <rdg wit="χ">munere</rdg>
+    <rdg wit="#χ">munere</rdg>
 </app>
 ```
 ---
