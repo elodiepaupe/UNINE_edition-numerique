@@ -204,8 +204,8 @@
                         <rdg wit="#Sang">Presertim</rdg>
                     </app>
                     <app loc="#ps3">
-                        <rdg wit="#AS #P1">narrent</rdg>
-                        <rdg wit="#Sang">narrent qui nobis non audita sed visa narrent</rdg>
+                        <rdg wit="#AS #P1"></rdg>
+                        <rdg wit="#Sang">qui nobis non audita sed visa narrent</rdg>
                     </app>
                 </listApp>
             </div>
