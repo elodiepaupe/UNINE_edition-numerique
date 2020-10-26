@@ -1,7 +1,3 @@
----
-marp: true
----
-
 Université de Neuchâtel
 Master en littérature
 
@@ -177,7 +173,7 @@ copia fultis...
 ```
 ---
 
-Exercice 1: [ici]()
+Exercice 1: [ici](https://github.com/elodiepaupe/UNINE_edition-numerique/blob/master/Cours%206/exercices/exercice_cours6.md)
 
 ---
 
@@ -219,7 +215,7 @@ Exercice 1: [ici]()
 
 ---
 
-Exercice 2: [ici]()
+Exercice 2: [ici](https://github.com/elodiepaupe/UNINE_edition-numerique/blob/master/Cours%206/exercices/exercice_cours6.md)
 
 ---
 
@@ -261,7 +257,7 @@ Exercice 2: [ici]()
 
 ---
 
-Exercice 3: [ici]()
+Exercice 3: [ici](https://github.com/elodiepaupe/UNINE_edition-numerique/blob/master/Cours%206/exercices/exercice_cours6.md)
 
 ---
 
@@ -311,7 +307,7 @@ Il existe une troisième méthode pour relier le texte à son apparat critique, 
 
 --- 
 
-Exercice 4: [ici]()
+Exercice 4: [ici](https://github.com/elodiepaupe/UNINE_edition-numerique/blob/master/Cours%206/exercices/exercice_cours6.md)
 
 ---
 ### `<variantEncoding>` 
@@ -356,6 +352,7 @@ Plus largement à ce sujet, voyez Paolo D’Iorio, « Qu’est-ce qu’une édit
 ---
 
 ![bg center w:500](images/Apollinaire.jpg) 
+BnF, NAF 25609, 7r
 
 ---
 ## Encoder la création
@@ -368,12 +365,12 @@ Les étapes de l'écriture (rature, d'ajouts, repentences…) sont encodées ave
 * `<restore>` permet d'encoder qu'un passage supprimé est finalement récupéré
 
 ```xml
-Hier je suis allé à <subst><del>Genève</del><add>Lausanne
-</add></subst>
+Mon <subst><del>cher</del><add>vieil
+</add></subst> ami
 ````
 
 ```xml
-Hier je suis allé à <restore><del>Genève</del></restore>
+Mon <restore><del>très</del></restore> cher ami
 ```
 
 ---
@@ -388,10 +385,22 @@ L'attribut `@style` permet de délivrer une description précise du texte dont i
 ```XML
 <head style="text-align: center; font-variant: small-caps;">Head</head>
 ```
+---
+**Valeurs prédéfinies de `@place`: 
+below: below the line
+bottom: at the foot of the page
+margin: in the margin (left, right, or both)
+top: at the top of the page
+opposite: on the opposite, i.e. facing, page 
+overleaf: on the other side of the leaf
+above: above the line
+end: at the end of e.g. chapter or volume.
+inline: within the body of the text.
+inspace: in a predefined space, for example left by an earlier scribe.
 
 ---
 
-## Dégager des niveaux de réécriture
+## Niveaux de réécriture
 
 En TEI, on considère que le processus de réécriture s'encode de la même manière que la variante textuelle entre témoins. Dans ce cas, les témoins `<witness>` sont les strates de réécriture.
 
@@ -407,7 +416,7 @@ Dans ce cas, `A` et `B` renvoient à des états d'écriture successifs, des "té
 
 ---
 
-Exercice 5: [ici]()
+Exercice 5: [ici](https://github.com/elodiepaupe/UNINE_edition-numerique/blob/master/Cours%206/exercices/exercice_cours6.md)
 
 ---
 
