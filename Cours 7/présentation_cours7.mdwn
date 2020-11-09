@@ -1,7 +1,3 @@
----
-marp: true
----
-
 Université de Neuchâtel
 Master en littérature
 
@@ -195,7 +191,7 @@ La même situation se présente avec la maison d'édition Gallimard: la balise `
 
 ---
 
-Exercice 1: [ici]()
+Exercice 1: [ici](https://github.com/elodiepaupe/UNINE_edition-numerique/blob/master/Cours%207/exercices/cours7_exercices.mdwn)
 
 ---
 
@@ -361,7 +357,7 @@ Et si le contenu du manuscrit est plus important?
 
 ---
 
-Exercice 2: [ici]()
+Exercice 2: [ici](https://github.com/elodiepaupe/UNINE_edition-numerique/blob/master/Cours%207/exercices/cours7_exercices.mdwn)
 
 --- 
 
@@ -539,6 +535,15 @@ Le `<revisionDesc>` contient les différentes étapes de révision du document n
              <date when="2020-06-30"/>Finalisation de l'édition de base avec numérotation des paragraphes.</change>
       </revisionDesc>
 ```
+---
+
+Exercice 3: [ici](https://github.com/elodiepaupe/UNINE_edition-numerique/blob/master/Cours%207/exercices/cours7_exercices.mdwn)
+
+
+---
+
+Exercice 4: [ici](https://github.com/elodiepaupe/UNINE_edition-numerique/blob/master/Cours%207/exercices/cours7_exercices.mdwn)
+
 ---
 
 # Bibliographie
