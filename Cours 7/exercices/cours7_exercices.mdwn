@@ -21,7 +21,7 @@ chaire de philologie classique et d'histoire ancienne
 
 Références bibliographiques: [Lien vers la notice sur RBNJ](http://data.rero.ch/01-1460820/html?view=NJ_V1)
 
-Lien vers la page numérisée: [ici]()
+Lien vers la page numérisée: [ici](https://github.com/elodiepaupe/UNINE_edition-numerique/blob/master/Cours%207/exercices/images/Musset.jpg)
 
 ![w:500](images/Musset.jpg)
 
