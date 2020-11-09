@@ -1,0 +1,552 @@
+---
+marp: true
+---
+
+Université de Neuchâtel
+Master en littérature
+
+# TG: Édition de texte (numérique)
+## Cours 7: métadonnées
+
+Élodie Paupe 
+chaire de philologie classique et d'histoire ancienne
+
+9 novembre 2020
+
+---
+# Pour commencer
+
+**Métadonnées:** "ensembles de données structurées pour décrire, expliquer, localiser les ressource et en faciliter la recherche, l’usage et la gestion" (Morel-Pair 2007 citant NISO 2014)
+* des données exploitables numériquement pour décrire d'autres données
+
+---
+
+## Six "groupes de fonctions" (Morel-Pair 2007, 3-4)
+1. améliorer la recherche d’information et la « découverte » des ressources avec des _métadonnées descriptives du contenu_
+1. gérer les ressources: 
+    1. avec des _métadonnées administratives_
+    1. avec des _métadonnées instancielles_, ou _techniques et de structure_
+1. gérer les « archives »
+1. faciliter le partage de données et leur réutilisation
+1. participer à la pérennité des ressources numériques avec des _métadonnées de préservation_
+1. décrire les utilisateurs pour gérer les accès, leur permettre des personnalisations de consultation, analyser les comportements d’usage
+
+---
+
+## Types de métadonnées et usages (Riley 2017, 7)
+
+![](images/metadatatypes.png)
+
+---
+
+Les métadonnées sont exploitées depuis longtemps par certains champs disciplinaires ou certaines institutions (bibliothèques, etc.). 
+Avec l'apparition du web et la diffusion de données numérique, l'établissement des métadonnées est devenu le souci de tous les acteurs de "l'édition numérique".
+
+---
+
+"ensembles de données **structurées** pour décrire, expliquer, localiser les ressource et en faciliter la recherche, l’usage et la gestion"
+* standardisation
+* format
+* interopérabilité
+
+---
+
+**interopérabilité**: "capacité d’échanger des données entre systèmes multiples disposant de différentes caractéristiques en terme de matériels, logiciels, structures de données et interfaces, et avec le minimum de perte d’information et de fonctionnalités"(NISO 2004)
+
+→ le [World Wide Web Consortium](https://www.w3.org) travaille en permanence à un web interopérable.
+→ la [Dublin Core Metadata Initiative](https://www.dublincore.org) travaille à la description généraliste de métadonnées.
+→ etc.
+
+---
+
+## Exemples de métadonnées
+
+![](images/rbnj.png) Format MARC
+
+---
+
+![](images/html.png) Format HTML
+
+---
+
+![](images/XMLTEIvisuel.png)
+
+---
+
+![](images/XMLTEI.png) Format XML-TEI
+
+---
+
+# Métadonnées et XML-TEI
+[2. TEI header](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html)
+
+---
+
+## Structuration générale d'un document TEI
+
+```XML
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Exercice d'encodage</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Élodie Paupe, Université de Neuchâtel. Cours d'édition, semestre d'automne 2020</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Un poème de Musset.</p>
+         </sourceDesc>
+      </fileDesc>
+  </teiHeader>
+  <text>
+    <front>
+        <p>Introduction, etc.</p>
+    </front>
+    <body>
+        <p>Texte</p>
+    </body>
+    <back>
+        <p>Index, commentaire, apparat, etc.</p>
+    </back>
+  </text>
+</TEI>
+```
+---
+
+
+Au minimum, le `<teiHeader>` doit contenir une balise `<fileDesc>` qui contient les métadonnées du fichier informatique lui-même. 
+
+---
+## `<fileDesc>`
+
+Le `<fileDesc>` contient au minimum trois balises: 
+* `<titleStmt>` (_title statement_): informations sur le titre du document et la/les personne/s chargée/s l'édition.
+* `<publicationStmt>` (_publication statement_): informations relatives à la publication et à la diffusion du document
+* `<sourceDesc>` (_source description_): description de la/des source/s dont dérive la présente édition (par exemple une description bibliographique dans le cas d'une édition numérique d'unt exte préexistant, la liste des manuscrits dans le cas d'une édition critique, dans le cas d'un document original, on le précise également)
+
+---
+
+### `<titleStmt>` vs `<sourceDesc>`
+* Dans le cas de l'édition numérique d'une œuvre existante, on pourrait avoir l'impression que le `<titleStmt>` et le `<sourceDesc>` contiennent la même information, mais ce ne'st pas le cas: 
+    * `<titleStmt>` est le titre du document numérique, pas celui de la source.
+    * `<sourceDesc>` contient la description de la source qui est éditée, les informations qui s'y trouvent de décrivent pas l'édition numérique, mais son contenu.
+
+---
+
+### Métadonnées structurées vs paragraphe
+
+Le `<titleStmt>` n'admet pas la balise `<p>` et nous contraint à structurer les informations. Au minimum, il doit contenir un titre:
+
+```XML
+<titleStmt>
+    <title></title>
+</titleStmt>
+```
+
+---
+## Composant I du `<fileDesc>`: `<titleStmt>`
+Mais on peut augmenter la granularité de l'information un jeu de balises: 
+* `<author>`
+* `<editor>`
+* `<respStmt>` (_statement of responsibility_): indication sur la responsabilité intellectuelle lorsque le statut d'auteur ou d'éditeur n'est pas suffisamment précis
+    * `<resp>` indique la nature de la responsabilité
+    * `<name>`
+* `<principal>` (_principal researcher_): informations sur le chercheur principal
+* `<funder>` (_funding body_): informations sur l'institution qui finance un projet
+* `<sponsor>`: informations sur une institution qui parraine un projet
+
+---
+
+### Préciser un `<author>`,`<editor>` ou `<name>` 
+
+On peut encoder le nom, le prénom, le nom d'auteur, etc.
+cf. [13.2 Names](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html#NDNA)
+* `<perName>` (_personal name_): un nom qui peut être décomposé en prénom, nom, etc.
+* `<surname>`: nom de famille
+* `<forename>`: prénom
+* `<rolename>`: titre, position hiérarchique, etc.
+* `<addname>` (_additional name_): surnom, alias, etc.
+* etc. 
+
+---
+
+## Balises spécifiques et balises "généralistes"
+Les balises qui viennent d'être vues ne sont pas spécifiques au `<teiHeader>` et pourraient se retrouver ailleurs dans le document.
+
+```XML
+<lg>
+    <l n="5">Respecter sa pensée auss loin qu'on y plonge,</l>
+    <l n="6">Faire de son amour un jour au lieu d'un songe,</l>
+    <l n="7">Et dans cette clarté respirer librement – </l>
+    <l n="8">Ainsi respirait <persName>Laure</persName> et chantait son amant.</l>
+</lg>
+```
+---
+
+Ainsi, la balise `<title>` peut identifier un titre dans un paragraphe ordinaire, mais pas la balise `<author>` qui est réservée pour les usages bibliographiques (références bibliographiques, de manuscrits, d'édition).
+
+```XML
+<p> Dans l'exercice, vous allez encoder un poème de <name>Musset</name> 
+tiré de ses <bibl><title>Poésies complètes</title></bibl> publiées par <rs>Gallimard</rs>.</p> 
+```
+
+La même situation se présente avec la maison d'édition Gallimard: la balise `<publisher>`est réservée pour les usages bibliographiques. Ici, on emploie la balise `<rs>`(_referencing string_) qui contient un nom d'usage qu'il faudrait préciser avec une balise.
+
+---
+
+Exercice 1: [ici]()
+
+---
+
+## Composant II du `<fileDesc>`: `<publicationStmt>`
+
+Les informations relatives à la publication du document informatique peuvent être présentées dans un paragraphe (`<p>`). 
+
+Cette solution descriptive n'est toutefois pas interrogeable par un ordinateur. Il est plus intéressant de structurer l'information.
+
+---
+
+cf. [`<publicationStmt>`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-publicationStmt.html)
+
+* `<address>`
+* `<date>`
+* `<pubPlace>`
+* `<publisher>`
+* `<authority>` (_release authority_): donne le nom de la personne ou de l'organisation qui met à disposition l'édition (≠ l'éditeur ou le distributeur)
+* `<availability>`: informations sur la disponibilité d'un texte, son utilisation, le droit d'auteur, la licence de partage, etc. (`@status`propose trois options, mais la balise `<p>` permet de définir plus précisément les critères ou les licences)
+* etc.
+
+---
+
+```XML
+<availability status="restricted">
+ <p>Available for academic research purposes only.</p>
+</availability>
+```
+```
+<availability status="free">
+ <p>In the public domain</p>
+</availability>
+```
+
+```XML
+<availability>
+  <p>Copyright 1989, Oxford University Press</p>
+ </availability>
+```
+
+```XML
+<availability status="restricted">
+  <licence target="http://creativecommons.org/licenses/by-sa/3.0/"> 
+  Distributed under a Creative Commons Attribution-ShareAlike 3.0 Unported License
+  </licence>
+</availability>
+```
+---
+
+## Composant III du `<fileDesc>`: `<sourceDesc>`
+
+Dernier composant obligatoire du `<fileDesc>`, le `<sourceDesc>` peut 
+* s'exprimer dans un `<p>` plus ou moins structuré:
+
+```XML
+<sourceDesc>
+    <p>Aucune source: ce document est né numérique</p>
+</sourceDesc>
+```
+* se limiter à une référence bibliographique peut structurée:
+```XML
+<sourceDesc>
+    <bibl>The first folio of Shakespeare, prepared by Charlton Hinman (The Norton Facsimile, 1968)</bibl>
+</sourceDesc>
+```
+---
+
+* se présenter sous la forme d'une référence bibliographique fortement structurée
+```XML
+<sourceDesc>
+    <biblStruct xml:id="Nussbaumer1965" type="livre">
+        <monogr>
+            <author>P. Arnold Nussbaumer</author>
+            <title>Die Jura-Heiligen German und Randoald</title>
+            <imprint>
+                <pubPlace>Laufon</pubPlace>
+                <publisher>Verlag der "Nordschweiz"</publisher>
+                <date>1965</date>
+            </imprint>
+        </monogr>
+        <note>Nussbaumer traduit le Codex Sangallensis 551.</note>
+    </biblStruct>
+</sourceDesc>
+```
+---
+```XML
+<biblStruct xml:id="Bessire1954" type="livre">
+    <analytic>
+        <author>Pierre-Olivier Bessire</author>
+        <title>Actes de saint Germian, abbé du monastère de Moutier-Grandval, 
+        son martyre et celui de saint Randoald, par le moine Bobolène</title>
+    </analytic>
+    <monogr>
+        <imprint>
+            <date>1954</date>
+            <biblScope>67-74</biblScope>
+        </imprint>                
+    </monogr>
+    <series>
+        <title>Société jurassienne d'émulation</title>
+    </series>
+    <note>Bessire traduit le texte édité par Trouillat, 
+    autrement dit le manuscrit <ref source="#P1">P1</ref>.</note>
+</biblStruct>
+```
+---
+
+Dans le `<sourceDesc>`, on fait donc figurer les documents dont dérive l'édition numérique. Dans les cas qui nous intéressent, il peut s'agir
+* de livres encodés avec `<bibl>`, `<biblFull>` ou `<biblStruct>` (cf. les exemples précédents)
+ou 
+* de manuscrits encodés avec `<msDesc>`
+
+---
+
+Description d'un manuscrit dans une version minale... 
+```XML
+<msDesc>
+    <msIdentifier>
+        <country>Suisse</country>
+        <region>Jura</region>
+        <settlement>Porrentruy</settlement>
+        <repository>Archives de l'ancien Évêché de Bâle</repository>
+        <idno>A 55/12-1.1</idno>
+        <msName>Vita Sancti Germani</msName>
+    </msIdentifier>
+</msDesc>
+```
+---
+... dans une version étendue...
+```XML
+<msDesc>
+    <msIdentifier>
+        <country>Suisse</country>
+        <region>Jura</region>
+        <settlement>Porrentruy</settlement>
+        <repository>Archives de l'ancien Évêché de Bâle</repository>
+        <idno>A 55/12-1.1</idno>
+        <msName>Vita Sancti Germani</msName>
+    </msIdentifier>
+    <msContents>
+        <msItem>
+            <author>Prêtre Bolène</author>
+            <title>Vita Sancti Germani</title>
+        </msItem>
+    </msContents>
+    <physDesc>
+        <objectDesc>
+            <ab>Livret de papier de 16 folios. </ab>
+            <ab>Titre, prologue et notes marginales à l'encre rouge. </ab>
+        </objectDesc>
+    </physDesc>
+    <history>
+        <ab>Le manuscrit est une copie du XVIIe siècle<origDate notBefore="1600" notAfter="1700"/> 
+        d'après le répertoire des AAEB et Krusch.</ab>
+    </history>
+</msDesc>
+```
+---
+
+Et si le contenu du manuscrit est plus important? 
+[Exemple sur e-codices](https://www.e-codices.unifr.ch/xml/tei_published/bcj-0034.xml) avec l'Évangéliaire de Saint-Ursanne, Porrentruy, Bibliothèque cantonale jurassienne, Ms. 34.
+[https://www.e-codices.unifr.ch/en/description/bcj/0034/](https://www.e-codices.unifr.ch/en/description/bcj/0034/)
+
+---
+
+Exercice 2: [ici]()
+
+--- 
+
+## `<fileDesc>` étendu
+
+Il peut également par exemple contenir les balises suivantes: 
+```XML
+<teiHeader>
+  <fileDesc>
+    <titleStmt>…</titleStmt>
+    <editionStmt>…</editionStmt>
+    <publicationStmt>…</publicationStmt>
+    <noteStmt>…</noteStmt>
+    <sourceDesc>…</sourceDesc>
+  </fileDesc>
+</teiHeader>
+```
+---
+
+* `<editionStmt>`permet de donner des informations descriptives sur l'édition (_editio princeps_, révision, etc.). Son contenu peut être plus ou moins détaillé.
+
+```XML
+<editionStmt>
+    <p>
+    Première édition électronique, <date>2020</date>, réalisée dans le cadre d'un cours 
+   de l'<ref target="http://www.unine.ch/">Université de Neuchâtel</ref> .
+   </p>
+</editionStmt>
+```
+---
+
+Il permet également de nommer les différents collaborateurs avec leurs attributions spécifiques:
+```XML
+<editionStmt>
+    <edition>Troisième édition</edition>
+    <respStmt>
+        <resp>réalisée par</resp>
+        <name ref="#EP">Élodie Paupe</name>
+    </respStmt>
+</editionStmt>
+```
+
+---
+```XML
+<editionStmt>
+    <edition>Première version électronique TEI</edition>   
+    <respStmt> 
+        <resp>
+            Équipe de traduction pour l'année <date when="2020-02">2020</date> 
+            pour le Groupe de Théâtre Antique composée de 
+        </resp>
+        <name xml:id="CA" type="participante">Camille Aeby</name>
+        <name xml:id="NA" type="participante">Noa Aeby</name>
+        <name xml:id="MC" type="participant">Maxime Cario</name>
+        <name xml:id="MD" type="participant">Marc Duhram</name>
+        <name xml:id="PJ" type="participante">Pauline Jacsont</name>
+        <name xml:id="SM" type="participante">Séverine Moy</name>
+        <name xml:id="IM" type="participante">Ilma Muminovic</name>
+        <name xml:id="JRRS" type="participant">Joram Rafael Ribeiro da Silva</name>
+        <name xml:id="RR" type="participante">Rania Richard</name>
+        <name xml:id="PPS" type="participant">Paul-Philippe Schwab</name> 
+    </respStmt>
+    <respStmt>
+        <resp>
+            Direction de la traduction et de la publication.
+        </resp>
+        <name xml:id="EP" type="éditeur">Élodie Paupe</name>
+    </respStmt>
+</editionStmt>
+```
+---
+
+* `<publicationStmt>` permet de définir qui publie et avec quels droits
+* `<noteStmt>` permet d'introduire des notes complémentaires
+
+--- 
+## Au-delà du `<fileDesc>`
+
+```XML
+<teiHeader>
+  <fileDesc>…</fileDesc>
+  <encodingDesc>…</encodingDesc>
+  <profileDesc>…</profileDesc>
+  <revisionDesc>…</revisionDesc>
+</teiHeader>
+```
+---
+
+### `<encodingDesc>`
+L'`<encodingDesc>` permet d'expliquer la relation qui lie la source avec l'édition numérique. On y décrit notamment les pratiques de transcription et d'édition. 
+
+Nous l'avons déjà rencontré lorsque nous avons parlé de normalisation de texte et d'apparat critique. Une simple balise `<p>` peut faire l'affaire.
+
+---
+```XML
+<encodingDesc>
+    <editorialDecl>
+        <normalization>
+            <p>Les graphies majuscules et abréviations de la source ne sont pas conservées.</p>
+        </normalization>
+        <correction>
+            <p>Les corrections sont encodées.</p>
+        </correction>
+        <hyphenation>
+            <p>La césure des mots en fin de ligne ne respecte pas l'original.</p>
+        </hyphenation>
+        <punctuation>
+            <p>La ponctuation n'est pas conservée</p>
+        </punctuation>
+        <quotation>
+            <p>Les citations marquées dans l'original sont encodées.</p>
+            <p>Les éventuelles autres marques d'intertextualité du texte sont encodées.</p>
+        </quotation>
+        <segmentation>
+            <p>La segmentation éditoriale de la source est conservée.</p>
+                </segmentation>
+    </editorialDecl>
+    <variantEncoding location="internal" method="parallel-segmentation"/>
+</encodingDesc>
+```
+---
+
+### `<profileDesc>`
+Le `<profileDesc>` (_text-profile description_) décrit les aspects non-bibliographiques du texte (mots-clés, résumé, langue, liste de personnes mentionnées, processus de création de la source, etc.)
+
+```XML
+<profileDesc>
+  <creation>
+    <date type="type" when="YYYY-MM-DD"/>
+  </creation>
+  <textClass>
+    <keywords scheme="référentiel">
+      <list>
+        <item>Un mot-clé</item>
+        <item>Un autre mot-clé</item>
+      </list>
+    </keywords>
+    <languageUsage>
+      <language ident="code_ISO">Langue</language>
+    </languageUsage>
+  </textClass>
+</profileDesc>
+```
+
+---
+### `<revisionDesc>`
+Le `<revisionDesc>` contient les différentes étapes de révision du document numérique.
+
+```XML
+<revisionDesc>
+         <change type="creation" resp="#EP">
+            <date when="2020-02-20"/>Création du fichier.</change>
+         <change type="update" resp="#EP">
+            <date when="2020-03-17"/>Mise à jour du texte
+            latin.</change>
+         <change type="update" resp="#PJ">
+            <date when="2020-03-16"/>Apparat critique.</change>
+         <change type="update" resp="#RR">
+            <date when="2020-04-02"/>Mise à jour du texte latin</change>
+         <change type="update" resp="#PJ">
+            <date when="2020-04-11"/>Corrections du texte latin.</change>
+         <change type="update" resp="#EP">
+            <date when="2020-04-15"/>Correction du texte latin, modification de l'apparat critique, ajout de la traduction.</change>
+         <change type="update" resp="#PJ">
+            <date when="2020-04-22"/>Correction de l'apparat critique.</change>
+         <change type="update" resp="#EP">
+            <date when="2020-05-22"/>Correction du texte latin, modification de l'apparat critique, ajout de la traduction.</change>
+         <change type="update" resp="#EP">
+            <date when="2020-05-25"/>Correction du texte latin, modification de l'apparat critique, ajout de la traduction.</change>
+         <change type="update" resp="#PJ">
+            <date when="2020-06-01"/>Encodage intertextualité.</change>
+         <change type="update" resp="#EP">
+            <date when="2020-06-07"/>Correction de l'encodage de l'intertextualité, du texte latin, de l'apparat critique, ajout de la traduction.</change>
+         <change type="update" resp="#EP">
+             <date when="2020-06-30"/>Finalisation de l'édition de base avec numérotation des paragraphes.</change>
+      </revisionDesc>
+```
+---
+
+# Bibliographie
+
+Burnard, Lou, _Qu’est-ce que la Text Encoding Initiative?_ [en ligne], Marseille: OpenEdition Press, 2015. Disponible sur Internet : [http://books.openedition.org/oep/1298](http://books.openedition.org/oep/1298). DOI : https://doi.org/10.4000/books.oep.1237.
+
+Mahé, Annaïg, _Métadonnées: mutations et perspectives_, Séminaire Inria IST 2008, https://bbf.enssib.fr/consulter/bbf-2009-01-0094-008.
+
+Morel-Pair, Catherine, "Métadonnées et XML", _Revue des Sciences et Technologies de l’Information - Série ISI: Ingénierie des Systèmes d’Information_, Lavoisier, 2007, 12 (2 Spécial), p.9-39. DOI: 10.3166/isi.12.2.9-39 . hal-01355788
+
+Riley, Jenn, _Understanding Metadata. What is metadata, and what is it for?_, National Information Standards Organisation (NISO), , 2017, http://www.niso.org/standards/resources/UnderstandingMetadata.pdf.

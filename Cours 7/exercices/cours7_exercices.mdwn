@@ -1,0 +1,55 @@
+---
+marp: true
+---
+
+Université de Neuchâtel
+Master en littérature
+
+# TG: Édition de texte (numérique)
+## Cours 7: exercices
+
+Élodie Paupe 
+chaire de philologie classique et d'histoire ancienne
+
+9 novembre 2020
+
+---
+
+## Exercice 1: 
+
+1. Ouvrez votre éditeur de code et le fichier exercice1.xml.
+1. Commencez à compléter le `<fileDesc>` d'un document réalisé par vous qui contiendrait l'édition numérique d'un sonnet de Musset (cf. la diapositive suivante). 
+1. Utilisez les balises qui figurent sur les diaposives du cours.
+
+---
+
+Références bibliographiques: [Lien vers la notice sur RBNJ](http://data.rero.ch/01-1460820/html?view=NJ_V1)
+
+Lien vers la page numérisée: [ici]()
+
+![w:500](images/Musset.jpg)
+
+---
+
+
+## Exercice 2:
+1.  Complétez votre document en ajoutant:
+    1. le `<publicationStmt`, notamment des informations concernant l'éditeur et l'open (ou pas) access
+    1. le `<sourceDesc>` avec la référence bibliographique structurée dans une balise `<biblStruct>` ou `<bibl>`
+1. Utilisez les balises vues dans les diapositives.
+1. Consultez les Guidelines pour comprendre comment développer certaines balises, par exemple `<biblStruct>`, `<publisher>`...
+---
+
+## Exercice 3: 
+1. Complétez votre document en ajoutant
+    1. un `<noteStmt>`
+    1. un `<encodingDesc>` notamment des informations sur la conservation de la ponctuation et l'absence de prise en compte du découpage du texte.
+    1. un `<profileDesc>` notamment des mots-clés et la langue
+    1. un `<revisionDesc>` notamment la date de création du document.
+
+---
+
+## Exercice 4:
+1. Copiez le texte du poème de Musset et compléter votre édition.
+
+

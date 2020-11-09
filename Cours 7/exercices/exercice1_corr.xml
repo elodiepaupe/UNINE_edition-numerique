@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Édition numérique d'un sonnet de Musset</title>
+                <author>
+                    <forename>Alfred</forename>
+                    <surname>de Musset</surname>
+                </author>
+                <editor xml:id="EP">
+                    <forename>Élodie</forename>
+                    <surname>Paupe</surname>
+                </editor>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>
+                    <orgName>Université de Neuchâtel</orgName>
+                    <address>
+                        <addrLine>1, Espace Tilo-Frey</addrLine>
+                        <postCode>2000</postCode>
+                        <settlement>Neuchâtel</settlement>
+                        <country>Suisse</country>
+                    </address>
+                </publisher>
+                <availability status="restricted">
+                    <licence  target="https://creativecommons.org/licenses/by/2.0">Attribution 2.0 Generic (CC BY 2.0)</licence>
+                </availability>
+                <date when="2020-11-09">9 septembre 2020</date>
+            </publicationStmt>
+            <notesStmt>
+                <note>Exercice d'encodage de métadonnées dans le cadre du cours d'édition numérique.</note>
+            </notesStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <analytic>
+                        <title>Sonnet</title>
+                        <author>Alfred de Musset</author>
+                        <editor>Maurice Allem</editor>
+                    </analytic>
+                    <monogr>
+                        <title>Poésies complètes</title>
+                        <imprint>
+                            <pubPlace>Paris</pubPlace>
+                            <publisher>Gallimard</publisher>
+                            <date>1951</date>
+                        </imprint>
+                        <extent>1 volume</extent>
+                        <biblScope unit="page" n="463">p. 463</biblScope>
+                    </monogr>
+                    <note>Première publication dans <title>Poésies nouvelles</title> en <date>1851</date>.</note>
+                </biblStruct>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <textClass>
+                <keywords>
+                    <list>
+                        <item>XIXe siècle</item>
+                        <item>Poésie</item>
+                        <item>Sonnet</item>
+                        <item>France</item>
+                        <item>Romantisme</item>
+                    </list>
+                </keywords>
+            </textClass>
+            <langUsage>
+                <language ident="fr">Français moderne</language>
+            </langUsage>
+        </profileDesc>
+        <encodingDesc>
+            <editorialDecl>
+                <correction><ab>Aucune correction n'est apportée au texte.</ab></correction>
+                <punctuation><ab>La ponctuation de l'édition est conservée.</ab></punctuation>
+                <segmentation><ab>La segmentation de l'édition n'est pas conservée.</ab></segmentation>
+            </editorialDecl>
+        </encodingDesc>
+        <revisionDesc>
+            <listChange>
+                <change type="creation"><date when="2020-11-08"/><persName ref="#EP">Élodie Paupe</persName> crée le document et les métadonnées.</change>
+                <change type="update"><date when="2020-11-09"/><persName ref="#EP">La même</persName> ajoute l'édition.</change>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="sonnet" n="1" xml:id="s1">
+                <head>Sonnet</head>
+                
+                <lg type="quatrain">
+                    <l n="1">Se voir le plus possible et s'aimer seulement,</l>
+                    <l n="2">Sans ruse et sans détours, sans honte ni mensonge,</l>
+                    <l n="3">Sans qu'un désir nous trompe, ou qu'un remords nous ronge,</l>
+                    <l n="4">Vivre à deux et donner son coeur à tout moment;</l>
+                </lg>
+                
+                <lg type="quatrain">
+                    <l n="5">Respecter sa pensée aussi loin qu'on y plonge,</l> 
+                    <l n="6">Faire de son amour un jour au lieu d'un songe,</l>
+                    <l n="7">Et dans cette clarté respirer librement –</l>
+                    <l n="8">Ainsi respirait <persName>Laure</persName> et chantait son amant.</l>
+                </lg>
+                    
+                <lg type="tercet">
+                    <l n="9">Vous dont chaque pas touche à la grâce suprême,</l>
+                    <l n="10">C'est vous, la tête en fleurs, qu'on croirait sans souci,</l>
+                    <l n="11">C'est vous qui me disiez qu'il faut aimer ainsi.</l>
+                </lg>   
+                
+                <lg type="tercet">
+                    <l n="12">Et c'est moi, vieil enfant du doute et du blasphème,</l>
+                    <l n="13">Qui vous écoute, et pense, et vous réponds ceci:</l>
+                    <l n="14">Oui, l'on vit autrement, mais c'est ainsi qu'on aime.</l>
+                </lg>
+            </div>   
+        </body>
+    </text>
+</TEI>
