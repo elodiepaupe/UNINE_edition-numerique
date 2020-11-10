@@ -36,7 +36,7 @@ chaire de philologie classique et d'histoire ancienne
 ---
 
 Les métadonnées sont exploitées depuis longtemps par certains champs disciplinaires ou certaines institutions (bibliothèques, etc.). 
-Avec l'apparition du web et la diffusion de données numérique, l'établissement des métadonnées est devenu le souci de tous les acteurs de "l'édition numérique".
+Avec l'apparition du web et la diffusion de données numériques, l'établissement des métadonnées est devenu le souci de tous les acteurs de "l'édition numérique".
 
 ---
 
@@ -158,7 +158,7 @@ Mais on peut augmenter la granularité de l'information un jeu de balises:
 
 On peut encoder le nom, le prénom, le nom d'auteur, etc.
 cf. [13.2 Names](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html#NDNA)
-* `<perName>` (_personal name_): un nom qui peut être décomposé en prénom, nom, etc.
+* `<persName>` (_personal name_): un nom qui peut être décomposé en prénom, nom, etc.
 * `<surname>`: nom de famille
 * `<forename>`: prénom
 * `<rolename>`: titre, position hiérarchique, etc.
@@ -272,16 +272,16 @@ Dernier composant obligatoire du `<fileDesc>`, le `<sourceDesc>` peut
                 <date>1965</date>
             </imprint>
         </monogr>
-        <note>Nussbaumer traduit le Codex Sangallensis 551.</note>
+        <note>Nussbaumer traduit le <ref source="#Sang">Codex Sangallensis 551</ref>.</note>
     </biblStruct>
 </sourceDesc>
 ```
 ---
 ```XML
-<biblStruct xml:id="Bessire1954" type="livre">
+<biblStruct xml:id="Bessire1954" type="article">
     <analytic>
         <author>Pierre-Olivier Bessire</author>
-        <title>Actes de saint Germian, abbé du monastère de Moutier-Grandval, 
+        <title>Actes de saint Germain, abbé du monastère de Moutier-Grandval, 
         son martyre et celui de saint Randoald, par le moine Bobolène</title>
     </analytic>
     <monogr>
@@ -430,11 +430,10 @@ Il permet également de nommer les différents collaborateurs avec leurs attribu
 ```
 ---
 
-* `<publicationStmt>` permet de définir qui publie et avec quels droits
 * `<noteStmt>` permet d'introduire des notes complémentaires
 
 --- 
-## Au-delà du `<fileDesc>`
+# Au-delà du `<fileDesc>`
 
 ```XML
 <teiHeader>
@@ -446,7 +445,7 @@ Il permet également de nommer les différents collaborateurs avec leurs attribu
 ```
 ---
 
-### `<encodingDesc>`
+## `<encodingDesc>`
 L'`<encodingDesc>` permet d'expliquer la relation qui lie la source avec l'édition numérique. On y décrit notamment les pratiques de transcription et d'édition. 
 
 Nous l'avons déjà rencontré lorsque nous avons parlé de normalisation de texte et d'apparat critique. Une simple balise `<p>` peut faire l'affaire.
@@ -473,14 +472,14 @@ Nous l'avons déjà rencontré lorsque nous avons parlé de normalisation de tex
         </quotation>
         <segmentation>
             <p>La segmentation éditoriale de la source est conservée.</p>
-                </segmentation>
+        </segmentation>
     </editorialDecl>
     <variantEncoding location="internal" method="parallel-segmentation"/>
 </encodingDesc>
 ```
 ---
 
-### `<profileDesc>`
+## `<profileDesc>`
 Le `<profileDesc>` (_text-profile description_) décrit les aspects non-bibliographiques du texte (mots-clés, résumé, langue, liste de personnes mentionnées, processus de création de la source, etc.)
 
 ```XML
@@ -503,7 +502,7 @@ Le `<profileDesc>` (_text-profile description_) décrit les aspects non-bibliogr
 ```
 
 ---
-### `<revisionDesc>`
+## `<revisionDesc>`
 Le `<revisionDesc>` contient les différentes étapes de révision du document numérique.
 
 ```XML
