@@ -46,16 +46,16 @@ Cours 12.	Reconnaissance optique de caractères ou textométrie
 
 Vous devez installer:
 
-* Un éditeur de code source comme _Sublime_ [[ici](https://www.sublimetext.com)] ou _Brackets_ [[ici](http://brackets.io)]
-* L'utilisation d'_Oxygen_ [[ici](https://www.oxygenxml.com/)] est vivement recommandée. Une version d'essai est disponible pour une durée de 30 jours. 
-* Pour le dernier cours, _TXM_ [[ici](http://textometrie.ens-lyon.fr/spip.php?article60&lang=fr)]
+* Un éditeur de code source comme _Sublime_ [ici](https://www.sublimetext.com) ou _Brackets_ [ici](http://brackets.io)
+* L'utilisation d'_Oxygen_ [ici](https://www.oxygenxml.com/) est vivement recommandée. Une version d'essai est disponible pour une durée de 30 jours. 
+* Pour le dernier cours, _TXM_ [ici](http://textometrie.ens-lyon.fr/spip.php?article60&lang=fr)
 
 En option:
-* Installez TreeTagger avec _TXM_ [[plus d'informations ici](http://txm.sourceforge.net/installtreetagger_fr.html)].
+* Installez TreeTagger avec _TXM_ [plus d'informations ici](http://txm.sourceforge.net/installtreetagger_fr.html).
 * Si vous souhaitez utiliser toutes les fonctionnalités de gitHub, essayez de télécharger [_GitHub Desktop_](https://desktop.github.com/).
 
 ## Cite this repository
-Élodie Paupe (éd.), _Introduction à la philologie numérique_, Neuchâtel: Université de Neuchâtel, 2020, https://github.com/elodiepaupe/UNINE_edition-numerique(https://github.com/elodiepaupe/UNINE_edition-numerique).
+Élodie Paupe (éd.), _Introduction à la philologie numérique_, Neuchâtel: Université de Neuchâtel, 2020, [https://github.com/elodiepaupe/UNINE_edition-numerique](https://github.com/elodiepaupe/UNINE_edition-numerique).
 
 ## Licence
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution 4.0 International Licence</a>.
