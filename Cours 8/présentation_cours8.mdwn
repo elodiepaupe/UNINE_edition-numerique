@@ -387,13 +387,11 @@ Comme il serait laborieux de devoir écrire les schémas "à la main", il est po
 Pour les projets plus spécifiques, la même plateforme permet de sélectionner les éléments nécessaires et génère automatique l'ODD et le schéma. 
 
 ---
-## Tous les chemins mènent à Rome
-Imaginons que nous voulons générer l'_ODD_ et le schéma de [ce fichier]().
-
----
 
 # Bibliographie
 
 Burnard, Lou, _Qu’est-ce que la Text Encoding Initiative?_ [en ligne], Marseille: OpenEdition Press, 2015. Disponible sur Internet : [http://books.openedition.org/oep/1298](http://books.openedition.org/oep/1298). DOI : https://doi.org/10.4000/books.oep.1237.
 
+Ateliers "Philologie numérique", donnés par Simon Gabay et Jean-Baptiste Camp, février 2018.
 
+Simon Gabay (éd.), _Encoder, Analyser - Introduction à la philologie numérique_, Genève: Université de Genève, 2020, https://github.com/gabays/Cours_Edition_Geneve.
