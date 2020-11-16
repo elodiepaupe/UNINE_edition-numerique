@@ -1,0 +1,402 @@
+---
+marp: true
+---
+
+Université de Neuchâtel
+Master en littérature
+
+# TG: Édition de texte (numérique)
+## Cours 8: documenter
+
+Élodie Paupe 
+chaire de philologie classique et d'histoire ancienne
+
+9 novembre 2020
+
+---
+# Pourquoi documenter?
+
+* Au début d'un projet, une étape de modélisation est nécessaire. 
+* Différents choix éditoriaux sont faits qui vont mener l'éditrice ou l'éditeur à utiliser certains éléments, certains attributs, etc. On dit que l'on "personnalise la TEI".
+* Ces choix doivent être documentés pour permettre la bonne lecture des documents TEI, la continuation de projets éditoriaux, la spécificité de certains usages, etc.
+
+---
+## Personnaliser, c'est-à-dire?
+Deux priorités: 
+* personnaliser la TEI = restreindre la TEI globale: votre TEI personnalisée doit être valide du point de vue de la TEI
+* conserver le sens des éléments établi par le consortium
+
+On parle de personnalisation "propre" si ces points sont respectés, sinon on la dira "sale".
+
+---
+
+Modifications propres:
+* Supprimer les éléments inutiles
+* Modifier un modèle de contenu
+* Modifier une liste d’attributs ou de valeurs d’attributs
+Propre/sale:
+* Ajouter de nouveaux éléments
+* Ajouter de nouveaux attributs
+
+---
+
+## Les personnalisations de la TEI les plus diffusées
+
+Il existe déjà certaines personnalisations de la TEI largement diffusées.
+* all: tous les éléments disponibles
+* lite: sous-ensemble d’environ cinquante éléments (= les besoins d'env. 90% des utilisatrices et utilisateurs)
+* absolutely bare: version minimale
+* Epidoc: spécialisation pour les épigraphistes
+* ...
+
+---
+## Exemples
+
+* _Bibliothèques virtuelles humanistes_: http://www.bvh.univ-tours.fr/XML-TEI/index.asp
+* École des chartes: http://developpements.enc.sorbonne.fr/diple/schema/
+* _Sources du droit suisse_: https://www.ssrq-sds-fds.ch/wiki/Transkriptionsrichtlinien/fr 
+---
+
+## Rédiger la documentation
+
+La documentation est réalisée à l'aide de langages de définitions de données (_data definition language_): 
+* une DTD (_Document Type Definition_)
+* un schéma:
+    * XML Schema (`.xsd`) 
+    * RELAX NG XML (`.rng`)
+    * RELAX NG Compact (`.rnc`)
+* un ODD (_One Document Does it all_)
+
+Ces documents fournissent la grammaire et le vocabulaire d'encodage d'un projet.
+
+---
+
+> **ODD:** il fournit l’information nécessaire aux traitements informatiques en même temps que la documentation de cette information destinée à être lue par un être humain, le tout intégré dans un seul document XML. Comme on pouvait s’y attendre, le système TEI lui-même est exprimé en utilisant précisément ce même ensemble d’éléments, mais ici nous nous concentrerons sur son usage pour la création d’une personnalisation de la TEI.
+– Burnard 2015: "Personnaliser la TEI", 5
+
+---
+
+## DTD
+
+```XML
+<div type="test" xml:id="t1">
+    <p>Des choses intéressantes </p>
+    <p>D'autres choses intéressantes chez <persName>Caroline</persName></p>
+</div>
+```
+---
+
+* Syntaxe:
+
+```XML
+<!DOCTYPE div [
+<!ELEMENT div (p+)>
+<!ATTLIST div
+    type CDATA #REQUIRED 
+    xml:id CDATA #REQUIRED>
+<!ELEMENT p (#PCDATA | persName)*>
+<!ELEMENT persName (#PCDATA)>
+]>
+```
+
+---
+Schématiquement, cela donne: 
+
+```DTD
+<!DOCTYPE élémentracine [
+<!ELEMENT balise1 (_balises contenues_)>
+<!ATTLIST balise1
+    attribut1 CDATA (= des données) #REQUIRED (= obligatoire)
+    attribut2_CDATA #IMPLIED (= facultatif)>
+]>
+```
+
+---
+
+Elle peut être interne (au début du document) ou externe (dans un autre fichier ou en ligne):
+* Interne: 
+```XML
+    <?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE div [
+    <!ELEMENT div (p+)>
+        <!ATTLIST div
+            type CDATA #REQUIRED 
+            xml:id CDATA #REQUIRED>
+    <!ELEMENT p (#PCDATA | persName)*>
+    <!ELEMENT persName (#PCDATA)>
+    ]>
+
+    <div type="test" xml:id="t1">
+        <p>Des choses intéressantes </p>
+        <p>D'autres choses intéressantes chez <persName>Caroline</persName></p>
+    </div>
+```
+
+---
+
+* Externe, mais enregistré sur mon ordinateur: 
+
+```XML
+    <?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE div SYSTEM "monfichier.dtd">
+
+    <div type="test" xml:id="t1">
+        <p>Des choses intéressantes </p>
+        <p>D'autres choses intéressantes chez <persName>Caroline</persName></p>
+    </div>
+```
+
+---
+### Déclarer les éléments
+
+* Vide: `<!ELEMENT anchor EMPTY>`
+* Données textuelles: `<!ELEMENT title (#PCDATA)>`
+* Imbrication: 
+    * élément obligatoire: `<!ELEMENT TEI (teiHeader)>`
+    * élément obligatoire répété une ou plusieurs fois: `<!ELEMENT list (item+)>`
+    * élément facultatif répété zéro ou plusieurs fois: `<!ELEMENT p (app*)>`
+    * élément facultatif répété zéro ou une fois: `<!ELEMENT div (head?)>`
+    * élément à choix: `<!ELEMENT sourceDesc (bibl | msDesc)>`
+    * plusieurs éléments dans l'ordre: `<!ELEMENT fileDesc (titleStmt, publicationStmt, sourceDesc)>`
+    * élément ou texte: `<!ELEMENT p (#PCDATA | persName)*>`
+
+---
+### Déclarer les attributs
+
+```XML
+<!ATTLIST div 
+    type CDATA #IMPLIED
+    xml:id CDATA #REQUIRED
+    lang CDATA #FIXED "fr">
+```
+ * facultatif: `#IMPLIED`
+ * obligatoire: `#REQUIRED`
+ * fixe: `#FIXED` (dans ce cas, la valeur de l'attribut est défini par défaut et ne peut pas être changée.)
+
+Valeur de l'attribut: 
+* une chaîne de caractère: `CDATA`
+* liste à choix: `<!ATTLIST lg 
+    type (distique|tercet|quatrain|sizain) #REQUIRED>`
+* valeur unique: `ID`
+
+---
+
+Exercice 1: [DTD interne](exercices/cours8_exercices.mdmw)
+Exercice 2: [DTD externe](exercices/cours8_exercices.mdmw)
+
+---
+
+## DTD vs schéma
+
+* DTD peu précise pour la valeurs: on ne peut pas forcer une valeur numérique
+* DTD peu sémantique: date? heure? = chiffres (et encore, ce n'est pas sûr...)
+* contrôle limité sur les éléments: 0, 1 ou plusieurs occurrences
+* DTD pas écrit en XML
+
+---
+# Schéma
+Le schéma est mentionné au début de chaque document TEI: 
+l. 1: la déclaration XML
+l. 2: le lien vers le schéma
+l. 3: le lien vers les règles schematron
+
+![](images/declaration.png)
+
+
+---
+## RELAX NG
+
+```XML
+<app>
+    <lem wit="#AS #P1">religionisque</lem>
+    <rdg wit="#Sang #Krusch">relegionisque</rdg>
+</app>
+```
+
+```XML
+ <define name="app">
+    <element name="app">
+        <element name="lem">
+          <attribute name="wit"/>
+        </element>
+      <oneOrMore>
+        <element name="rdg">
+          <attribute name="wit"/>
+        </element>
+      </oneOrMore>
+    </element>
+  </define>
+  ```
+Le schéma RELAX NG est écrit en XML.
+
+--- 
+## RELAX NG Compact
+
+```XML
+<app>
+    <lem wit="#AS #P1">religionisque</lem>
+    <rdg wit="#Sang #Krusch">relegionisque</rdg>
+</app>
+```
+
+```XML
+app =
+  element app {
+    element lem {
+      attribute wit { text },
+    },
+    element rdg {
+      attribute wit { text },
+    }
+  }
+```
+
+---
+## _ODD_ (_One Document Does it all_)
+Écrire les schémas ci-dessus est complexe. L'ODD a une approche un peu différente qui simplifie la lecture et la maîtrise de la personnalisation de la TEI.
+* C'est un fichier TEI.
+* Il permet de générer un schéma _et_ la documentation en HTML (et d'autres formats).
+
+---
+### Structure d'un _ODD_
+
+```XML
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="fr">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title></title>
+            </titleStmt>
+            <publicationStmt><p></p></publicationStmt>
+            <sourceDesc><p></p></sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div>
+            <!-- Où j'explique avec des mots les choix qui sont les miens.
+            J'écris des phrases complètes.-->
+            </div>
+            <div>
+                <specGrp/>
+                <!-- Où j'annonce les classes d'attributs en XML. -->
+            </div>
+            <div>
+                <schemaSpec/>
+                <!-- Où j'annonce les modèles pour les éléments employés en XML. -->
+            </div>
+        </body>
+    </text>
+</TEI>
+
+```
+
+---
+![](images/ODDgrille.png)
+
+---
+### Modules et `<schemaSpec>`
+* Les éléments nécessaires sont autorisés dans le `<schemaSpec>` (_schema specification_).
+* Les éléments sont réunis en modules: 
+
+![w:500](images/modules.png)
+
+---
+
+![](images/moduleGuidelines.png)
+
+---
+* Les modules `core` (éléments communs à tous les fichiers TEI) ou `tei` sont obligatoires.
+* Une fois le module sélectionné (`@key`), on ajoute les éléments que l'on souhaite conserver (`@include`) ou exclure (`@except`): 
+```xml
+<schemaSpec ident="monProjet" docLang="fr">
+    <moduleRef key="header" 
+        include="teiHeader fileDesc titleStmt publicationStmt sourceDesc"/>
+    <moduleRef key="textstructure"  
+        include="TEI text body div front back"/>
+    <moduleRef key="namesdates"
+        include="forename surname orgName persName"/>
+</schemaSpec>
+```
+---
+### `<elementSpec>`
+Chaque élément peut être défini pour préciser quels éléments il peut/doit contenir, l'ordre éventuel d'apparition, les occurences, etc.
+```xml
+<elementSpec ident="monElement" mode="change">
+  <content>
+    <elementRef key="element1"/>
+    <elementRef key="element2" minOccurs="1"
+   maxOccurs="unbounded"/>
+    <sequence>
+      <elementRef key="element3"/>
+      <elementRef key="element4"/>
+    </sequence>
+  </content>
+</elementSpec>
+```
+---
+
+De même, on peut préciser les attributs associés à un élément et la liste des valeurs que peuvent prendre ceux-ci:
+```xml
+<elementSpec ident="monElement" mode="change">
+  <attList>
+    <attDef ident="att1" mode="delete"/>
+    <attDef ident="att2" mode="change" usage="req">
+      <datatype>
+        <dataRef key="teidata.count"/>
+      </datatype>
+    </attDef>
+    <attDef ident="att3" mode="change" usage="req">
+      <valList mode="add" type="closed">
+        <valItem ident="valeur1"/>
+        <valItem ident="valeur2"/>
+      </valList>
+    </attDef>
+  </attList>
+</elementSpec>
+```
+
+---
+
+### Classes d'attributs et `<specGrp>`
+
+Les attributs sont groupés en classes lorsqu'ils ont des comportements similaires: 
+
+![w:900](images/classe.png)
+
+---
+
+On peut modifier les classes d'attributs avec `<specGrp>`:
+```xml
+<specGrp xml:id="classmods">
+  <classSpec ident="att.global" mode="change"
+             module="tei" type="atts">
+    <attList>
+      <attDef ident="xml:space" mode="delete"/>
+      <attDef ident="xml:base" mode="delete"/>
+    </attList>
+  </classSpec>
+  <classSpec ident="att.divLike" mode="delete"
+             module="tei" type="atts"/>
+</specGrp>
+```
+
+---
+
+# Créer un _ODD_ sans encoder
+Comme il serait laborieux de devoir écrire les schémas "à la main", il est possible d'utiliser les modèles annoncés au début de la séance. Les schémas peuvent être téléchargés sur [Roma](https://romabeta.tei-c.org/).
+
+Pour les projets plus spécifiques, la même plateforme permet de sélectionner les éléments nécessaires et génère automatique l'ODD et le schéma. 
+
+---
+## Tous les chemins mènent à Rome
+Imaginons que nous voulons générer l'_ODD_ et le schéma de [ce fichier]().
+
+---
+
+# Bibliographie
+
+Burnard, Lou, _Qu’est-ce que la Text Encoding Initiative?_ [en ligne], Marseille: OpenEdition Press, 2015. Disponible sur Internet : [http://books.openedition.org/oep/1298](http://books.openedition.org/oep/1298). DOI : https://doi.org/10.4000/books.oep.1237.
+
+

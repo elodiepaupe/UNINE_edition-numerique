@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="fr">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title></title>
+            </titleStmt>
+            <publicationStmt><p></p></publicationStmt>
+            <sourceDesc><p></p></sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div>
+                <!-- Où j'explique avec des mots les choix qui sont les miens.-->
+            </div>
+            <div>
+                <specGrp>
+                    <!-- Où j'annonce les attributs. -->
+                </specGrp>
+            </div>
+            <div>
+                <schemaSpec>
+                    <!-- Où j'annonce les éléments employés. -->
+                </schemaSpec>
+            </div>
+        </body>
+    </text>
+</TEI>

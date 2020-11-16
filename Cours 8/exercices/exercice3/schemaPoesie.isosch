@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
+   <title>ISO Schematron rules</title>
+   <!-- This file generated 2020-11-16T12:05:18Z by 'extract-isosch.xsl'. -->
+
+   <!-- ********************* -->
+   <!-- namespaces, declared: -->
+   <!-- ********************* -->
+   <ns prefix="tei" uri="http://www.tei-c.org/ns/1.0"/>
+   <ns prefix="xs" uri="http://www.w3.org/2001/XMLSchema"/>
+   <ns prefix="rng" uri="http://relaxng.org/ns/structure/1.0"/>
+
+   <!-- ********************* -->
+   <!-- namespaces, implicit: -->
+   <!-- ********************* -->
+
+
+   <!-- ************ -->
+   <!-- constraints: -->
+   <!-- ************ -->
+   <pattern id="schematron-constraint-schemaPoesie-att.datable.w3c-att-datable-w3c-when-1">
+      <rule context="tei:*[@when]">
+        <report test="@notBefore|@notAfter|@from|@to" role="nonfatal">The @when attribute cannot be used with any other att.datable.w3c attributes.</report>
+      </rule>
+    </pattern>
+   <pattern id="schematron-constraint-schemaPoesie-att.datable.w3c-att-datable-w3c-from-2">
+      <rule context="tei:*[@from]">
+        <report test="@notBefore" role="nonfatal">The @from and @notBefore attributes cannot be used together.</report>
+      </rule>
+    </pattern>
+   <pattern id="schematron-constraint-schemaPoesie-att.datable.w3c-att-datable-w3c-to-3">
+      <rule context="tei:*[@to]">
+        <report test="@notAfter" role="nonfatal">The @to and @notAfter attributes cannot be used together.</report>
+      </rule>
+    </pattern>
+   <pattern id="schematron-constraint-schemaPoesie-att.datable-calendar-calendar-4">
+          <rule context="tei:*[@calendar]">
+            <assert test="string-length(.) gt 0"> @calendar indicates the system or calendar to
+              which the date represented by the content of this element belongs, but this
+              <name/> element has no textual content.</assert>
+          </rule>
+        </pattern>
+   <pattern id="schematron-constraint-schemaPoesie-att.typed-subtypeTyped-5">
+      <rule context="tei:*[@subtype]">
+        <assert test="@type">The <name/> element should not be categorized in detail with @subtype unless also categorized in general with @type</assert>
+      </rule>
+    </pattern>
+   <pattern id="schematron-constraint-schemaPoesie-p-abstractModel-structure-p-6">
+      <rule context="tei:p">
+         <report test="not(ancestor::tei:floatingText) and (ancestor::tei:p or ancestor::tei:ab)          and not(parent::tei:exemplum                |parent::tei:item                |parent::tei:note                |parent::tei:q                |parent::tei:quote                |parent::tei:remarks                |parent::tei:said                |parent::tei:sp                |parent::tei:stage                |parent::tei:cell                |parent::tei:figure                )">
+        Abstract model violation: Paragraphs may not occur inside other paragraphs or ab elements.
+      </report>
+      </rule>
+   </pattern>
+   <pattern id="schematron-constraint-schemaPoesie-p-abstractModel-structure-l-7">
+      <rule context="tei:p">
+         <report test="ancestor::tei:l[not(.//tei:note//tei:p[. = current()])]">
+        Abstract model violation: Lines may not contain higher-level structural elements such as div, p, or ab.
+      </report>
+      </rule>
+   </pattern>
+   <pattern id="schematron-constraint-schemaPoesie-l-abstractModel-structure-l-8">
+      <rule context="tei:l">
+         <report test="ancestor::tei:l[not(.//tei:note//tei:l[. = current()])]">
+        Abstract model violation: Lines may not contain lines or lg elements.
+      </report>
+      </rule>
+   </pattern>
+   <pattern id="schematron-constraint-schemaPoesie-lg-atleast1oflggapl-9">
+      <rule context="tei:lg">
+         <assert test="count(descendant::tei:lg|descendant::tei:l|descendant::tei:gap) &gt; 0">An lg element
+        must contain at least one child l, lg, or gap element.</assert>
+      </rule>
+   </pattern>
+   <pattern id="schematron-constraint-schemaPoesie-lg-abstractModel-structure-l-10">
+      <rule context="tei:lg">
+         <report test="ancestor::tei:l[not(.//tei:note//tei:lg[. = current()])]">
+        Abstract model violation: Lines may not contain line groups.
+      </report>
+      </rule>
+   </pattern>
+      
+      
+    
+      
+    <pattern id="schematron-constraint-schemaPoesie-div-abstractModel-structure-l-13">
+      <rule context="tei:div">
+         <report test="ancestor::tei:l">
+        Abstract model violation: Lines may not contain higher-level structural elements such as div.
+      </report>
+      </rule>
+   </pattern>
+   <pattern id="schematron-constraint-schemaPoesie-div-abstractModel-structure-p-14">
+      <rule context="tei:div">
+         <report test="ancestor::tei:p or ancestor::tei:ab and not(ancestor::tei:floatingText)">
+        Abstract model violation: p and ab may not contain higher-level structural elements such as div.
+      </report>
+      </rule>
+   </pattern>
+</schema>

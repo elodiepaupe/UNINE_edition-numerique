@@ -1,0 +1,82 @@
+---
+marp: true
+---
+
+Université de Neuchâtel
+Master en littérature
+
+# TG: Édition de texte (numérique)
+## Cours 8: exercices
+
+Élodie Paupe 
+chaire de philologie classique et d'histoire ancienne
+
+16 novembre 2020
+
+---
+
+## Exercice 1: 
+1. Ouvrir le fichier [DTD_exo1.xml](exercice1/DTD_exo1.xml)
+1. Composer la DTD interne du document xml.
+
+
+---
+
+## Exercice 2:
+1. Ouvrir le fichier [DTD_exo2.xml](exercice2/DTD_exo2.xml)
+1. Ouvrir le fichier [mydtd.dtd](exercice2/mydtd.dtd)
+1. Adapter la DTD de l'exercice 1 à cette situation. Voyez la théorie pour la syntaxe.
+1. Relier les deux document.
+
+---
+
+## Exercice 3: 
+1. Nous allons créer un schéma personnalisé pour l'encodage du poème de Musset. 
+1. Ouvrons le fichier [Musset.xml](exercice3/Musset.xml)
+1. Ouvrons https://romabeta.tei-c.org/
+
+---
+On choisit de commencer avec une personnalisation que nous allons compléter: 
+
+![](images/TEIminimale.png)
+
+---
+On remplit les métadonnées:
+![](images/metadata.png)
+
+---
+On clique ici pour avancer:
+![](images/customize.png)
+
+---
+On vérifie que tous les éléments de notre fichier sont présents, au besoin, on les ajoute: 
+![](images/lg.png)
+
+---
+On génère la documentation qu'on enregistre dans le même dossier, pour éviter les chemins compliqués:
+* ODD
+* RelaxNG schema
+* Documentation en format HTML
+![w:500](images/sorties_doc.png)
+
+---
+On applique le schéma à son projet: 
+* manuellement: remplacer le contenu du `@href` du premier `<?xml-model` (ligne 2 et 3), autrement dit:
+    1. J'efface `http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng`
+    1. J'ajoute le chemin vers mon nouveau schema (le fichier qui finit par `.rng`)
+
+---
+* sur Oxygen:
+![](images/associer.png)
+
+---
+
+On peut tester la restriction de la TEI (sur Oxygen): si j'ajoute un élément qui n'est pas prévu, par exemple un `<persName>`, le fichier n'est plus valide: 
+
+![w:800](images/validation.png)
+
+---
+Si on ouvre le fichier [HTML](exercice3/schemaPoesie.html), on peut lire la documentation. 
+
+Pour modifier cette documentation et la faire vraiment coller à notre projet, il faut ouvrir l'[_ODD_](exercice3/schemaPoesie.xml) et en modifier le contenu.
+

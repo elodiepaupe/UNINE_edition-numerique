@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<div type="sonnet" n="1" xml:id="s1">
+    <head>Sonnet</head>
+    
+    <lg type="quatrain">
+        <l n="1">Se voir le plus possible et s'aimer seulement,</l>
+        <l n="2">Sans ruse et sans détours, sans honte ni mensonge,</l>
+        <l n="3">Sans qu'un désir nous trompe, ou qu'un remords nous ronge,</l>
+        <l n="4">Vivre à deux et donner son coeur à tout moment;</l>
+    </lg>
+
+    <lg type="quatrain">
+        <l n="5">Respecter sa pensée aussi loin qu'on y plonge,</l> 
+        <l n="6">Faire de son amour un jour au lieu d'un songe,</l>
+        <l n="7">Et dans cette clarté respirer librement –</l>
+        <l n="8">Ainsi respirait <persName>Laure</persName> et chantait son amant.</l>
+    </lg>
+    
+    <lg type="tercet">
+        <l n="9">Vous dont chaque pas touche à la grâce suprême,</l>
+        <l n="10">C'est vous, la tête en fleurs, qu'on croirait sans souci,</l>
+        <l n="11">C'est vous qui me disiez qu'il faut aimer ainsi.</l>
+    </lg>   
+    
+    <lg type="tercet">
+        <l n="12">Et c'est moi, vieil enfant du doute et du blasphème,</l>
+        <l n="13">Qui vous écoute, et pense, et vous réponds ceci:</l>
+        <l n="14">Oui, l'on vit autrement, mais c'est ainsi qu'on aime.</l>
+    </lg>
+</div>

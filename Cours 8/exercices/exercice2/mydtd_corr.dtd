@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT div (head,lg+)>
+<!ATTLIST div
+    type CDATA #REQUIRED 
+    n CDATA #REQUIRED 
+    xml:id CDATA #IMPLIED>
+<!ELEMENT head (#PCDATA)>
+<!ELEMENT lg (l+)>
+<!ATTLIST lg 
+    type (distique|tercet|quatrain|sizain) #REQUIRED>
+<!ELEMENT l (#PCDATA | persName)*>
+<!ATTLIST l
+    n CDATA #REQUIRED>
+<!ELEMENT persName (#PCDATA)>
