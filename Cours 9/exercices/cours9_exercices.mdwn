@@ -12,7 +12,8 @@ chaire de philologie classique et d'histoire ancienne
 ---
 
 ## Exercice 
-1. Ouvrir le fichier [FHodler_lettre_exe.xml](exercice1/FHodler_lettre_exe.xml).
+1. Ouvrir le fichier [FHodler_lettre_exe.xml](FHodler_lettre_exe.xml).
+1. Ouvrir les deux fichiers jpeg.
 1. Ajouter les métadonnées de la pièce d'archive dans le `<sourceDesc>`(cf. plus bas).
 1. Ajouter les métadonnées de l'échange dans le `<profileDesc>`(cf. plus bas).
 1. Ajouter une liste des personnes dans le `<profileDesc>`(cf. plus bas).
