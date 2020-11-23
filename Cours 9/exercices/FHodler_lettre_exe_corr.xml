@@ -142,7 +142,7 @@
                         <placeName ref="geonames:2996944">Lyon,</placeName> 
                         <date when="1881-10-20">l<ex>e</ex> 20. Oct. 1881,</date>
                     </dateline>
-                    <salute>Monsieur à pas tranquilles,</salute>
+                    <salute><rs ref="#odier">Monsieur à pas tranquilles</rs>,</salute>
                 </opener>
                 
                 <p>
