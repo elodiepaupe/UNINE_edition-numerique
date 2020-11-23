@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="fr">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Exercice d'encodage sur une lettre de Ferdinand Hodler</title>
+            </titleStmt>
+            <publicationStmt>
+                <authority>
+                    <persName xml:id="EP">Élodie Paupe</persName>
+                    <affiliation>Université de Neuchâtel</affiliation>
+                    <email>elodie.paupe@unine.ch</email>
+                </authority>
+            </publicationStmt>
+            <sourceDesc>
+                <p/>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <editorialDecl>
+                <punctuation>
+                    <ab>La ponctuation est respectée.</ab>
+                </punctuation>
+                <normalization>
+                    <ab>Les majuscules sont mises d'après l'usage francophone moderne.</ab>
+                    <ab>Les erreurs d'orthographe sont corrigées, mais la syntaxe est conservée pour autant que le sens soit préservé.</ab>
+                </normalization>
+                <hyphenation>
+                    <ab>Le découpage de la source est conservé.</ab>
+                </hyphenation>
+            </editorialDecl>
+        </encodingDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url="FH-1011-0217.jpg"/>
+        <graphic url="FH-1011-0217_1.jpg"/>
+    </facsimile>
+    <text>
+        <body>
+            Lyon, l 20. Oct. 1881,
+            Monsieur à pas tranquilles,
+            
+            Tu ne m’envoit pas 
+            les journaux, et je 
+            comprend que tu 
+            soit entrainé par le 
+            charme irrésistible 
+            du mariage.
+            il faudra bien que 
+            je me forme un 
+            autre commissionnaire 
+            pourvue que tu 
+            me fasses encore 
+            la commission suivante en 
+            exceptant pas la 
+            première.
+            Je viens lire dans 
+            le Journal d. Genève 
+            que l’exposition est 
+            fermée aujourd’hui 
+            l’incertitude au sujet 
+            de mon tableau m’est 
+            désagréable.
+            Voudrais tu en sortant 
+            a 11 heure de ton magasin 
+            t’informer chez M Couteau 
+            Bâtiment Électoral 
+            si mon tableau est 
+            à retiré ou si il est vendu 
+            À 11 heures, tu pourrai 
+            le trouvé au Batiment 
+            autrement en sortant 
+            de dîner, il demeure 
+            dans le petit chemin 
+            qui passe devant ta 
+            maison, dans une des 
+            deux habitations un 
+            peu retirée et devant 
+            lesquelles il y a un petit 
+            jardin.
+            Je n’ai aucune 
+            communication est 
+            je suis vraiment 
+            ennuyer.
+            À la fin du mois, 
+            mon retour.
+            (Présente mes amitiés à 
+            ta femme et recu 
+            toit même lexpression 
+            de mon iresistible 
+            devouement.
+            Hodler (de bonne écorce)
+        </body>
+    </text>
+</TEI>

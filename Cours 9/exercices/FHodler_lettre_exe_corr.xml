@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="fr">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Exercice d'encodage sur une lettre de Ferdinand Hodler</title>
+            </titleStmt>
+            <publicationStmt>
+                <authority>
+                    <persName xml:id="EP">Élodie Paupe</persName>
+                    <affiliation>Université de Neuchâtel</affiliation>
+                    <email>elodie.paupe@unine.ch</email>
+                </authority>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <settlement>Delémont</settlement>
+                        <repository>Archives Jura Bruschweiller</repository>
+                        <idno>FH 1011-0217</idno>
+                    </msIdentifier>
+                    <msContents>
+                        <msItem>
+                            <docAuthor ref="isni:0000000108910082">Ferdinand Hodler</docAuthor>
+                            <docDate when="1881-10-20">20 octobre 1881</docDate>
+                            <incipit>Monsieur à pas tranquille</incipit>
+                            <filiation type="autograph"/>
+                        </msItem>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <material>papier</material>
+                                </support>
+                                <extent>
+                                    <measure unit="folio" n="1"/>
+                                    <measure unit="page" n="4"/>
+                                </extent>
+                                <foliation>Pas de pagination, à l'encre</foliation>
+                            </supportDesc>
+                        </objectDesc>
+                    </physDesc>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <correspDesc>
+                <correspAction type="sent">
+                    <persName ref="isni:0000000108910082">Ferdinand Hodler</persName>
+                    <placeName ref="geonames:2996944">Lyon</placeName>
+                    <date>20 octobre 1881</date>
+                </correspAction>
+                <correspAction type="received">
+                    <persName ref="#odier">Marc Odier</persName>
+                    <placeName ref="geonames:2660646">Genève</placeName>
+                </correspAction>
+            </correspDesc>
+            <particDesc>
+                <listPerson>
+                    <person corresp="isni:0000000108910082">
+                        <persName>
+                            <surname>Hodler</surname>
+                            <forename>Ferdinand</forename>
+                        </persName>
+                        <birth>
+                            <placeName ref="geonames:2661552">Berne</placeName>
+                            <date when="1853-03-14">14 mars 1853</date>
+                        </birth>
+                        <death>
+                            <placeName ref="geonames:2660646">Genève</placeName>
+                            <date when="1918-05-19">19 mai 1918</date>
+                        </death>
+                        <occupation>Artiste peintre</occupation>
+                    </person>
+                    <person xml:id="odier">
+                        <persName>
+                            <surname>Odier</surname>
+                            <forename>Marc</forename>
+                        </persName>
+                        <residence ref="geonames:2660646">Genève</residence>
+                        <occupation>Peintre amateur et quincailler.</occupation>
+                    </person>
+                    <person xml:id="couteau">
+                        <persName>M. Couteau</persName>
+                        <residence ref="geonames:2660646">Genève</residence>
+                        <occupation>Travail au Bâtiment électoral</occupation>
+                    </person>
+                </listPerson>
+            </particDesc>
+            <settingDesc>
+                <listPlace>
+                    <place corresp="geonames:2996944">
+                        <settlement ref="geonames:2996944">Lyon</settlement>
+                        <country>France</country>
+                        <location>
+                            <geo>45.74846, 4.84671</geo>
+                        </location>
+                    </place>
+                    <place xml:id="magasin">
+                        <placeName>Île sur le Rhône</placeName>
+                        <settlement ref="geonames:2660646">Genève</settlement>
+                        <country>Suisse</country>
+                    </place>
+                    <place xml:id="batimentelectoral">
+                        <placeName>
+                            <address>
+                                <street>24, rue Général-Dufour</street>
+                                <postCode>1204</postCode>
+                                <settlement ref="geonames:2660646">Genève</settlement>
+                                <country>Suisse</country>
+                            </address>
+                        </placeName>
+                    </place>
+                </listPlace>
+            </settingDesc>
+        </profileDesc>
+        <encodingDesc>
+            <editorialDecl>
+                <punctuation>
+                    <ab>La ponctuation est modifiée pour correspondre à l'usage.</ab>
+                </punctuation>
+                <normalization>
+                    <ab>Les majuscules sont mises d'après l'usage francophone moderne.</ab>
+                    <ab>L'orthographe n'est pas corrigé.</ab>
+                </normalization>
+                <hyphenation>
+                    <ab>Le découpage de la source est conservé.</ab>
+                </hyphenation>
+            </editorialDecl>
+        </encodingDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url="FH-1011-0217%20-%20copie.jpg"/>
+        <graphic url="FH-1011-0217_1%20-%20copie.jpg"/>
+    </facsimile>
+    <text>
+        <body>
+            <div type="letter">
+                <opener>
+                    <dateline rend="align(right)">
+                        <placeName ref="geonames:2996944">Lyon,</placeName> 
+                        <date when="1881-10-20">l<ex>e</ex> 20. Oct. 1881,</date>
+                    </dateline>
+                    <salute>Monsieur à pas tranquilles,</salute>
+                </opener>
+                
+                <p>
+                     Tu ne m’envoit pas <lb/>
+                     les journaux, <del rend="strikeout">et</del> je <lb/>
+                     comprend que tu <lb/>
+                     soit entrainé par le <lb/>
+                     charme irrésistible <lb/>
+                     du mariage.
+                </p>
+                <p>
+                    il faudra bien que <lb/>
+                    je me forme un <lb/>
+                    autre commissionnaire <lb/>
+                    pourvue que tu <lb/>
+                    me fasses encore <lb/>
+                    la <add place="above">commission</add> suivante en <lb/>
+                    exceptant pas la <lb/>
+                    première.
+                </p>
+                <pb/>
+                 <p>
+                     Je viens lire dans <lb/>
+                     le <title>Journal d<ex>e</ex> Genève</title> <lb/>
+                     <subst><del>q</del><add>q</add></subst>ue l’exposition est <lb/>
+                     fermée aujourd’hui <lb/>
+                     l’incertitude au sujet <lb/>
+                     de mon tableau m’est <lb/>
+                     désagréable.
+                 </p>
+                <p>
+                    Voudrais tu ein sortant <lb/>
+                    a 11 heure de <placeName ref="#magasin">ton magasin</placeName> <lb/>
+                    <subst><del>din</del><add place="inline">t’in</add></subst>form<subst><del>é</del><add>er</add></subst> chez <persName ref="#couteau">M Couteau</persName> <lb/>
+                    <placeName ref="batimentelectoral">Batiment Électoral</placeName> <lb/>
+                    si mon tableau est <lb/>
+                    à retiré ou si il <lb/>
+                    est vendu.
+                </p>
+                 <p>
+                     À 11 heures, tu pourrai <lb/>
+                     le trouvé au <placeName ref="#batimentelectoral">Batiment</placeName> <lb/>
+                     autrement en sortant <lb/>
+                     de dîner, il demeure <lb/>
+                     dans le petit chemin <lb/>
+                     qui passe devant ta <lb/>
+                 <pb/>
+                     maison, dans une des <lb/>
+                     deux habitations un <lb/>
+                     peu re<subst><del><unclear reason="illegible"/></del><add place="inline">tirée</add></subst> et devant <lb/>
+                     lesquelles il y a un petit <lb/>
+                    jardin.
+                 </p>
+                 <p>
+                     J<subst><del>a</del><add place="inline">e</add></subst> n’ai aucune <lb/>
+                     communication est <lb/>
+                     je suis vraiment <lb/>
+                     ennuyer.
+                 </p>
+                <p>
+                    À la fin du mois, <lb/>
+                    mon retour.
+                </p>
+                <closer>
+                    <salute>(Présente mes amitiés à <lb/>
+                    ta femme et recu <lb/>
+                    toit même lexpression <lb/>
+                    de mon iresistible <lb/>
+                    devouement.</salute>
+                
+                    <signed rend="align(right)">Hodler (de bonne écorce)</signed>
+                </closer>
+            </div>
+        </body>
+    </text>
+</TEI>
+
+

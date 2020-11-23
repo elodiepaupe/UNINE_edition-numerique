@@ -1,0 +1,93 @@
+Université de Neuchâtel
+Master en littérature
+
+# TG: Édition de texte (numérique)
+## Cours 9: exercices
+
+Élodie Paupe 
+chaire de philologie classique et d'histoire ancienne
+
+23 novembre 2020
+
+---
+
+## Exercice 
+1. Ouvrir le fichier [FHodler_lettre_exe.xml](exercice1/FHodler_lettre_exe.xml).
+1. Ajouter les métadonnées de la pièce d'archive dans le `<sourceDesc>`(cf. plus bas).
+1. Ajouter les métadonnées de l'échange dans le `<profileDesc>`(cf. plus bas).
+1. Ajouter une liste des personnes dans le `<profileDesc>`(cf. plus bas).
+1. Ajouter une liste des lieux dans le `<profileDesc>`(cf. plus bas).
+1. Encoder le `<text>` (cf. plus bas).
+1. Encoder la mise en page du document et l'annotation critique (cf. plus bas) .
+
+---
+### Métadonnées de la source 
+Delémont, Archives Jura Bruschweiller, FH 1011-0217, _Lettre de Ferdinand Hodler à son ami Marc Odier_.
+
+Balises: 
+* `<sourceDesc>`
+* `<msDesc>`
+* `<msIdentifier>`
+* `<settlement>`
+* `<repository>`
+* `<idno>`
+* `<msContent>`
+
+---
+### Métadonnées de la correspondance 
+* Émetteur: Ferdinand Hodler
+* Date et lieu: 20 octobre 1881, Lyon
+* Récepteur: Marc Odier
+* Lieu: Genève
+
+Balises: 
+* `<correspDesc>`
+* `<correspAction>`
+* `<persName>` avec `@ref` relié à l'identifiant tiré d'un référentiel commun s'il existe, sinon un pointeur vers `@xml:id` défini à l'étape suivante.
+* `<placeName>` avec `@ref` relié à l'identifiant tiré d'un référentiel commun s'il existe, sinon un pointeur vers `@xml:id` défini à l'étape suivante.
+* `<date>`
+
+---
+### Liste des personnes
+Balises: 
+* `<particDesc>`
+* `<listPerson>`
+* `<person>` avec `@xml:id` ou `@corresp` relié à l'identifiant tiré d'un référentiel commun s'il existe.
+* `<persName>` (`<surname>`, `<forename>`)
+* `<birth>` et `<death>`
+* `<placeName>` et `<date>`
+* `<occupation>` (métier)
+* `<residence>` (lieu de résidence)
+
+---
+### Liste des lieux
+Balises: 
+* `<settingDesc>`
+* `<listPlace>` avec `@corresp` où faire figurer l'identifiant tiré d'un référentiel commun.
+* `<place>`
+
+Si le lieu possède un identifiant dans un référentiel commun, le faire apparaître. 
+
+* Le magasin de Marc Odier est appelé "Magasin de fer". Il est situé sur l'île à Genève. 
+* Le Bâtiment électoral est devenu l'Uni-Dufour. 
+
+---
+### Encoder la lettre
+Balises: 
+* `<opener>`
+* `<closer>`
+* `<salute>`
+* `<signed>`
+* `<dateline>`
+* `<placeName>` avec `@ref` relié à l'identifiant tiré d'un référentiel commun s'il existe, sinon un pointeur vers `@xml:id`
+* `<date>`avec `@when` pour la date
+* `<p>`
+
+---
+### Encoder la mise en page
+Balises:
+* `<del>`, `<add>` (avec `@place` et les valeurs `ìnline, above`), `<subst>`
+* `<unclear reason="illegible"/>`
+* `<pb>` 
+* `@rend` avec la valeur `align(left), align(right), align(center)`, etc.
+

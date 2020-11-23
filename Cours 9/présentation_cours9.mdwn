@@ -1,0 +1,408 @@
+---
+marp: true
+---
+
+Université de Neuchâtel
+Master en littérature
+
+# TG: Édition de texte (numérique)
+## Cours 8: texte (correspondance), lieux et personnes
+
+Élodie Paupe 
+chaire de philologie classique et d'histoire ancienne
+
+23 novembre 2020
+
+---
+
+# Les noms
+[13 Names, Dates, People, and Places](https://tei-c.org/release/doc/tei-p5-doc/en/html/ND.html)
+
+---
+## Noms: degré de précision
+Les noms de personne et de lieux peuvent s'encoder plus ou moins précisément. Il y a trois niveaux:
+1. `<name>`: tous les types de noms
+1. `<rs>`(_reference string_) avec l'attribut `@ref` permet de pointer vers une entité nommée ailleurs 
+1. Classification plus précise:
+	1. `<placeName>` pour les noms de lieux.
+	1. `<persName>` pour les noms de personnes.
+	1.  `<orgName>` pour les noms d'organisations.
+
+---
+## Gérer la reprise lexicale 
+On peut nommer une personne par son nom, son prénom, son titre, son rôle une périphrase, etc. 
+S'il n'y a pas d'entité nommée, on utilise `<rs>`: 
+
+```XML
+<p>
+    <persName xml:id="sandra">Sandra</persName> et <persName xml:id="camillepere">Camille</persName> 
+    ont le plaisir de vous annoncer la naissance de <persName xml:id="camillefils">Camille</persName>. 
+    La <rs ref="#sandra">maman</rs>, le <rs ref="#camillepere">papa</rs> 
+    et le <rs ref="#camillefils">bébé</rs> se portent bien. 
+</p>
+```
+---
+### Gérer la reprise pronominale
+
+
+---
+## Encoder les personnes
+1. `<forename>`: prénom
+1. `<surname>`: nom de famille
+1. `<nameLink>`: particule  (Isabelle _de_ Merteuil)
+1. `<roleName>`: titre, rang (Isabelle, _marquise_ de Merteuil)
+1. `<addName>`: surnom, épithète (Charles II _le Chauve_)
+1. `<genName>`: numéro de générations (Charles _II_)
+
+---
+## Encoder les lieux
+1. `<country>`: pays
+1. `<region>`: région, province, canton
+1. `<settlement>`: lieu habité. L'attribut `@type` permet de préciser sa nature
+1. `<geogName>`: nom de lieu associé à une caractéristique géographique (_Mont Blanc_, _Delta du Nil_)
+
+---
+### Modéliser son projet
+Comment choisir l'encodage des personnes et des lieux?
+* Quels sont mes besoins?
+* Pourquoi cette information est importante?
+Des parties du fichier TEI qui méritent plus de précision que d'autre? 
+* `<TEI header>`et `<text>`?
+* `<msDesc>`, etc.
+```XML
+<msDesc>
+    <msIdentifier>
+        <settlement>Oxford</settlement>
+        <repository>Bodleian Library</repository>
+        <idno>MS. Add. A. 61</idno>
+    <msIdentifier>
+</msDesc>
+```
+---
+### Imbrication
+Lorsque les noms sont complexes, il est possible d'encoder l'entier avec une balise générale et de préciser à l'intérieur de cette dernière.
+
+```XML
+<placeName>
+ <district type="arondissement">6ème</district>
+ <settlement type="city">Paris, </settlement>
+ <country>France</country>
+</placeName>
+```
+```XML
+<geogName type="river">
+    <name>Mississippi</name>
+    <geogFeat>River</geogFeat>
+</geogName>
+```
+On emploie `<geogFeat>`(_geographical feature name_) pour identfier une caractéristique géographique.
+
+---
+Pour les noms de famille ou les prénoms multiples, l'attribut `@type` permet de clarifier: 
+```XML
+<persName>
+    <forename>Kara</forename>
+    <surname type="complex">
+        <surname type="paternal">Hattersley</surname>- <surname type="maternal">Smith</surname>
+    </surname>
+</persName>
+```
+```XML
+<persName>
+    <forename type="given">Margaret</forename>
+    <forename type="unused">Hilda</forename>
+    <surname type="birth">Roberts</surname>
+    <surname type="married">Thatcher</surname>
+</persName>
+```
+---
+
+Il est également possible d'encoder des localisations relatives, par exemple: 
+```XML
+<placeName>
+    <measure>1,5 kilomètre</measure>
+    <offset>au sud de </offset>
+    <settlement>Porrentruy</settlement>
+</placeName>
+```
+
+NB: la balise `<offset>` s'emploie également pour donner une expression relative temporelle: 
+```XML
+<date when="--12-09">
+    <date>A week</date>
+    <offset>before</offset>
+    <date type="occasion" when="--12-16">my birthday</date> on <date>9th December</date>
+</date>
+```
+---
+## Référentialité
+
+Si on encode des noms, c'est notamment pour les identifier. Il est possible de créer sa propre base de donnée, mais il est également possible d'utiliser des référentiels communs. Les deux peuvent se combiner. 
+
+---
+
+### Référentiel commun
+1. Pour les personnes:
+    * ISNI (_International Standard Name Identifier_): https://isni.org/
+    * VIAF (_Virtual International Authority File_): https://viaf.org/
+
+---
+
+![](images/isni.png)
+
+---
+
+![](images/isni_aegidius.png)
+
+---
+
+![](images/isni_aegidius2.png)
+
+---
+
+![](images/viaf.png)
+
+---
+
+![](images/bnf.png)
+
+---
+
+![](images/idref_aegidius.png)
+
+---
+
+![](images/idref_aegidius2.png)
+
+---
+
+1. Pour les lieux (ou les institutions):
+    * Geonames: http://www.geonames.org/
+    * Pleiades: https://pleiades.stoa.org
+    * WHG (_World-Historical Gazetteer_): http://whgazetteer.org/
+
+---
+
+![](images/geonames.png)
+
+---
+
+![](images/geonames1.png)
+
+---
+
+![](images/geonames2.png)
+
+---
+
+```xml
+<persName ref="isni:0000 0000 5557 1127">Roland Béguelin</persName> est 
+un politicien jurassien né à <placeName ref="geonames:7287322">Tramelan</placeName> et mort à <placeName ref="geonames:2661035">Delémont</placeName>.
+```
+
+---
+### Référentiel personnel
+Si les lieux ou les personnes ne figurent pas dans les référentiels communs, on peut en développer dans le `<profileDesc>` du `<teiHeader>`. Il est également possible de le faire dans un fichier externe en fonction du projet. 
+* `<particDesc>` permet de décrire les participants d'une interaction linguistique et permet de contenir un `<listPerson>`
+* `<settingDesc>` permet de décrire le contexte d'une interaction linguistique, et peut donc contenir un `<listPlace>`
+
+---
+
+## `<listPerson>`
+Il est possible d'encoder une liste de personnes.
+
+```xml
+<listPerson>
+  <person xml:id="beguelinR">
+    <persName>
+      <forename>Roland</forename>
+      <surname>Béguelin</surname>
+    </persName>
+    <birth>
+      <date when="1921"/>
+      <place>Tramelan</place>
+    </birth>
+    <death>
+      <date when="1993"/>
+      <place>Delémont</place>
+    </death>
+    <occupation>Politicien jurassien</occupation>
+  </person>
+  <person>…</person>
+</listPerson>
+```
+
+---
+## `<listPlace>`
+Il est possible d'encoder une liste de lieux.
+
+```xml
+<listPlace>
+  <place xml:id="delemont">
+    <placeName>Delémont</placeName>
+    <region>Canton du Jura</region>
+    <country>Suisse</country>
+    <location>
+      <geo>47.36493 7.34453</geo>
+    </location>
+  </place>
+  <place>…</place>
+</listPlace>
+```
+
+---
+
+# Correspondance
+
+---
+## Encoder la correspondance
+
+L'encodage de la prose (`<p>`, etc.) ou de la versification (`l`, etc.) reste valable. Il existe des balises particulières pour encoder certaines spécificités de la correspondance: 
+
+* `<opener>`contient les formules introductives
+* `<closer>`contient les formules de clôture
+
+---
+### `<salute>`
+La formule d'adresse ou de politesse est encodée avec la balise `<salute>`:
+
+```XML
+<opener>
+  <salute>Chères étudiantes, chers étudiants,</salute>
+</opener>
+<p>Je vous donne rendez-vous lundi prochain à 14h15 pour le cours.</p>
+<closer>
+  <salute>Recevez, chères étudiantes, chers étudiants, mes meilleures salutations</salute>
+</closer>
+```
+
+---
+
+La lettre est elle-même contenue dans une balise `<div>`:
+```XML
+<div type="letter">
+    <opener>
+        <salute>Chères étudiantes, chers étudiants,</salute>
+    </opener>
+    <p>Je vous donne rendez-vous lundi prochain à 14h15 pour le cours.</p>
+    <closer>
+        <salute>Recevez, chères étudiantes, chers étudiants, mes meilleures salutations</salute>
+    </closer>
+</div>
+```
+---
+
+## Lieu, date et signature
+* `<dateLine>` indique la date, mais aussi le lieu d'écriture de la lettre.
+* `<signed>` permet d'encoder la signature.
+
+Ces éléments sont contenus dans l'`<opener>`et le `<closer>`.
+
+---
+```XML
+<div type="letter">
+    <opener>
+        <dateline>Neuchâtel, le 23 novembre</dateline>
+        <salute>Chères étudiantes, chers étudiants,</salute>
+    </opener>
+    <p>Je vous donne rendez-vous lundi prochain à 14h15 pour le cours.</p>
+    <closer>
+        <salute>Recevez, chères étudiantes, chers étudiants, mes meilleures salutations</salute>
+        <signed>Élodie Paupe</signed>
+    </closer>
+</div>
+```
+
+---
+
+## Adresse
+Si l'adresse est mentionnée, elle figure dans une `<div>`à part: 
+* `<address>`
+* `<addrLine>`est répété autant de fois que nécessaire
+
+ou alors on ajoute du sémantisme: 
+* `<street>`
+* `<postCode>`
+
+---
+
+```XML
+<address>
+  <addrLine>Université de Neuchâtel</addrLine>
+  <addrLine>Élodie Paupe</addrLine>
+  <addrLine>1, Espace Tilo Frey</addrLine>
+  <addrLine>2000 Neuchâtel</addrLine>
+  <addrLine>Suisse</addrLine>
+</address>
+
+<address>
+    <orgName>Université de Neuchâtel</orgName>
+    <persName>Élodie Paupe</persName>
+    <street>1, Espace Tilo Frey</street>
+    <postCode>2000</postCode>
+    <settlement>Neuchatel</settlement>
+    <country>Suisse</country>
+</address>
+```
+---
+## `<correspDesc`>
+Les métadonnées de l'échange épistolaire peuvent être encodées dans le `<profileDesc>` avec la balise `<correspDesc>`(_correspondence description_). Chaque émetteur/récepteur est identifié dans un `<correspAction>`. 
+L'attribut `@type="sent"` et `@type="received"` permettent de les distinguer.
+
+```XML
+<correspDesc>
+    <correspAction type="sent">
+        <persName>Paulin de Nole</persName>
+        <placeName nymRef="Italie">Probablement de Nole</placeName>
+        <date notBefore="0395" notAfter="0397">fin 395 au plus tôt, été 396 ou 397 au plus tard</date>
+    </correspAction>
+    <correspAction type="received">
+        <persName>Sulpice Sévère</persName>
+        <placeName nymRef="Gaule">Lieu indéterminé en Gaule</placeName>
+    </correspAction>
+</correspDesc>
+```
+---
+## Pour résumer: 
+Dans le cas d'une correspondance, le `<profileDesc>` contiendra:
+* une liste des personnes: `<listPerson>`
+* une liste des lieux: `<listPlace>`
+* des informations sur l'échange: 2x `<correspAction>`
+
+---
+```xml
+<profileDesc>
+   <particDesc>
+      <listPerson>
+         <person corresp="viaf:…"> <!-- ou isni, ou bnf, ou... -->
+            …
+         </person>
+      </listPerson>
+   </particDesc>
+   <settingDesc>
+      <listPlace>
+         <place corresp="geonames:…"> <!-- ou un autre référentiel -->
+            …
+         </place>
+      </listPlace>
+   </settingDesc>
+   <correspDesc>
+      <correspAction type="sent">
+        …
+      </correspAction>
+      <correspAction type="received">
+        …
+      </correspAction>
+   </correspDesc>
+</profileDesc>
+```
+---
+
+
+# Bibliographie
+
+Burnard, Lou, _Qu’est-ce que la Text Encoding Initiative?_ [en ligne], Marseille: OpenEdition Press, 2015. Disponible sur Internet : [http://books.openedition.org/oep/1298](http://books.openedition.org/oep/1298). DOI : https://doi.org/10.4000/books.oep.1237.
+
+Simon Gabay (éd.), _Encoder, Analyser - Introduction à la philologie numérique_, Genève: Université de Genève, 2020, https://github.com/gabays/Cours_Edition_Geneve.
+
+_Lettre de Ferdinand Hodler à Marc Odier_, 20 octobre 1881, Delémont, Archives Jura Bruschweiler, FH 1011-0217.
