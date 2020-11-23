@@ -86,6 +86,7 @@
                         <residence ref="geonames:2660646">Genève</residence>
                         <occupation>Travail au Bâtiment électoral</occupation>
                     </person>
+                    <person xml:id="femmeOdier"/>
                 </listPerson>
             </particDesc>
             <settingDesc>
@@ -208,7 +209,7 @@
                 </p>
                 <closer>
                     <salute>(Présente mes amitiés à <lb/>
-                    ta femme et recu <lb/>
+                    <rs ref="#femmeOdier">ta femme</rs> et recu <lb/>
                     toit même lexpression <lb/>
                     de mon iresistible <lb/>
                     devouement.</salute>
