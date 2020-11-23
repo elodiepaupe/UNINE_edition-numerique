@@ -1,7 +1,3 @@
----
-marp: true
----
-
 Université de Neuchâtel
 Master en littérature
 
@@ -42,10 +38,6 @@ S'il n'y a pas d'entité nommée, on utilise `<rs>`:
 </p>
 ```
 ---
-### Gérer la reprise pronominale
-
-
----
 ## Encoder les personnes
 1. `<forename>`: prénom
 1. `<surname>`: nom de famille
@@ -62,31 +54,14 @@ S'il n'y a pas d'entité nommée, on utilise `<rs>`:
 1. `<geogName>`: nom de lieu associé à une caractéristique géographique (_Mont Blanc_, _Delta du Nil_)
 
 ---
-### Modéliser son projet
-Comment choisir l'encodage des personnes et des lieux?
-* Quels sont mes besoins?
-* Pourquoi cette information est importante?
-Des parties du fichier TEI qui méritent plus de précision que d'autre? 
-* `<TEI header>`et `<text>`?
-* `<msDesc>`, etc.
-```XML
-<msDesc>
-    <msIdentifier>
-        <settlement>Oxford</settlement>
-        <repository>Bodleian Library</repository>
-        <idno>MS. Add. A. 61</idno>
-    <msIdentifier>
-</msDesc>
-```
----
 ### Imbrication
 Lorsque les noms sont complexes, il est possible d'encoder l'entier avec une balise générale et de préciser à l'intérieur de cette dernière.
 
 ```XML
 <placeName>
- <district type="arondissement">6ème</district>
- <settlement type="city">Paris, </settlement>
- <country>France</country>
+    <district type="arondissement">6ème</district> 
+    <settlement type="city">Paris, </settlement>
+    <country>France</country>
 </placeName>
 ```
 ```XML
@@ -95,7 +70,7 @@ Lorsque les noms sont complexes, il est possible d'encoder l'entier avec une bal
     <geogFeat>River</geogFeat>
 </geogName>
 ```
-On emploie `<geogFeat>`(_geographical feature name_) pour identfier une caractéristique géographique.
+On emploie `<geogFeat>`(_geographical feature name_) pour identifier une caractéristique géographique.
 
 ---
 Pour les noms de famille ou les prénoms multiples, l'attribut `@type` permet de clarifier: 
@@ -134,10 +109,28 @@ NB: la balise `<offset>` s'emploie également pour donner une expression relativ
     <date type="occasion" when="--12-16">my birthday</date> on <date>9th December</date>
 </date>
 ```
+
+---
+### Modéliser son projet
+Comment choisir l'encodage des personnes et des lieux?
+* Quels sont mes besoins?
+* Pourquoi cette information est importante?
+Des parties du fichier TEI qui méritent plus de précision que d'autre? 
+* `<TEI header>`et `<text>`?
+* `<msDesc>`, etc.
+```XML
+<msDesc>
+    <msIdentifier>
+        <settlement>Oxford</settlement>
+        <repository>Bodleian Library</repository>
+        <idno>MS. Add. A. 61</idno>
+    <msIdentifier>
+</msDesc>
+```
 ---
 ## Référentialité
 
-Si on encode des noms, c'est notamment pour les identifier. Il est possible de créer sa propre base de donnée, mais il est également possible d'utiliser des référentiels communs. Les deux peuvent se combiner. 
+Si on encode des noms, c'est notamment pour les identifier. Il est possible de créer sa propre base de données, mais il est plus efficace d'utiliser des référentiels communs. Les deux peuvent se combiner. 
 
 ---
 
@@ -197,7 +190,8 @@ Si on encode des noms, c'est notamment pour les identifier. Il est possible de c
 
 ```xml
 <persName ref="isni:0000 0000 5557 1127">Roland Béguelin</persName> est 
-un politicien jurassien né à <placeName ref="geonames:7287322">Tramelan</placeName> et mort à <placeName ref="geonames:2661035">Delémont</placeName>.
+un politicien jurassien né à <placeName ref="geonames:7287322">Tramelan</placeName> 
+et mort à <placeName ref="geonames:2661035">Delémont</placeName>.
 ```
 
 ---
