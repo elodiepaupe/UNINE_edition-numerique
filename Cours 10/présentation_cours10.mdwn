@@ -23,7 +23,7 @@ Il est possible de lier
 ---
 
 ### Lier une page
-Lorsqu'on encode une édition (semi-)diplomatique, on utilise la balise `<pb>` pour signaler le début d'une nouvelle page. En utilisant l'attribut `@facs`, on peut lui lier l'image de la page. 
+Lorsqu'on encode une édition (semi-)facsimilaire, on utilise la balise `<pb>` pour signaler le début d'une nouvelle page. En utilisant l'attribut `@facs`, on peut lui lier l'image de la page. 
 
 ```xml
 <pb facs="chemin/vers/image"/>
@@ -140,7 +140,9 @@ Quel est le chemin
 ```XML
 <div type="pretexte">
     <pb/>
-    <graphic url="images/gravure.jpeg"></graphic>
+    <p>
+      <graphic url="images/gravure.jpeg"></graphic>
+    </p>
     <p>
         ¶ Subscriptam oracionem edidit dominus Sixtus papa 
         <lb/>quartus et concessit omnibus eam devote dicentibus 
