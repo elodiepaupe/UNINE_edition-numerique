@@ -77,7 +77,7 @@ Le chemin de `bnf.png` à `README.md`:
 
 ### Bonne pratique
 
-Lorsque plusieurs documents dépendent d'un fichier, il est plus prudent de les organiser dans des dossiers ou sous dossiers. 
+Lorsque plusieurs documents dépendent d'un même projet, il est plus prudent de les organiser dans des dossiers ou sous-dossiers. 
 
 Exemple: 
 * 4 `fichier.xml`
