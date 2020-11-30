@@ -1,0 +1,95 @@
+Université de Neuchâtel
+Master en littérature
+
+# TG: Édition de texte (numérique)
+## Cours 10: exercices
+
+Élodie Paupe 
+chaire de philologie classique et d'histoire ancienne
+
+30 novembre 2020
+
+---
+
+## Exercice 1
+1. Télécharger et enregistrer les éléments du dossier exercice.
+1. Ouvrir le fichier [Éloge_de_Voltaire_exercice.xml](exercice1/Éloge_de_Voltaire_exercice.xml).
+1. Ouvrir le dossier d'images. 
+1. Comparer la page et son encodage.
+1. Lier la page à son image. 
+1. Ajouter les images dans le texte.
+1. Ajouter des descriptions d'images
+1. Cliquer sur le mode auteur pour voir le résultat.
+
+Balises à utiliser: 
+* `<figure>`
+* `<graphic>`
+* `<figDesc>`
+* `@url`
+* `@facs`
+
+---
+
+## Exercice 2
+1. Ouvrir le fichier [Éloge_de_Voltaire_exercice.xml](exercice2/Éloge_de_Voltaire_exercice.xml).
+1. Aller chercher l'image de la page dans le dossier de l'exercice1.
+1. Ajouter la page dans le `<facsimile>`.
+1. Découper les zones d'images (cf. la suite du document).
+1. Modifier les `@xml:id`, si vous ne l'avez pas fait à l'étape précédente.
+1. Lier les zones dans le `<text>`.
+1. Ajouter la description des images.
+
+Balises à utiliser: 
+* `<facsimile>`
+* `<surface>`
+* `<figure>`
+* `<graphic>`
+* `<figDesc>`
+* `@url`
+* `@facs`
+
+---
+
+## Comment découper les zones d'images dans Oxygen
+
+1. Ajouter l'image dans la balise `<facsimile>`.
+
+![](images/capture1.png)
+
+---
+
+2. Passer en mode auteur et ouvrir l'outil d'édition d'image.
+
+![](images/capture2.png)
+
+---
+
+3. Dessiner la zone et nommer son ID (= la valeur de l'`@xml:id`de la `<zone>` ensuite.)
+
+![](images/capture3.png)
+
+---
+
+4. La balise `<zone>` apparaît dans le document avec les coordonnées de la portion d'image. 
+
+![](images/capture4.png)
+
+5. Dans le texte, le pointeur est dirigé vers cet objet.
+---
+
+## Exercice 3
+
+Même exercice avec les documents du dossier d'exercice 3.
+
+```text
+Et avec nous te couvient force 
+Se tu de grant vertu fais force
+Vers herculés te fault virer
+Et ses vaillances remirer
+En qui il eut trop se bernage
+Et pour tant se a ton lignage
+Fut contraire et eut attainé
+N'ayes mye pour tant hayne
+A ses vertus nobles et fortes
+Qui se proesse euvrent les portes
+```

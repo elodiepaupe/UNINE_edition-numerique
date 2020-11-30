@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Exercice d'encodage d'image</title>
+            </titleStmt>
+            <publicationStmt>
+                <p>Élodie Paupe, UniNE</p>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc facs="https://www.e-codices.unifr.ch/en/list/one/ubb/A-VII-0068">
+                    <msIdentifier>
+                        <settlement>Basel</settlement>
+                        <repository>Universitätsbibliothek</repository>
+                        <idno> A VII 68</idno>
+                        <altIdentifier type="former">
+                            <repository>Basel UB, Handschriften</repository>
+                            <idno>B XI 4 (alt)</idno>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <head>
+                        <title> Cursus beatissimae virginis Mariae secundum ordinem Carthusiensem et
+                            aliae orationes </title>
+                        <origDate notBefore="1445" notAfter="1499">Milieu, deuxième moitié du XVIe
+                            siècle.</origDate>
+                    </head>
+                    <msContents>
+                        <textLang mainLang="lat" otherLangs="deu">Lateinisch, Deutsch</textLang>
+                        <msItem>
+                            <locus from="4v">4v</locus>
+                            <note> Holzschnitt. Bild: Maria, das Christuskind auf dem Arm tragend,
+                                daneben kniend ein Kartäusermönch; 8 x 6,3 cm. Darunter ein um
+                                    <date>1493</date> bei <persName>Friedrich Riederer</persName> in
+                                    <placeName>Freiburg i. Br.</placeName> gedruckter Text: <quote>
+                                    Subscriptam oracionem edidit dominus Sixtus papa quartus et
+                                    concessit ... - ... libera me ab omnibus malis amen. </quote>
+                            </note>
+                        </msItem>
+                    </msContents>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="images/e-codices_ubb-A-VII-0068_0004v_medium.jpg"/>
+            <zone xml:id="gravure" lry="766" lrx="745" uly="46" ulx="145"/>
+        </surface>
+    </facsimile>
+    <text>
+        <body>
+            <div type="pretexte">
+                <pb/>
+                <figure>
+                    <graphic url="#gravure"/>
+                    <figDesc> Gravure sur bois représentant l'enfant Jésus dans les bras de sa mère
+                        avec un moine orant à ses pieds. </figDesc>
+                </figure>
+                <p> ¶ Subscriptam oracionem edidit dominus Sixtus papa <lb/> quartus et concessit
+                    omnibus eam devote dicentibus <lb/> coram ijmagine beate virginis in Solel
+                    undecim mi-<lb break="no"/> lia annorum vere indulgencie. </p>
+                <p> ¶ Ave sanctissima maria + mater dei + regina celi + por<lb break="no"/> ta
+                    paradisi + domina mundi + tu es singularis virgo pura + <lb/> tu concepisti
+                    ihesum sine peccato tu peperisti creato-<lb break="no"/> rem et salvatorem mundi
+                    in quo ego non dubito. Era<lb/> pro me ihesum dilectus filium et libera me ab
+                    omnibus<lb/> malis amen. </p>
+            </div>
+        </body>
+    </text>
+</TEI>

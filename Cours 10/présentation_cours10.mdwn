@@ -1,0 +1,283 @@
+---
+marp: false
+---
+
+Université de Neuchâtel
+Master en littérature
+
+# TG: Édition de texte (numérique)
+## Cours 10: mise en page
+
+Élodie Paupe 
+chaire de philologie classique et d'histoire ancienne
+
+30 novembre 2020
+
+---
+
+# Mise en page: lier le facsimilé au document TEI
+
+---
+
+## Lier une image
+Il est possible de lier
+* une image disponible en ligne ou en local
+* une portion d'image
+
+---
+
+### Lier une page
+Lorsqu'on encode une édition (semi-)diplomatique, on utilise la balise `<pb>` pour signaler le début d'une nouvelle page. En utilisant l'attribut `@facs`, on peut lui lier l'image de la page. 
+
+```xml
+<pb facs="chemin/vers/image"/>
+```
+
+Le lien peut être un chemin vers un fichier conservé sur l'ordinateur:
+```xml
+<pb facs="image.jpg"/>
+```
+Le lien peut être une url, si possible un permalien: 
+```xml
+<pb facs="https://gallica.bnf.fr/ark:/12148/btv1b8610810z/f90.item"/>
+```
+
+---
+
+### Qu'est-ce qu'un permalien?
+
+Un permalien est un URL (_Uniform Resource Locator_) stable et pérenne dans le temps. 
+La manuscrits disponibles en ligne disposent généralement de permaliens permettant de pointer vers la page spécifique et pas vers la notice ou la première page du volume/manuscrit. 
+
+Exemple: 
+* https://www.e-codices.unifr.ch/en/ubb/A-VII-0068/4v/0/
+* https://www.e-codices.unifr.ch/en/list/one/ubb/A-VII-0068
+
+---
+
+### Nommer un chemin de fichier = maîtriser l'arborescence de son classement
+
+![](images/arborescence.png)
+
+---
+Le chemin de `présentation_cours8.mdwn` à `bnf2.png`:
+* `bnf2.png`
+
+Le chemin de `présentation_cours8.mdwn` à `bnf.png`:
+* `ìmages/bnf.png`
+
+Le chemin de `README.md` à `bnf.png`:
+* `Cours 9/images/bnf.png`
+
+---
+
+* Dans les exemples précédents, on déroulait l'aborescence: le chemin vers le fichier se faisait toujours de gauche à droite.
+* On peut aussi écrire un chemin vers la gauche en remontant l'aborescence. Pour cela on utilise `../` pour chaque niveau. 
+
+Le chemin de `bnf.png` à `README.md`: 
+* `../../README.md`
+
+---
+
+### Bonne pratique
+
+Lorsque plusieurs documents dépendent d'un fichier, il est plus prudent de les organiser dans des dossiers ou sous dossiers. 
+
+Exemple: 
+* 4 `fichier.xml`
+* 1 `indexnominum.xml`
+* 1 `indexlocorum.xml`
+* 4x20 numérisations `.jpeg`
+* 1 `fichier.css`
+* 1 `schema.rng`
+* 1 `fichier.odd`
+
+Comment les organiser?
+
+---
+
+Proposition: 
+```YAML
+DOSSIER
+  |-fichier1.xml
+  |-fichier2.xml
+  |-fichier3.xml
+  |-fichier4.xml
+  |-MATERIAL
+    |-OUTILS
+        |-fichier.css
+        |-schema.rng
+        |-fichier.odd
+    |-IMAGES
+        |-NUMERISATION1    
+            |-image1.jpg
+            |-image2.jpg
+            |...
+        |-NUMERISATION2
+        |-NUMERISATION3
+        |-NUMERISATION4
+    |-INDICES
+        |-indexnominum.xml
+        |-indexlocorum.xml
+```
+---
+
+Oxygen vous aide a écrire des liens corrects. 
+
+Quel est le chemin 
+* de `fichier1.xml` à `schema.rng`?
+* de `fichier1.xml` à `image1.jpg`?
+* de `fichier1.xml` à `indexlocorum.jpg`?
+* de `fichier.css` à `fichier1.xml`?
+* de `fichier.css` à `indexnominum.xml`?
+
+---
+
+## Encoder l'image
+
+* On peut lier l'image d'une page à `<pb>`, mais on peut aussi encoder un morceau de l'image de la page directement, par exemple une initiale ou une enluminure. 
+* Dans ce cas, on peut découper l'image pour en extraire l'élément pertinent (`initiale.png`).
+* La balise `<graphic>` permet d'encoder l'image et l'attribut `@url` pointe vers le fichier. 
+
+---
+
+```XML
+<div type="pretexte">
+    <pb/>
+    <graphic url="images/gravure.jpeg"></graphic>
+    <p>
+        ¶ Subscriptam oracionem edidit dominus Sixtus papa 
+        <lb/>quartus et concessit omnibus eam devote dicentibus 
+        <lb/>coram ijmagine beate virginis in Solel undecim mi-
+        <lb break="no"/>lia annorum vere indulgencie.
+    </p>
+</div>
+```
+![w:200](images/gravure.jpeg) → images/gravure.jpeg
+
+---
+
+### Encoder l'image et sa description
+
+Si on veut ajouter une description de l'image, on peut ajouter un `<figDesc>`. Les deux balises sont rassemblées au sein d'un élément `<figure>`.
+
+```XML
+<div type="pretexte">
+    <pb/>
+    <figure>
+        <graphic url="images/gravure.jpeg"></graphic>
+        <figDesc>Gravure sur bois représentant l'enfant Jésus dans les bras de sa mère avec un moine orant à ses pieds.</figDesc>
+    </figure>
+    <p>
+        ¶ Subscriptam oracionem edidit dominus Sixtus papa 
+        <lb/>quartus et concessit omnibus eam devote dicentibus 
+        <lb/>coram ijmagine beate virginis in Solel undecim mi-
+        <lb break="no"/>lia annorum vere indulgencie.
+    </p>
+</div>
+```
+---
+
+Exercice [1](exercices/cours10_exercices.mdwn)
+
+---
+
+Plutôt que de renvoyer à la page en entier, on peut préciser la zone ou les zones de la page qui nous intéressent. Dans le cas qui nous intéresse, on peut ne garder que la gravure, mais dans le cas d'une page qui contiendrait plusieurs éléments (une enluminure et une initiale; un bandeau, une frise, une initiale; etc.) on pourrait ensuite "pointer" vers ces structures précises.
+
+---
+
+Dans ce cas, on ajoute une nouvelle partie au document TEI entre le `<teiHeader>`et le `<text>` avec la balise `<facsimile>`. 
+```XML
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        ...
+    </teiHeader>
+    <facsimile>
+        ...
+    </facsimile>
+    <text>
+        ...
+    </text>
+</TEI>
+```
+---
+La balise `<surface>` permet d'identifier l'image de la page avec la balise `<graphic>` et les zones de l'image intégrées avec la balise `<zone>` qui contient les coordonnées de la portion d'image (ici un rectangle).
+
+```XML
+<facsimile>
+    <surface>
+        <graphic url="images/e-codices_ubb-A-VII-0068_0004v_medium.jpg"/>
+        <zone xml:id="gravure" lry="758" lrx="746" uly="48" ulx="147"/>
+    </surface>
+</facsimile>
+```
+---
+
+Les zones d'image sont toutes identifiées à l'aide d'`@xml:id` vers lesquels ont peut faire pointer la balise `<graphic>` lorsque l'on souhaite lier une portion d'image au texte dans la balise `<text>`.
+
+```XML
+<facsimile>
+    <surface>
+         <graphic url="images/e-codices_ubb-A-VII-0068_0004v_medium.jpg"/>
+        <zone xml:id="gravure" lry="758" lrx="746" uly="48" ulx="147"/>
+    </surface>
+</facsimile>
+<text>
+    <body>
+        <div type="pretexte">
+            <pb/>
+            <figure>
+                <graphic url="#gravure"/>
+                <figDesc>Gravure sur bois représentant l'enfant Jésus dans les bras de sa mère avec un moine orant à ses pieds.</figDesc>
+            </figure>
+            <p> 
+            ¶ Subscriptam oracionem edidit dominus Sixtus papa <lb/> quartus et concessit
+            omnibus eam devote dicentibus <lb/> coram ijmagine beate virginis in Solel
+            undecim mi-<lb break="no"/> lia annorum vere indulgencie. 
+            </p>
+        </div>
+    </body>
+</text>
+```
+
+On pourrait également faire pointer l'attribut `@facs` vers un `@xml:id`.
+
+---
+
+Document minimal avec données graphiques: 
+```XML
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Titre du document numérique</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Informations sur la publication du document numérique</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information sur la source source</p>
+         </sourceDesc>
+      </fileDesc>
+  </teiHeader>
+   <facsimile>
+      <graphic url="image.jpg"></graphic>
+   </facsimile>
+  <text>
+      <body>
+         <p>Texte édité.</p>
+      </body>
+  </text>
+</TEI>
+```
+---
+
+Exercice [2](exercices/cours10_exercices.mdwn)
+
+---
+
+# Bibliographie
+
+Burnard, Lou, _Qu’est-ce que la Text Encoding Initiative?_ [en ligne], Marseille: OpenEdition Press, 2015. Disponible sur Internet : [http://books.openedition.org/oep/1298](http://books.openedition.org/oep/1298). DOI : https://doi.org/10.4000/books.oep.1237.
+
+Simon Gabay (éd.), _Encoder, Analyser - Introduction à la philologie numérique_, Genève: Université de Genève, 2020, https://github.com/gabays/Cours_Edition_Geneve.

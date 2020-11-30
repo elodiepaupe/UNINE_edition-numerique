@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Exercice d'encodage d'image</title>
+            </titleStmt>
+            <publicationStmt>
+                <p>Élodie Paupe, UniNE</p>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc corresp="https://www.e-codices.unifr.ch/en/list/one/fmb/cb-0049">
+                    <msIdentifier>
+                        <settlement>Genève</settlement>
+                        <repository>Fondation Bodmer</repository>
+                        <idno>Cod. Bodmer 49</idno>
+                    </msIdentifier>
+                    <head>
+                        <title>
+                            <persName role="author">Christine de Pisan</persName>
+                            : Epitre d'Othea
+                        </title>
+                        <origDate notBefore="1455" notAfter="1465">Vers 1460</origDate>
+                    </head>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="texte" n="3">
+                <pb n="f12v" corresp="images/page.jpeg"/>
+                <figure>
+                    <graphic url="images/enluminure.jpeg"/>
+                    <figDesc>Un chevalier combattant des bêtes sauvages.</figDesc>
+                </figure>
+                <p>   
+                    <figure>
+                        <graphic url="images/initiale.jpg"/>
+                        <figDesc>E enluminé avec couleurs.</figDesc>
+                    </figure> 
+                    <hi rend="initiale">E</hi>t avec nous te couvient force<lb/>
+                    Se tu de grant vertu fais force<lb/>
+                    Vers herculés te fault virer<lb/>
+                    Et ses vaillances remirer<lb/>
+                    En qui il eut trop se bernage<lb/>
+                    Et pour tant se a ton lignage<lb/>
+                    Fut contraire et eut attainé<lb/>
+                    N'ayes mye pour tant hayne<lb/>
+                    A ses vertus nobles et fortes<lb/>
+                    Qui se proesse euvrent les portes<lb/>
+                </p>
+            </div>
+        </body>
+    </text>
+</TEI>

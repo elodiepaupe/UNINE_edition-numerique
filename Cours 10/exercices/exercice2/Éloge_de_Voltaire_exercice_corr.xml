@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Exercice d'encodage d'image</title>
+            </titleStmt>
+            <publicationStmt>
+                <p>Élodie Paupe, UniNE</p>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <analytic>
+                        <title>Éloge de Voltaire, suivi de Poésies diverses</title>
+                        <author>Michel de Cubières-Palmézeaux</author>
+                        <author>Voltaire</author>
+                    </analytic>
+                    <monogr>
+                        <imprint>
+                            <pubPlace>La Haie</pubPlace>
+                            <pubPlace>Paris</pubPlace>
+                            <publisher>Gueffier, rue de la Harpe</publisher>
+                            <publisher>Couturier, quai des Augustins</publisher>
+                            <date when="1783">M.DCC.L XXXIII</date>
+                        </imprint>
+                        <biblScope unit="page" n="5">5</biblScope>
+                    </monogr>
+                </biblStruct>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic xml:id="page" url="../exercice1/images/page.jpg"/>
+            <zone xml:id="bandeau" lry="315" lrx="716" uly="99" ulx="35"/>
+            <zone xml:id="initiale" lry="643" lrx="121" uly="568" ulx="43"/>
+            <zone xml:id="filet" lry="1206" lrx="723" uly="1172" ulx="48"/>
+        </surface>
+    </facsimile>
+    <text>
+        <body>
+            <div type="dialogue">
+                <pb facs="#page"/>
+                <figure>
+                    <graphic url="#bandeau"/>
+                    <figDesc>Bandeau graphique à motif floral.</figDesc>
+                </figure>
+                <head><hi rend="majuscule">Dialogue</hi>
+                    <ref corresp="note1">(1)</ref>
+                    <lb/>
+                    <hi rend="italique+majuscule">entre</hi>
+                    <lb/>
+                    <hi rend="majuscule">Madame de *** et l'auteur</hi>.</head>
+                <sp>
+                    <speaker>M<hi rend="petitemajuscule">adame de ***</hi>.</speaker>
+                    <p>
+                        <figure>
+                            <graphic url="#initiale"/>
+                            <figDesc>Initiale simple peu ornée</figDesc>
+                        </figure>
+                        <hi rend="initiale">M</hi>e voilà dans ma loge depuis un quart-<lb/> d'heure
+                        au moins, &amp; je ne ſais pas ce qu'on doit<lb/> jouer; comment
+                        trouvez-vous cela, Monſieur? </p>
+                </sp>
+                <sp>
+                    <speaker>L' A<hi rend="petitemajuscule">auteur</hi>.</speaker>
+                    <p> Cela me paroît tout ſimple, Madame: vous<lb/> aimez beaucoup les Comédien
+                        François. </p>
+                </sp>
+                <sp>
+                    <speaker>M<hi rend="petitemajuscule">adame de ***</hi>.</speaker>
+                    <p> Il eſt vrai que je les aime beaucoup; mais <lb/> encore faut-il ſavoir ce
+                        qu'ils jouent. <hi rend="italique">Dancourt</hi><lb/> ne me plaît pas autant
+                        que <hi rend="italique">Molière</hi>, &amp; j'aime<lb/> mieux <hi
+                            rend="italique">Voltaire</hi> que <hi rend="italique">Corneille</hi>.
+                    </p>
+                </sp>
+                <sp>
+                    <speaker>L' A<hi rend="petitemajuscule">auteur</hi>.</speaker>
+                    <p> Eh bien! Madame, félicitez-vous; c'eſt une<lb/> Pièce de Voltaire qu'on va
+                        vous donner. </p>
+                </sp>
+            </div>
+            
+            <figure>
+                <graphic url="#filet"/>
+                <figDesc>Filet simple.</figDesc>
+            </figure>
+            
+            <div type="notebasdepage">
+                <p xml:id="note1"> (1) Ce Dialogue a eu lieu avant la diſtribution des Prix de<lb/>
+                    L'Académie Françoiſe. </p>
+            </div>
+            <fw type="remarque">A3</fw>
+        </body>
+    </text>
+</TEI>
