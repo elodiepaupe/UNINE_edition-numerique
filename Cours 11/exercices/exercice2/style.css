@@ -1,0 +1,30 @@
+teiHeader {
+    display: none;
+}
+
+body {
+  color: #000; 
+  text-align: inherit;
+  line-height: inherit;
+  font-size: 100%;
+  text-decoration: none;
+  border-bottom: none;
+  max-width: 800px;
+  padding: 10px;
+}
+
+div {
+  display: block;
+  text-align: inherit;
+  color: inherit;
+  width: inherit;
+  padding: inherit;
+}
+
+strong{
+    color: black;
+    font-weight: bold;
+    font-style: normal;
+    text-decoration: inherit;
+    content:attr(source);
+}

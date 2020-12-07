@@ -1,0 +1,33 @@
+Université de Neuchâtel
+Master en littérature
+
+# TG: Édition de texte (numérique)
+## Cours 10: XPath
+
+Élodie Paupe 
+chaire de philologie classique et d'histoire ancienne
+
+7 décembre 2020
+
+---
+* le titre de l'œuvre
+`/TEI/teiHeader/fileDesc/sourceDesc/bibl/title/text()`
+* le nom de l'auteur 
+`/TEI/teiHeader/fileDesc/sourceDesc/bibl/author/text()`
+* la date
+`/TEI/teiHeader/fileDesc/sourceDesc/bibl/date/text()`
+* les actes 
+`/TEI/text/body/div[@type="acte"]/head/text()`
+`//div[@type="acte"]/head/text()`
+`//head[parent::div[@type="acte"]]/text()`
+* les scènes
+`/div[@type="scène"]/head/text()`
+`//head[parent::div[@type="scène"]]/text()`
+* les noms des personnages 
+`//speaker/text()`
+* les didascalies
+`//stage/text()`
+* répliques
+`//sp/p/text()`
+
+

@@ -1,0 +1,33 @@
+Université de Neuchâtel
+Master en littérature
+
+# TG: Édition de texte (numérique)
+## Cours 10: XPath
+
+Élodie Paupe 
+chaire de philologie classique et d'histoire ancienne
+
+7 décembre 2020
+
+---
+Imaginons que l'on veuille éditer [Caligula_exercice.xml](Caligula_exercice.xml) sous format `.html`. 
+On voudra extraire certaines informations pour en contrôler la mise en forme.
+
+On voudra extraire: 
+* le titre de l'œuvre
+* le nom de l'auteur 
+* la date
+
+pour imprimer l'en-tête du fichier.
+
+On voudra extraire: 
+* les actes et les scènes
+* les noms des personnages 
+* les didascalies
+* les répliques
+
+pour les imprimer et les mettre en forme (gras, italique...)
+
+---
+
+Quels chemins XPath?

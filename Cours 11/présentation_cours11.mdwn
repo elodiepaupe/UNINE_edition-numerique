@@ -1,0 +1,331 @@
+---
+marp: true
+---
+
+Université de Neuchâtel
+Master en littérature
+
+# TG: Édition de texte (numérique)
+## Cours 10: XPath
+
+Élodie Paupe 
+chaire de philologie classique et d'histoire ancienne
+
+7 décembre 2020
+
+---
+
+# XPath
+
+---
+
+## Qu'est-ce que c'est?
+
+En encodant un document, on crée une arborescence dans laquelle il est possible de se déplacer pour identifier des portions de documents qui figures entre des balises (les données) et dans les balises (la valeur des attributs).
+
+XPath est donc une **syntaxe** qui permet de décrire un chemin dans un document XML (et donc XML-TEI) et une **bibliothèque de fonctions** pour écrire ces chemins.
+
+---
+
+## Pourquoi maîtriser XPath?
+
+La localisation de données ou d'attributs sont utiles lorsqu'on souhaite transformer le document encodé dans un autre format (HTML, laTex, etc.) ou lorsqu'on souhaite extraire des informations du texte considéré comme une base de données. 
+
+XPath s'emploie en complément avec d'autres langages
+* XSLT (pour la transformation)
+* XQuery (pour l'extraction)
+
+---
+
+## Syntaxe
+Un document XML peut être schématisé sous la forme d'une arborescence du même type que celle employée pour stocker ses fichiers en dossiers et dossiers. Sa syntaxe ressemble donc un peu à celle que nous avons vue la semaine dernière pour identifier le chemin vers un fichier enregistré sur votre ordinateur. 
+
+---
+Si on considère le fichier XML suivant: 
+```XML
+<body>
+    <div type="sonnet">
+        <head>Sonnet</head>
+        <lg type="quatrain">
+            <l n="1">Se voir le plus possible et s'aimer seulement,</l>
+            <l n="2">Sans ruse et sans détours, sans honte ni mensonge,</l>
+            <l n="3">Sans qu'un désir nous trompe, ou qu'un remords nous ronge,</l>
+            <l n="4">Vivre à deux et donner son coeur à tout moment;</l>
+        </lg>
+        <lg type="quatrain">
+            <l n="5">Respecter sa pensée aussi loin qu'on y plonge,</l>
+            <l n="6">Faire de son amour un jour au lieu d'un songe,</l>
+            <l n="7">Et dans cette clarté respirer librement –</l>
+            <l n="8">Ainsi respirait Laure et chantait son amant.</l>
+        </lg> 
+        <lg type="tercet">
+            <l n="9">Vous dont chaque pas touche à la grâce suprême,</l>
+            <l n="10">C'est vous, la tête en fleurs, qu'on croirait sans souci,</l>
+            <l n="11">C'est vous qui me disiez qu'il faut aimer ainsi.</l>
+        </lg>
+        <lg type="tercet">
+            <l n="12">Et c'est moi, vieil enfant du doute et du blasphème,</l>
+            <l n="13">Qui vous écoute, et pense, et vous réponds ceci:</l>
+            <l n="14">Oui, l'on vit autrement, mais c'est ainsi qu'on aime.</l>
+        </lg>
+    </div>
+    <div type="autre">
+        <head>Colloque sentimental</head>
+        <lg type="distique">
+            <l n="1">Dans le vieux parc solitaire et glacé</l>
+            <l n="2">Deux formes ont tout à l’heure passé.</l>
+        </lg>
+    </div>
+</body>
+```
+
+---
+On peut le schématiser sous la forme de l'arborescence suivante: 
+![w:900](images/schema_recueil.jpg)
+
+---
+### Syntaxe de base
+Son élément racine est `<body>`: tout chemin XPath à l'intérieur de ce document commencera donc par 
+
+`/body`
+
+---
+
+* Si on applique ce chemin au document, il rendra l'entier des données contenues par la balise `<body>`.
+
+![w:600](images/\body.jpg)
+
+---
+* Oxygen permet de tester des chemins XPath: voyons quelles données vont être rendues par cette syntaxe
+
+---
+Pour descendre dans l'aborescence, on utilise le séparateur `/`qu'on fait suivre de la balise suivante: 
+
+ainsi: `/body/div`
+rendra: 
+![w:700](images/div.jpg)
+
+---
+Pour descendre de "plusieurs niveau", on peut utiliser un double séparateur: 
+
+ainsi: `/body//l`
+rendra: 
+![w:700](images/\body\l.jpg)
+
+---
+de même: `//l`
+rendra:
+![w:700](images/\body\l.jpg)
+
+---
+Pour remonter d'un niveau (= aller au noeud parent), on peut utiliser `..`. 
+On peut également naviguer en faisant appel aux attributs.
+
+ainsi: `//lg/../@type`
+rendra: 
+![w:700](images/atttype.jpg)
+
+---
+
+Noeud d'élément: `element`
+* `/body/div`
+
+Noeud d'attribut: `@attribut`
+* `/body/div/@type`
+
+Noeud de texte: `text()`
+* `//l/text()`
+
+Dans XPath, ces chemins vont rendre 
+* le contenu de l'élément;
+* la valeur de l'attribut (ce qui figure entre guillemets);
+* le texte contenu par l'élément.
+
+---
+`/body/div/lg/l`
+![w:700](images/l.jpg)
+
+---
+`/body/div/lg/l/text()`
+![w:700](images/text.jpg)
+
+---
+### Prédicat 
+Même s'ils ne sont pas numéroté avec l'attribut `@n`, les éléments sont identifiables par leur prédicat: 
+
+ainsi: `//lg[1]`
+rendra: 
+![w:700](images/lg[1].jpg)
+
+---
+Le prédicat peut être défini par la valeur d'un élément:
+
+ainsi: `//div[lg/@type='quatrain']`
+rendra: 
+![w:700](images/div[lgtypequatrain].jpg)
+
+---
+ainsi: `//head[.='Sonnet']`
+rendra: 
+![w:700](images/head.jpg)
+
+---
+Le pérdicat peut être définit par la valeur d'un attribut: 
+
+ainsi: `//lg[©type='tercet']`
+rendra: 
+![w:700](images/tercet.jpg)
+
+---
+### Opérateurs logiques
+Le prédicat peut être rendu plus complexe à l'aide des opérateurs logiques qui permettent d'ajouter des conditions. 
+
+* `and`
+* `or`
+
+---
+`and`
+ainsi: `//lg[@type="tercet" and l/@n="9"]`
+rendra:
+![w:700](images/tercetn9.jpg)
+
+---
+`or`
+ainsi: `//lg[@type="tercet" or @type="distique"]`
+rendra: 
+![w:700](images/tercetdistique.jpg)
+
+---
+On s'exerce:
+`/body/div` 
+![w:700](images/schema_recueil.jpg)
+
+---
+![w:700](images/div.jpg)
+
+---
+On s'exerce:
+`/body/div/lg` 
+![w:700](images/schema_recueil.jpg)
+
+---
+![w:700](images/lg.jpg)
+
+---
+On s'exerce:
+`/body/div/@type` 
+![w:700](images/schema_recueil.jpg)
+
+---
+![w:700](images/atttype.jpg)
+
+---
+On s'exerce:
+`/body/div/lg/l[@n="1"]` 
+![w:700](images/schema_recueil.jpg)
+
+---
+![w:700](images/atttype.jpg)
+
+---
+On s'exerce:
+`/body/div[@type="autre"]/head` 
+![w:700](images/schema_recueil.jpg)
+
+---
+![w:700](images/sonnethead.jpg)
+
+---
+On s'exerce:
+`//div[@type="autre"]//l` 
+![w:700](images/schema_recueil.jpg)
+
+---
+![w:700](images/distiquel.jpg)
+
+---
+On s'exerce:
+`//l[number(@n)>3]` 
+![w:700](images/schema_recueil.jpg)
+
+---
+![w:700](images/l+3.jpg)
+
+---
+### La parenté des noeuds
+Il est possible d'écrire des chemins à partir du lien de parenté entre les noeuds: on dit qu'on travaille sur l'axe d'un noeud.
+
+* `ancestor::` signifie un parent, un grand-parent ou plus... du noeud
+* `parent::` signifie le parent du noeud
+* `child::` signifie l'enfant du noeud
+* `descendant::` signifie un enfant, petit enfant ou plus... du noeud
+
+---
+On s'exerce:
+`//l[ancestor::lg[@type="tercet"]]` 
+![w:700](images/schema_recueil.jpg)
+
+---
+![w:700](images/ancestor.jpg)
+
+---
+On s'exerce:
+`//lg[child::l[@n="1"]]` 
+![w:700](images/schema_recueil.jpg)
+
+---
+![w:700](images/child.jpg)
+
+---
+On s'exerce:
+`//l[last()]` 
+![w:700](images/schema_recueil.jpg)
+
+---
+![w:700](images/last.jpg)
+
+---
+On s'exerce:
+`//l[last()-1]` 
+![w:700](images/schema_recueil.jpg)
+
+---
+![w:700](images/last-1.jpg)
+---
+
+On y retourne. Attention, méchants prédicats en perspective...
+
+---
+On s'exerce:
+`//div[.//l/@n="7"]` 
+![w:700](images/schema_recueil.jpg)
+
+---
+![w:700](images/7.jpg)
+
+---
+On s'exerce:
+`//l[position()=1]]` 
+![w:700](images/schema_recueil.jpg)
+
+---
+![w:700](images/l1.jpg)
+
+---
+## Et maintenant, à vous: 
+
+Vous voulez extraire: 
+* tous les vers du distique
+* le titre d'un poème qui contiendrait 8 vers
+* les deux premiers vers de tous les poèmes
+
+---
+
+Exercice 2: [ici]()
+
+---
+# Bibliographie
+
+Burnard, Lou, _Qu’est-ce que la Text Encoding Initiative?_ [en ligne], Marseille: OpenEdition Press, 2015. Disponible sur Internet : [http://books.openedition.org/oep/1298](http://books.openedition.org/oep/1298). DOI : https://doi.org/10.4000/books.oep.1237.
+
+Simon Gabay (éd.), _Encoder, Analyser - Introduction à la philologie numérique_, Genève: Université de Genève, 2020, https://github.com/gabays/Cours_Edition_Geneve.
