@@ -318,7 +318,7 @@ Vous voulez extraire:
 
 ---
 
-Exercice 2: [ici]()
+Exercice 2: [ici](exercices/exercice2/cours10_exercice2.mdwn)
 
 ---
 # Bibliographie
