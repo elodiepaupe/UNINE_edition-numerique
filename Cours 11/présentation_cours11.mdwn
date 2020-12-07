@@ -1,7 +1,3 @@
----
-marp: true
----
-
 Université de Neuchâtel
 Master en littérature
 
@@ -97,7 +93,7 @@ Son élément racine est `<body>`: tout chemin XPath à l'intérieur de ce docum
 
 ---
 * Oxygen permet de tester des chemins XPath: voyons quelles données vont être rendues par cette syntaxe
-
+![w:700](images/oxy_body.png)
 ---
 Pour descendre dans l'aborescence, on utilise le séparateur `/`qu'on fait suivre de la balise suivante: 
 
@@ -143,19 +139,20 @@ Dans XPath, ces chemins vont rendre
 
 ---
 `/body/div/lg/l`
-![w:700](images/l.jpg)
+![w:800](images/l.png)
 
 ---
 `/body/div/lg/l/text()`
-![w:700](images/text.jpg)
+![w:800](images/text.png)
 
 ---
 ### Prédicat 
-Même s'ils ne sont pas numéroté avec l'attribut `@n`, les éléments sont identifiables par leur prédicat: 
+Même s'ils ne sont pas numéroté avec l'attribut `@n`, les éléments sont "comptés" informatiquement. Cette numérotation qui n'est pas liée à l'encodage peut être appelée dans le **prédicat** d'un élément. 
+Un prédicat permet de définir un élément. 
 
 ainsi: `//lg[1]`
 rendra: 
-![w:700](images/lg[1].jpg)
+![h:300](images/lg[1].jpeg)
 
 ---
 Le prédicat peut être défini par la valeur d'un élément:
@@ -170,7 +167,7 @@ rendra:
 ![w:700](images/head.jpg)
 
 ---
-Le pérdicat peut être définit par la valeur d'un attribut: 
+Le prédicat peut être défini par la valeur d'un attribut: 
 
 ainsi: `//lg[©type='tercet']`
 rendra: 
@@ -187,7 +184,7 @@ Le prédicat peut être rendu plus complexe à l'aide des opérateurs logiques q
 `and`
 ainsi: `//lg[@type="tercet" and l/@n="9"]`
 rendra:
-![w:700](images/tercetn9.jpg)
+![w:700](images/tercet9.jpg)
 
 ---
 `or`
@@ -225,7 +222,7 @@ On s'exerce:
 ![w:700](images/schema_recueil.jpg)
 
 ---
-![w:700](images/atttype.jpg)
+![w:700](images/ln1.jpg)
 
 ---
 On s'exerce:
