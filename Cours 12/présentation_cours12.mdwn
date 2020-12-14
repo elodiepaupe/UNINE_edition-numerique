@@ -1,0 +1,474 @@
+---
+marp: true
+---
+
+Université de Neuchâtel
+Master en littérature
+
+# TG: Édition de texte (numérique)
+## Cours 12: textométrie avec TXM
+
+Élodie Paupe 
+chaire de philologie classique et d'histoire ancienne
+
+14 décembre 2020
+
+---
+# Qu'est-ce que la textométrie?
+## Définition
+* la textométrie ou logométrie ou statistique textuelle est la forme actuelle de la lexicométrie qui s'est développée dans les années 60.
+
+---
+> Elle propose des procédures de tris et de calculs statistiques pour l’étude d’un corpus de textes numérisés. A ces procédures quantitatives la textométrie articule fortement des moyens de parcours et d’interprétation qualitatifs, déterminants quant aux affinités possibles avec une théorie linguistique telle que la sémantique interprétative.
+–– Pincemin 2011, 2.
+
+---
+* Objectif ≠ la description de la langue qui serait le but de la linguistique de corpus.
+* Employée par différents champs de recherche (littérature, mais aussi histoire, sciences politiques, etc.)
+* Utilisation à des calculs statistiques (spécificité, coocurrence), mais aussi non statistiques (concordance)
+* Données chiffrées qui doivent permettre un retour au texte et une interprétation: importance fondamentale du contexte des éléments observés.
+
+---
+## Travailler sur le texte
+* L'approche textométrique nécessite qu'un corpus soit établi, c'est-à-dire qu'un ensemble de textes soit défini qui permette de valider les interprétations.
+* La textométrie n'est pas une analyse magique: 
+> L’analyse textométrique procède également d’une démarche construite : on ne peut pas fournir un corpus, « faire tourner » le logiciel, et récupérer le résultat comme produit fini. Chaque étape suppose des choix et implique l’utilisateur, et bien souvent la dynamique de l’interprétation procède par ajustement progressif des données et des calculs : on retrouve très concrètement l’interprétation comme action et comme geste qui affine dynamiquement sa trajectoire.
+–– Pincemin 2011, 17
+
+---
+> L’avantage reconnu du traitement informatisé est double : il porte sur la taille des corpus susceptibles d’être étudiés et sur la fiabilité des critères de recherche qui peuvent leur être appliqués ; pouvoir soumettre les très grands corpus à un questionnement stable, même s’il ne peut toujours pas être revendiqué comme objectif, est en effet une des distinctions essentielles entre la recherche traditionnelle et la recherche informatisée.
+–– Maigri-Mourgues 2010, 1.
+
+---
+### Typologie des corpus
+> Principles for the design of corpora are determined by the research intentions with which they are compiled.
+–– Aast 2011, 119.
+
+1. _balanced corpora_: image plus ou moins représentative d'une langue, d'état de langue… (--> _sample corpora_)
+1. _full-text corpora_: un ou plusieurs textes complets
+1. _parallel corpora_: des textes en plusieurs langues, ou de plusieurs versions d'une même langue (par exemple des dialectes)
+
+---
+ ## Lexicométrie et stylistique
+* L'approche du texte assistée par ordinateur (on parle d'approche computationnelle) n'est pas la création d'une science nouvelle: elle prend le relai de la stylistique.
+* Une approche computationnelle est forcéement quantitative: elle s'intéresse aux fréquences et à leurs variations.
+> La lexicométrie s’est d’abord définie comme étude du vocabulaire, avant qu’on ne parle de logométrie – comme étude globale d’un discours – ou encore de textométrie, comme analyse d’un texte. Le terme de stylométrie1, quant à lui, fonde sa spécificité dans la caractérisation d’une écriture.
+–– Maigri-Mourgues 2010, 1.
+
+---
+* Exemple de recherche textométrique: la prise de parole publique du président E. Macron par rapport aux autres présidents de la République
+
+Damon Mayaffre, Bénédicte Pincemin, Céline Poudat, « Explorer, mesurer, contextualiser. Quelques apports de la textométrie à l’analyse de discours », _Langue française_, 3 (N° 203), 2019, 101-115. DOI : 10.3917/lf.203.0101. URL : https://www.cairn.info/revue-langue-francaise-2019-3-page-101.htm
+
+---
+# Du texte au corpus, quelques définition
+Pour pouvoir travailler la matière textuelle, celle-ci doit être augmentée de métadonnées qui permettront des analyses qui dépassent la simple recherche de mot. 
+
+---
+## Token
+Le token (en français "jeton") n'est pas un mot, c'est une entité lexicale. C'est une chaîne de caractères (_string_) entre deux délimiteurs. Ces délimiteurs sont eux-mêmes une chaîne de caractères (usuellement virgule, point-virgule… éventuellement précédés d'un espace insécable).
+
+---
+## Lemmatisation
+* Faire passer de la forme fléchie à son lemme.
+* Lemme = une forme canonique
+* Nécessité d'avoir recours à un référentiel commun, comme _Morphalou_, car il faut éviter qu'un même mot ait deux lemmes (_œil_, _clef_ …)
+
+> Morphalou3 est un lexique à large couverture. Morphalou, dans sa version 3.1, comprend 159 271 lemmes et 976 570 formes fléchies, du français moderne.
+–– ATILF 2019
+
+---
+
+| token |
+|-------|
+| Je    |
+| mange |
+| une   |
+| pomme |
+
+---
+
+| token | Lemme  |
+|-------|--------|
+| Je    | je     |
+| mange | manger |
+| une   | un     |
+| pomme | pomme  |
+
+---
+### POS (_part of speech_) tagger
+* Il fait correspondre sa classe grammaticale à chaque token.
+* Un jeu d'étiquettes précis: `N` pour le substantif, `Adj`pour l'adjectif, `D` pour le déterminant… 
+* Ajout d'informations supplémentaires: le nombre, le genre, le mode, le temps, la personne…
+
+---
+
+| token | Lemme  |
+|-------|--------|
+| Je    | je     |
+| mange | manger |
+| une   | un     |
+| pomme | pomme  |
+
+---
+
+| token | Lemme  | CATTEX | UDpos | EAGLES   | MULTEX |
+|-------|--------|--------|-------|----------|--------|
+| Je    | je     | PROper | PRON  | PRON_PER | Pp     |
+| mange | manger | VERcjg | VERB  | V_GVRB   | Vv     |
+| une   | un     | DETndf | DET   | ART      | Dn     |
+| pomme | pomme  | NOMcom | NOUN  | NN       | Nc     |
+
+---
+
+| token | Lemme  | POS    | Morphologie                       |
+|-------|--------|--------|-----------------------------------|
+| Je    | je     | PROper | PERS.=1\NOMB.=s\|GENRE=x\         |
+| mange | manger | VERcjg | MODE=ind\TEMPS=pst\PERS.=1\NOM.=s |
+| une   | un     | DETndf | NOMB.=s\GENRE=f                   |
+| pomme | pomme  | NOMcom | NOMB.=s\|GENRE=f                  |
+
+---
+## Le parseur
+
+* Analyse syntaxique – en anglais on parle de _syntactic parsing_, ce qui permet d'analyser la fonction dans la phrase.
+* Cette approche s'appuie beaucoup sur la grammaire d'arbres adjoints (TAG, _Tree-adjoining grammar_ ) qui représente la phrase sous la forme de graphes.
+
+![](images/Recursion-tag-fr.jpg)
+
+Source: [Wikipedia](https://commons.wikimedia.org/wiki/File:Recursion-tag-fr.jpg?uselang=fr)
+
+---
+# Méthode lexicométrique et types de calculs
+
+---
+## Spécificité
+Objectif: observer la récurrence d'une cooccurence pour définir si son apparition dans une partie du corpus donné est significative ou non par rapport à l'entier du corpus considéré.
+
+1. Décompter les occurrences globales
+2. Diviser cette fréquence par le nombre total d'occurrences dans la partie considérer = calculer les fréquences relatives
+3. Indice de spécificité de Lafon (1980) pour améliorer la comparaison et définir un seuil de spécificité
+
+... pour les calculs statistiques, voyez [le Manuel TXM, chapitre 7.11 Spécificités](http://textometrie.ens-lyon.fr/files/documentation/Manuel%20de%20TXM%200.7%20FR.pdf)
+
+---
+![w:1000](images/spécificité.svg)
+
+---
+## Cooccurrence
+On peut observer trois types de contextes:
+* immédiat (par exemple la phrase)
+* proche (par exemple le paragraphe)
+* large (par exemple le chapitre)
+
+Des mots reliés partagent non seulement ce contexte, mais un écart-réduit positif ou une  probabilité forte selon la loi hypergéométrique (Brunet 1980).
+
+> Ce que produit le calcul textométrique, ce sont donc des cooccurrents, au plan des signifiants ; et ce qui est visé, c'est l'obtention de corrélats, au plan des signifiés.
+–– Pincemin 2012
+
+---
+![](images/cooccurrence.png)
+
+---
+## AFC (analyse factorielle des correspondances)
+Objectif: calculer l'analyse factorielle des correspondances d'une partition, où chaque partie est représentée par un vecteur de fréquence d'une propriété de mot (word, lemma, POS...).
+
+La mesure permet de décrire et hiérarchiser des relations statistiques entre des objets. Elles sont présentées dans un tableau rectangulaire de données. On obtient un nuage de points qui permet de visualiser le résultat de l'analyse.
+[Wikipedia](https://fr.wikipedia.org/wiki/Analyse_factorielle_des_correspondances)
+
+---
+![w:800](images/AFC.svg)
+
+---
+![w:800](images/AFC_1.svg)
+
+---
+## Classification
+Après avoir calculé une AFC, on peut lancer une classification qui permet (en très raccourci) de visualiser sous forme de dendogramme les résultats d'une AFC en définissant un certain nombre de classes. Cette méthode fait appel à de nouveaux calculs de distance que vous ne pouvez pas choisir (mais on le pourrait si on travaillait dans _R_ avec le package `stylo`, par exemple).
+
+---
+![w:1000](images/classification2D.svg)
+
+---
+![w:1000](images/classification3D.svg)
+
+---
+## Progression
+* Une progression affiche l'évolution d'un ou de plusieurs motifs au fil du corpus. Cette commande est lancée sur un corpus.
+
+---
+![](images/progression_annee.svg)
+
+---
+![](images/progression_FranceRépublique.svg)
+
+---
+![](images/progression_FranceRépublique_loc.svg)
+
+---
+# TXM
+## Logiciels de textométrie
+Bénédicte Pincemin, _Sept logiciels de textométrie_ 2018. halshs-01843695
+
+---
+## TXM
+* Possibilité d'importer des corpus de texte simple (copier-coller, fichier txt) ou enrichi (XML-TEI)
+* Possibilité de travailler sur des sous-corpus
+* Opérations textométriques traditionnelles possibles
+* Interface utilisateur pas trop difficile à comprendre
+
+---
+## Découvrir TXM avec le corpus VOEUX
+Le corpus «VOEUX» a été édité par Jean-Marc Leblanc du laboratoire Céditec (Centre d’étude des discours, images, textes, écrits, communication) à Créteil Val de Marne. Il est composé de 54 transcriptions de vœux présidentiels aux caractéristiques suivantes :   
+* septs présidents français : Pompidou (5 discours), de Gaulle (10 voeux), Giscard (7 voeux), Mitterand (14 voeux), Chirac (12 voeux), Sarkozy (5 voeux) et Hollande (1 voeu);
+* sur une période allant de 1959 à 2012.
+
+Chaque transcription a été lemmatisée avec le logiciel TreeTagger en utilisant le modèle `fr.par`: les étiquettes utilisées sont disponibles [ici](http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/data/french-tagset.html).
+
+---
+Le corpus est composé des éléments suivants :
+* unités structurelles : text (vœu) / p (paragraphe) / s (phrase)
+* chaque « text » comporte les propriétés suivantes :
+    * annee : au format « yyyy »
+    * loc : le nom du président
+* chaque unité lexicale comporte les propriétés suivantes :
+    * word : forme graphique du mot ;
+    * frpos:l'étiquettemorphosyntaxiquedeTreeTagger;
+    * frlemma:lelemmedeTreeTagger;
+    * lbn : le numéro de ligne dans le fichier source ;
+    * sn : le numéro de la phrase calculé lors de l'import ;
+    * pn : le numéro du paragraphe calculé lors de l'import.
+
+---
+![w:1000](images/corpus.png)
+
+---
+![w:1000](images/propriétés.png)
+
+---
+![w:1000](images/édition.png)
+
+---
+![w:1000](images/lexique.png)
+
+---
+![w:1000](images/lexique_lemme.png)
+
+---
+![w:1000](images/concordance.png)
+
+---
+![w:1000](images/concordance_result.png)
+
+---
+![w:1000](images/cooccurrencebis.png)
+
+---
+![w:1000](images/cooccurrence_result.png)
+
+---
+![w:1000](images/progressionbis.png)
+
+---
+![w:1000](images/progression_result.png)
+
+---
+![w:1000](images/progressionter.png)
+
+---
+![w:1000](images/partition.png)
+
+---
+![w:1000](images/spécificitébis.png)
+
+---
+![w:1000](images/diagramme_batons.png)
+
+---
+![w:1000](images/diagramme_batons_result.png)
+
+---
+![w:1000](images/AFCbis.png)
+
+---
+![w:800](images/AFC.svg)
+
+---
+## Aller plus loin dans la partition
+1. Créer une table lexicale
+2. Nettoyer la table (supprimer la ponctuation, etc.)
+3. Calculer des spécificités
+4. Générer l'histogramme
+
+---
+![w:800](images/table_lexicale.png)
+
+---
+![w:800](images/spécificité_je.png)
+
+---
+![w:800](images/je.png)
+
+---
+## Importer un corpus
+![w:800](exercice/images/import.png)
+
+---
+Il est aussi possible d'importer des corpus qui ne sont pas structurés en XML: 
+
+![w:800](exercice/images/importbis.png)
+
+---
+## Description succincte
+* **Groupe 1** (c. 1630-1650)
+	* Pierre Du Ryer (fl. 1628-1655)
+	* Georges de Scudéry (fl. 1631-1643)
+	* Jean de Rotrou (fl. 1635-1649)
+	* Paul Scarron (fl. 1648-1660)
+* **Groupe 2**
+	* Pierre Corneille (fl. 1629-1675)
+* **Groupe 3** (c. 1650-1690)
+	* Claude Boyer (fl. 1646-1697)
+	* Thomas Corneille (fl. 1651-1696)
+	* Molière (fl. 1655-1673)
+	* Jean Racine (fl. 1664-1691)
+
+---
+## Metadonnées
+* Dans un fichier csv
+* Première colonne, intitulée `id`, contient le nom du fichier
+* Le contenu et le titre des autres colonnes sont libres.
+* Plus de partitions automatiques possibles!
+
+---
+![w:800](exercice/images/métadonnées.png)
+
+---
+## Explorer le corpus: CQP (_Corpus Query Processor_)
+* Moteur de recherche pour corpus textuel.
+* Manuel de TXM [en ligne](http://textometrie.ens-lyon.fr/html/doc/manual/0.7.9/fr/manual60.xhtml)
+* Une "équation" de recherche qui permet de chercher un mot ou une suite de mot en fonction de certaines valeurs (mot graphique, lemme, catégorie grammaticale)
+
+---
+### Recherche --> index
+Cliquer sur la baguette magique. 
+Nous allons chercher le lemme "ami".
+
+![w:600](exercice/images/requête.png)
+
+---
+Les réponses peuvent être employées directement dans une recherche de concordance, de cooccurrence ou de progression. 
+
+On peut également modifier la réponse en demandant à faire apparaître non pas les formées fléchies du lemme, mais le lemme directement. 
+
+![w:600](exercice/images/requête_lemme.png)
+
+---
+Comment écririez-vous les requêtes suivantes? Aidez-vous du jeu d'[étiquettes Treetagger](exercice/JeuEtiquettesModeleFrancaisTreeTagger.pdf) ou [en ligne](https//www.sketchengine.eu/french-treetagger-part-of-speech-tagset/)
+1. Arriverez-vous à chercher tous les noms propres?
+1. Tous les déterminants suivis d'un nom commun et d'un adjectif?
+1. Le pronom "je" suivis du verbe avoir?
+1. Tous les pronoms suivis d'un mot quelconque, suivi du verbe être (peu importe la forme)?
+1. Le mot "que" suivi d'un pronom et du verbe aller.
+
+---
+![](exercice/images/nompropre.png)
+
+---
+## Solutions
+1. `[frpos="NAM.*"]`
+1. `[frpos="DET.*"][frpos="NOM.*"][frpos="ADJ.*"]`
+1. `[frpos="PRO.*"][frlemma="avoir"]`
+1. `[frpos="PRO.*"][][frlemma="être"]`
+1. `[word="que"][frpos="PRO.*"][frlemma="aller"]`
+
+---
+## CQL – un pas de plus
+* Ignorer:
+	* `%c` casse, ex. `[word="état"%c]`
+	* `%d` diacritiques, ex. `[word="état"%d]`
+	* `%d` les deux, ex., `[word="état"%cd]`
+* Opérateurs
+	* `=` égal
+	* `!=` différent
+	* `|` ou
+	* `&` et
+	* `()` priorité des opérations
+
+---
+* Quantificateurs
+	* `{1}`une fois, `{1,2}`une ou deux fois
+	* `?`zéro ou une fois
+	* `+`une seule fois ou plus
+
+* Certains caractères doivent être échappés en plaçant une barre oblique inverse avant:
+	* `?`, `*`, `+`, `|`, `&`
+	* `\?`, `\*`, `\+`, `\|`, `\&`
+
+---
+* On peut enfin utiliser des expressions régulières:
+	* `.` n'importe quel caractère
+	* `[uv]` _u_ ou _v_
+	* `[uvij]` _u_ ou _v_ ou _i_ ou _j_
+	* `[a-z]` n'importe quelle minuscule non accentuée
+	* `[A-Z]` n'importe quelle majuscule non accentuée
+	* `\d` un chiffre
+	* `\s` un caractère d’espacement
+	* `\w` un caractère de mot
+	* Et beaucoup d'autres…
+---
+* Il est possible d'utiliser des propriétés de structures, c'est-à-dire d'utiliser les balises XML dans les requêtes:
+	* `<l> []* [frlemma="rire"] []* </l>`
+
+![w:600](exercice/images/rire.png)
+
+---
+## À vous de jouer
+
+Comment chercher:
+1. _amour_ ou _joie_ précédé d'un pronom possessif
+1. _amour_ ou _joie_ précédé d'un pronom possessif ou d'un article
+1. _amour_ ou _joie_ précédé d'un pronom possessif ou d'un article à un ou deux mots d'intervalle
+1. Les mots finissant par _indre_
+1. Les interjections finissant par _h_
+1. Les mots avec _tion_  à la rime
+1. Les vers composés de cinq ou six tokens
+
+---
+Réponses: 
+1. `[frpos="DET:POS"][word="amour"|word="joie"]`
+1. `[frpos="DET:POS"|frpos="DET:ART"][word="amour"|word="joie"]`
+1. `[frpos="DET:POS"|frpos="DET:ART"][]{1,2}[word="amour"|word="joie"]`
+1. `[word=".*indre"]`
+1. `[word="[aeiou]h"]`
+1. `<l>  [] * [word=".*tion"] </l>`
+1. `<l>  [] {5,6} </l>`
+
+---
+# Bibliographie
+Analyse et traitement informatique de la langue française - UMR 7118 (ATILF), _Morphalou [Lexique]_; ORTOLANG (Open Resources and TOols for LANGuage) - www.ortolang.fr, v3.1, 2019, https://hdl.handle.net/11403/morphalou/v3.1.
+
+Jan Aarts, « Corpus analysis », in: _Pragmatics in Practice_, Jan-Ola Östman & Jef Verschueren (éds.), Amsterdam/Philadephie: John Benjamins Publishing Compagny, 2011, 118-129.
+
+Jean-Paul Benzécri et al., _L'analyse des correspondances_ Paris: Dunod, 1973.
+
+Brunet, "Loi hypergéométrique et loi normale. Comparaison dans les grands corpus", 1980.
+
+---
+
+Lou Burnard, _Qu’est-ce que la Text Encoding Initiative?_ [en ligne], Marseille: OpenEdition Press, 2015. Disponible sur Internet : [http://books.openedition.org/oep/1298](http://books.openedition.org/oep/1298). DOI : https://doi.org/10.4000/books.oep.1237.
+
+Lafon, "Sur la variabilité de la fréquence des formes dans un corpus", _Mots_, 1 (1980), 127-165.
+
+Véronique Magri-Mourgues, "Stylistique et statistiques. Le corpus textuel et Hyperbase", _PUR. Stylistiques ?_, 377-393, 2010. hal-01226831
+
+Damon Mayaffre, Bénédicte Pincemin, Céline Poudat, « Explorer, mesurer, contextualiser. Quelques apports de la textométrie à l’analyse de discours », Langue française, 2019/3 (N° 203), p. 101-115. DOI : 10.3917/lf.203.0101. URL : https://www.cairn.info/revue-langue-francaise-2019-3-page-101.htm
+
+---
+Bénédicte Pincemin, « Sémantique interprétative et textométrie – Version abrégée », _Corpus_, 10 | 2011, 259-269.
+
+Pincemin, "Sémantique interprétative et textométrie", 2012
+
+Bénédicte Pincemin, _Sept logiciels de textométrie_ 2018. halshs-01843695
+
+Simon Gabay (éd.), _Encoder, Analyser - Introduction à la philologie numérique_, Genève: Université de Genève, 2020, https://github.com/gabays/Cours_Edition_Geneve.
