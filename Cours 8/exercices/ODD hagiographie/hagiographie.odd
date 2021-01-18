@@ -1,0 +1,178 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Hagiographie_v1</title>
+            <author xml:id="EP">Élodie Paupe</author>
+         </titleStmt>
+         <publicationStmt>
+	         <publisher>TEI Consortium</publisher>
+           <availability status="free">
+	     <p>TEI  material can be licensed differently depending on the use you intend to 
+	     make of it. Hence it is made available under both the CC+BY and BSD-2 
+	     licences.  The CC+BY licence is generally appropriate for usages which 
+	     treat TEI content as data or documentation. The BSD-2 licence is 
+	     generally appropriate for usage of TEI content in a software 
+	     environment. For further information or clarification, please contact 
+	     the TEI Consortium (info@tei-c.org).</p>
+           </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Thèse de doctorat sur l'hagiographie mérovingienne du nord de la chaîne du Jura
+            par Élodie Paupe</p>
+         </sourceDesc>
+      </fileDesc>
+     <revisionDesc>
+       <change when="2021-01-18" who="#EP">Modification du document produit par Roma</change>
+     </revisionDesc>
+   </teiHeader>
+   <text>
+     <body>
+       <head>TEI pour l'hagiographie</head>
+       <p>Cette restriction de la TEI a été développée pour une thèse de doctorat comprenant l'édition bilingue de texte hagiographiques
+       en prose contenant également des vers, un apparat critique et un commentaire.</p>
+       <div>
+         <head>Structure de texte latin et de la traduction</head>
+         <p>Les éléments
+           <specList>
+             <specDesc key="div"/>
+             <specDesc key="p"/>
+           </specList>
+         </p>
+         <p>L'élément <gi>div</gi> peut contenir un <gi>head</gi> et des <gi>p</gi> qui correspondent au découpage traditionnel lorsque des éditions antérieures existent.</p>
+         <p>L'attribut <att>n</att> sur l'élément <gi>p</gi> est obligatoire.</p>
+       </div>
+       <div>
+         <head>Structure de l'apparat critique</head>
+         <p>Les éléments
+           <specList>
+             <specDesc key="app"/>
+             <specDesc key="lem"/>
+             <specDesc key="rdg"/>
+           </specList>
+         </p>
+         <p>L'élément <gi>app</gi> contient un <gi>lem</gi> et des <gi>rdg</gi></p>
+         <p>L'attribut <att>wit</att> sur chaque élément <gi>lem</gi> ou <gi>rdg</gi> est obligatoire.</p>
+       </div>
+       <div>
+         <head>Structure de la normalisation</head>
+         <p>Les éléments
+           <specList>
+             <specDesc key="choice"/>
+             <specDesc key="corr"/>
+             <specDesc key="sic"/>
+           </specList>
+         </p>
+         <p>L'élément <gi>choice</gi> contient un <gi>sic</gi> et un <gi>corr</gi></p>
+       </div>
+       <div>
+         <head>Structure du commentaire</head>
+         <p>Les éléments
+           <specList>
+             <specDesc key="note"/>
+             <specDesc key="anchor"/>
+           </specList>
+         </p>
+         <p>L'élément <gi>note</gi> figure dans le <gi>back</gi> du document. Il porte obligatoirement un attribut <att>xml:id</att>.</p>
+         <p>L'élément <gi>anchor</gi> sert à identifier les deux bornes du passage à commenter. 
+           Il contient l'attribut <att>next</att> au début du passage et <att>prev</att> à la fin de celui-ci renvoient à l'<att>xml:id</att> de la <gi>note</gi> qui contient le commentaire.</p>
+         <p>La <gi>note</gi> peut contenir des citations identifiées par l'élément <gi>quote</gi> accompagné de références bibliographiques encodées avec <gi>bibl</gi>. 
+         Les références bibliographiques seules sont encodées avec l'élément <gi>ref</gi> qui porte les attributs <att>source</att> (label bibliographique), <att>n</att> (chapitre, page, etc.) et <att>rend</att> (façon de citer).</p>
+       </div>
+       <div>
+         <head>Les métadonnées</head>
+         <p>L'essentiel des métadonnées sont fournies dans les trois éléments suivants:
+           <specList>
+             <specDesc key="titleStmt"/>
+             <specDesc key="editionStmt"/>
+             <specDesc key="publicationStmt"/>
+             <specDesc key="sourceDesc"/>
+             <specDesc key="fileDesc"/>
+             <specDesc key="encodingDesc"/>
+             <specDesc key="profileDesc"/>
+           </specList>
+           Par ailleurs, les images de la source édité sont présentés grâce à l'élément suivant: 
+            <specDesc key="facsimile"/>
+         </p>
+       </div>
+       
+       <div>
+         
+         <!-- les attributs sont gérés par classe. Plutôt que de retirer le même attribut
+          x fois, je peux juste le retirer de sa classe -->
+              
+         <head>Gestion des éléments</head>
+         
+         
+         <schemaSpec ident="hagiographie" start="TEI teiCorpus" prefix="tei_" targetLang="fr" docLang="fr">
+         <moduleRef key="tei"/>                             
+         <moduleRef key="core" except="citedRange gloss headLabel media meeting mentioned num postBox postCode relatedItem stage street term textLang time unit binaryObject"/>                             
+         
+         <moduleRef key="corpus" except="channel derivation domain factuality interaction locale particDesc preparedness purpose setting settingDesc textDesc activity"/>
+         
+         
+         <moduleRef key="figures" except="cell formula notatedMusic row table"/>
+         
+         <moduleRef key="header" except="cRefPattern calendar calendarDesc catDesc catRef category classCode classDecl conversion correspAction correspContext correspDesc geoDecl listPrefixDef prefixDef refState rendition samplingDecl schemaRef scriptNote stdVals styleDefDecl tagUsage tagsDecl taxonomy unitDecl unitDef xenoData appInfo application"/>                           <!-- required -->
+         
+         <moduleRef key="linking" except="standOff timeline alt altGrp"/>
+         
+         <moduleRef key="msdescription" except="binding bindingDesc catchwords colophon custEvent custodialHist decoDesc decoNote depth dim dimension explicit filiation finalRubric height heraldry layout layoutDesc msFrag musicNotation recordHist scriptDesc seal sealDesc secFol signatures stamp typeDesc typeNote watermark accMat acquisition additional adminInfo altIdentifier"/>
+         
+         <moduleRef key="namesdates" except="age birth bloc death district education event faith floruit genName geo geogFeat geogName langKnowledge langKnown listEvent listNym listObject listOrg listRelation nationality nym object objectDesc objectIdentifier objectName objectType occupation offset org personGrp persona population relation residence sex socecStatus state terrain trait climate"/>
+         
+         <moduleRef key="textcrit" except="lacunaEnd lacunaStart"/>
+         
+         <moduleRef key="textstructure" except="argument byline dateline div1 div2 div3 div4 div5 div6 div7 docAuthor docDate docEdition docImprint docTitle floatingText imprimatur opener postscript salute signed titlePage titlePart trailer"/>                    <!-- required -->
+         
+         <moduleRef key="transcr" except="addSpan am damage damageSpan delSpan fw handNotes handShift line listTranspose metamark mod path redo restore retrace secl sourceDoc space subst substJoin supplied surface surfaceGrp surplus transpose undo zone"/>
+
+             <classSpec module="tei" ident="att.global" mode="change" type="model">
+               <attList>
+                 <attDef ident="xml:space" mode="delete"/>
+                 <attDef ident="xml:base" mode="delete"/>
+               </attList>
+             </classSpec>
+           
+           <classSpec module="tei" ident="att.global.linking" mode="change" type="model">
+             <attList>
+               <attDef ident="corresp" mode="delete"/>
+               <attDef ident="synch" mode="delete"/>
+               <attDef ident="sameAs" mode="delete"/>
+               <attDef ident="copyOf" mode="delete"/>
+               <attDef ident="exclude" mode="delete"/>
+               <attDef ident="select" mode="delete"/>
+             </attList>
+           </classSpec>
+
+           <classSpec type="model" ident="att.handFeatures" module="tei" mode="delete"/>
+           <classSpec type="model" ident="att.internetMedia" module="tei" mode="delete"/>
+           <classSpec type="model" ident="att.measurement" module="tei" mode="change">
+             <attList>
+               <attDef ident="commodity" mode="delete"/>
+             </attList>
+           </classSpec>
+           <classSpec type="model" ident="att.media" module="tei" mode="delete"/>
+           <classSpec type="model" ident="att.msClass" module="tei" mode="delete"/>
+           <classSpec type="model" ident="att.msExcerpt" module="tei" mode="delete"/>
+           <classSpec type="model" ident="att.notated" module="tei" mode="delete"/>
+           <classSpec type="model" ident="att.personal" module="tei" mode="delete"/>
+           <classSpec type="model" ident="att.pointing" module="tei" mode="change">
+             <attList>
+               <attDef ident="targetLang" mode="delete"/>
+               <attDef ident="evaluate" mode="delete"/>
+             </attList>
+           </classSpec>
+           <classSpec type="model" ident="att.pointing.group" module="tei" mode="delete"/>
+           <classSpec type="model" ident="att.ranging" module="tei" mode="delete"/>
+           <classSpec type="model" ident="att.sortable" module="tei" mode="delete"/>
+           <classSpec type="model" ident="att.textCritical" module="tei" mode="delete"/>
+           <classSpec type="model" ident="att.timed" module="tei" mode="delete"/>
+           <classSpec type="model" ident="att.textCritical" module="tei" mode="delete"/>
+           <classSpec type="model" ident="att.translatable" module="tei" mode="delete"/>
+           <classSpec type="model" ident="att.textCritical" module="tei" mode="delete"/>
+       </schemaSpec>
+       </div>
+     </body>
+   </text>
+</TEI>
